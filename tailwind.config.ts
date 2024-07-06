@@ -14,8 +14,8 @@ const config: Config = {
         blue_3: '#1749d1',
         blue_4: '#396CF7',
         blue_5: '#172D67',
-        dark: '#00113C',
-        light : ''
+        dark:   '#00113C',
+        light : '#DEF3FF'
       }
     },
   },

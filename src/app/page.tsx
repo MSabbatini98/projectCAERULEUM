@@ -1,7 +1,11 @@
 export default function Home() {
   return (
    <main>
-    <h1>This is my website, bitch</h1>
+    <header>
+
+    </header>
+
+    <h1>HOME PAGE</h1>
    </main>
   );
 }
