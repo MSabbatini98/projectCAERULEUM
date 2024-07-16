@@ -6,7 +6,9 @@ import "./globals.css";
 
 //components
 import Navbar from './components/navbar'
-import Header_hp from './components/header_hp'
+import Header from './components/header'
+import Hero from './components/hero'
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header_hp />
+        <Header />
         <Navbar />
-
+        <div className="main_content">
         {children}
+          <Hero />
+
+        </div>
+
+
         </body>
     </html>
   );

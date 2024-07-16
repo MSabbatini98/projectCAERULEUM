@@ -18,16 +18,43 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  background-color: blue;
+ /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+* {
+  border: 1px solid red;
+}
+nav {
+  position: fixed;
+  top: 180px;
+  left: 0px;
+  width: 200px;
+  height: 750px;
+}
+.main_content {
+  height: 100%;
+  margin-left: 250px;  
+  border: 2px dotted  white;
+}
+.header{
+  background-color: aliceblue;
+  height: 140px;
+  margin-top: 20px;
+}
+
+.hero {
+  padding: 50px;
 }
