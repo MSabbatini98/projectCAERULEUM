@@ -5,8 +5,8 @@ import "./globals.css";
 
 
 //components
-import Navbar from './components/navbar'
-import Header from './components/header'
+import Navbar from '../components/navbar'
+import Header from '../components/header'
 
 
 

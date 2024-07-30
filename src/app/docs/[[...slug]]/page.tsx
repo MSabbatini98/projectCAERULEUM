@@ -8,7 +8,7 @@ export default function Docs({
         if (params.slug?.length >= 3) {
             return (
                 <h1>This is WAAAY tooo deep. Quit please
-                </h1>   
+                </h1>
             );
         } else if  (params.slug?.length === 2) {
             return (
