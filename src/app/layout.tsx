@@ -28,8 +28,16 @@ export default function RootLayout({
         <Header />
         <Navbar />
         <div className="main_content">
-        {children}
-
+          {children}  
+          <footer
+            style={{
+              backgroundColor: "ghostwhite",
+              padding : "10px 0",
+              color : "greenyellow",
+              textAlign : "center",
+            }}>
+            <p>footer and credits</p>
+          </footer>
         </div>
 
 

@@ -49,12 +49,36 @@ nav {
   margin-left: 250px;  
   border: 2px dotted  white;
 }
+
+/*?HEADER*/
 .header{
   background-color: aliceblue;
   height: 140px;
   margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  
+  .logo {
+    max-width: 350px;
+    background-color: teal;
+  }
+  
+  .modes {
+    
+  }
+}
+.languages img{
+  display: inline;
+  border: colors.dark solid 5px;
+  border-radius: 100%;
+
 }
 
+
+/*?HERO*/
 .hero {
   padding: 50px;
 }
