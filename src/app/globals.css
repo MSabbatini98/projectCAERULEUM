@@ -33,10 +33,11 @@ body {
     text-wrap: balance;
   }
 }
-
+/*
 * {
   border: 1px solid red;
 }
+  */
 nav {
   position: fixed;
   top: 180px;
@@ -53,28 +54,44 @@ nav {
 /*?HEADER*/
 .header{
   background-color: aliceblue;
-  height: 140px;
+  height: 120px;
   margin-top: 20px;
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
+  justify-content: space-around;
   
+  div {
+    border: solid red 1px;
+  }
   .logo {
-    max-width: 350px;
-    background-color: teal;
-  }
-  
-  .modes {
-    
-  }
-}
-.languages img{
-  display: inline;
-  border: colors.dark solid 5px;
-  border-radius: 100%;
+    margin: 5px 0 10px 0;
+    width: 50%;
+    text-align: center;
 
+    img {
+      display: inline;
+    }
+  }
+
+  .modes {
+    color: #00113C;
+    width: 25%;   
+    text-align: center;
+    }
+}
+.languages {
+  margin: auto;  
+  width: 25%;
+  text-align: center;
+  
+  img{
+    display: inline;
+    /**dark*/
+    border: #00113C solid 4px;
+    border-radius: 100%; 
+    margin: 5px;
+  }
 }
 
 
