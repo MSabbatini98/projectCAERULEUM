@@ -6,6 +6,8 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch, { SwitchProps } from '@mui/material/Switch';
 
+import day from '../../public/media/header/mode-sun.avif'
+import night from '../../public/media/header/mode-moon.avif'
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -62,11 +64,7 @@ export default function CustomizedSwitches() {
         label=""
         //TODO
       />
-      <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-        label=""
-        //TODO
-      />
+      
       
     </FormGroup>
   );

@@ -89,6 +89,36 @@ nav {
     }
     }
 }
+.css-jsexje-MuiSwitch-thumb {
+  box-shadow: none;
+}
+.css-qfzxn8-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb {
+  position: absolute;
+  background-color: transparent;
+  width: 46px;
+  height: 44px;
+  top: -6px;
+  left: -12px;
+}
+.css-qfzxn8-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb:before {
+  background-image: url('../../public/media/header/mode-moon.avif');
+  background-size: 33px;
+  left: 12px;
+}
+.css-qfzxn8-MuiSwitch-root .MuiSwitch-thumb {
+  position: absolute;
+  background-color: transparent;
+  width: 46px;
+  height: 44px;
+  top: -6px;
+  left: -12px;
+}
+.css-qfzxn8-MuiSwitch-root .MuiSwitch-thumb::before {
+  background-image: url('../../public/media/header/mode-sun.avif');
+  background-size: 37px;
+  background-color: transparent;
+  border-radius: 100px;
+}
 .languages {
   margin: auto;  
   width: 25%;
