@@ -62,8 +62,10 @@ nav {
   justify-content: space-around;
   
   div {
+    /*
     border: solid red 1px;
-  }
+    */
+    }
   .logo {
     margin: 5px 0 10px 0;
     width: 50%;
@@ -78,6 +80,13 @@ nav {
     color: #00113C;
     width: 25%;   
     text-align: center;
+    margin: auto;
+    span.MuiSwitch-root.MuiSwitch-sizeMedium.css-qfzxn8-MuiSwitch-root {
+      rotate: 90deg;
+      transform: scale(1.5);
+      margin: auto;
+
+    }
     }
 }
 .languages {

@@ -59,7 +59,13 @@ export default function CustomizedSwitches() {
     <FormGroup>
       <FormControlLabel
         control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-        label="Mode"
+        label=""
+        //TODO
+      />
+      <FormControlLabel
+        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+        label=""
+        //TODO
       />
       
     </FormGroup>
