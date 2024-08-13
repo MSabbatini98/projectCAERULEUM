@@ -18,8 +18,15 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: blue;
- /* background: linear-gradient(
+
+  background: rgb(42,82,190);
+  background: linear-gradient(0deg, #2a52be 0%, #def3ff 85%);
+  background: linear-gradient(#def3ff 20%, #2a52be 80%) fixed;
+
+  
+
+
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
@@ -53,13 +60,15 @@ nav {
 
 /*?HEADER*/
 .header{
-  background-color: aliceblue;
+  background-color: #DEF3FF;
   height: 120px;
   margin-top: 20px;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  border-top: #00113C 2px solid;
+  border-bottom: #00113C 2px solid;
 
   .logo {
     margin: 5px 0 10px 0;
@@ -114,25 +123,34 @@ nav {
   background-color: transparent;
   border-radius: 100px;
 }
+
 .languages {
   margin: auto;  
   width: 25%;
   text-align: center;
   
-  img{
-    display: inline;
-    /**dark*/
-    border: #00113C solid 4px;
-    border-radius: 100%; 
+  .single_flag {
+    width: fit-content;
+    display: inline-block;
     margin: 5px;
+    background-color: black;
+    border-radius: 100px;
+    
+    img{
+      border: #00113C solid 4px;
+      border-radius: 100px;
+      opacity: 0.5;
+
+    }
+  }
+  .single_flag:hover img,
+  img.active{
+    opacity: 1;
+    transform: scale(1.2);
   }
 }
 
 
-/*?HERO*/
-.hero {
-  padding: 50px;
-}
 
 /*?NAV*/
 nav.main_nav{
@@ -144,28 +162,69 @@ nav.main_nav{
     position: fixed;
     width: 250;
     left: -20px;
-    border: solid yellow 5px;
+    border: solid #00113C 5px;
     padding-left: 10px;
     border-radius: 30px;
 
-    ul li button{
-      position: relative;
-      display: block;
-      background-color: chartreuse;
-      border-radius: 100px;
-      border: solid 4px black;
-      width: 80px;
-      height: 80px;
-      margin: 10px 20px;
+    ul li {
+      margin: 15px;
+      
+      &#curriculum button{
+        background-color: #172D67;
+      }      
+      &#projects button{
+        background-color: #396CF7;
+      }      
+      &#about button{
+        background-color: #87A7FF;
+      }      
+      &#contacts button{
+        background-color: #CCDAFE;
+      }
 
-      span {
-        position: absolute;
-        bottom: -25px;
-        left: -10px;
-        right: -10px;
-        color: aliceblue;
+      button{
+        position: relative;
+        display: block;
+        background-color: chartreuse;
+        border-radius: 100px;
+        border: solid 4px #00113C;
+        width: 70px;
+        height: 70px;
+        margin: 20px 10px 30px 10px;
+        
+        span {
+          position: absolute;
+          bottom: -30px;
+          left: -16px;
+          right: -16px;
+          color: white;
+          font-size: 16px;
+        } 
+      }
+    }
+    ul li:nth-child(3) {
+      margin-top: 60px;
+    }
+    .arrow{
+      position: absolute;
+      top:45%;
+      right: -38px;
+      background-color: #1749d1;
+      border-radius: 100%;
+      width: 70px;
+
+
+      button {
+        padding: 2px 1px 0px 1px;
+        margin: 0;
       }
     }
   }
 
+}
+
+
+/*?HERO*/
+.hero {
+  padding: 50px;
 }

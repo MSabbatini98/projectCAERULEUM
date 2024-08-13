@@ -1,5 +1,6 @@
 import { Button } from '@mui/material'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Navbar() {
     return (
@@ -55,6 +56,16 @@ export default function Navbar() {
                         </Link>
                     </li>
                 </ul>
+                <div className="arrow">
+                    <Button>
+                        <Image
+                            src="/media/arrow-right.avif"
+                            width={70}
+                            height={70}
+                            alt="arrow icon to open side navigation"
+                        />
+                    </Button>
+                </div>
             </div>  
         </nav>
         
