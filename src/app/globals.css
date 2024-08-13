@@ -60,12 +60,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
-  div {
-    /*
-    border: solid red 1px;
-    */
-    }
+
   .logo {
     margin: 5px 0 10px 0;
     width: 50%;
@@ -81,13 +76,13 @@ nav {
     width: 25%;   
     text-align: center;
     margin: auto;
+    
     span.MuiSwitch-root.MuiSwitch-sizeMedium.css-qfzxn8-MuiSwitch-root {
       rotate: 90deg;
       transform: scale(1.5);
       margin: auto;
-
     }
-    }
+  }
 }
 .css-jsexje-MuiSwitch-thumb {
   box-shadow: none;
@@ -137,4 +132,40 @@ nav {
 /*?HERO*/
 .hero {
   padding: 50px;
+}
+
+/*?NAV*/
+nav.main_nav{
+
+  .nav_open{
+    display: none;
+  } 
+  .nav_close{
+    position: fixed;
+    width: 250;
+    left: -20px;
+    border: solid yellow 5px;
+    padding-left: 10px;
+    border-radius: 30px;
+
+    ul li button{
+      position: relative;
+      display: block;
+      background-color: chartreuse;
+      border-radius: 100px;
+      border: solid 4px black;
+      width: 80px;
+      height: 80px;
+      margin: 10px 20px;
+
+      span {
+        position: absolute;
+        bottom: -25px;
+        left: -10px;
+        right: -10px;
+        color: aliceblue;
+      }
+    }
+  }
+
 }
