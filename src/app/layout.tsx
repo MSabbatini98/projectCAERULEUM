@@ -7,6 +7,7 @@ import "./globals.css";
 //components
 import Navbar from '../components/navbar'
 import Header from '../components/header'
+import Footer from '../components/footer'
 
 
 
@@ -29,19 +30,11 @@ export default function RootLayout({
         <Navbar />
         <div className="main_content">
           {children}  
-          <footer
-            style={{
-              backgroundColor: "ghostwhite",
-              padding : "10px 0",
-              color : "greenyellow",
-              textAlign : "center",
-            }}>
-            <p>footer and credits</p>
-          </footer>
         </div>
 
+        <Footer />
 
-        </body>
+      </body>
     </html>
   );
 }
