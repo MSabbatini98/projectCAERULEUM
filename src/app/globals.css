@@ -53,9 +53,10 @@ nav {
   height: 750px;
 }
 .main_content {
-  height: 100%;
-  margin-left: 250px;  
+
+  margin-left: 200px;  
   border: 2px dotted  white;
+
 }
 
 /*?HEADER*/
@@ -93,6 +94,7 @@ nav {
     }
   }
 }
+
 .css-jsexje-MuiSwitch-thumb {
   box-shadow: none;
 }
@@ -227,6 +229,30 @@ nav.main_nav{
 /*?HERO*/
 .hero {
   padding: 50px;
+  margin: 20px;
+  position: relative;
+  height: 73vh;
+  overflow: hidden;
+  .side_left {
+    position: relative;
+    width:30%;
+    
+    h1 {
+      font-size: 80px;
+    }
+    
+    .icon {
+      position: absolute;
+      top: 35px;
+      right: -20px;
+    }
+  }
+  .side_right{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    transform: scale(1.5);
+  }
 }
 
 /*?FOOTER*/
@@ -240,3 +266,5 @@ nav.main_nav{
   display: flex;
   justify-content: space-evenly ;
 }
+
+

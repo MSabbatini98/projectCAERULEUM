@@ -1,5 +1,6 @@
 import Image from "next/image"
 import CustomizedSwitches from "./modes"
+import Link from "next/link"
 
 export default function Header() {
     return (
@@ -42,12 +43,14 @@ export default function Header() {
                 </div>
             </div>
             <div className="logo">
-                <Image
-                    src="/media/LOGO.avif"
-                    width={350}
-                    height={120}
-                    alt="CAERULEUM logo"
-                />
+                <Link href="/">
+                    <Image
+                        src="/media/LOGO.avif"
+                        width={350}
+                        height={120}
+                        alt="CAERULEUM logo"
+                    />
+                </Link>
             </div>
             <div className="modes">
                 <CustomizedSwitches />
