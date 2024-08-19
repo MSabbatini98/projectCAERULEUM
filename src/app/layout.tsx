@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Goblin_One, Gugi, Inter } from "next/font/google";
 import Link from "../../node_modules/next/link";
 import "./globals.css";
+import {Roboto} from '@next/font/google'
 
 
 //components
@@ -11,7 +12,15 @@ import Footer from '../components/footer'
 
 
 
-const inter = Inter({ subsets: ["latin"] });
+const gugi = Gugi({ 
+  subsets: ["latin"],
+  weight: ['400'] 
+})
+
+const goblin_one = Goblin_One({
+  subsets: ['latin'],
+  weight: '400' 
+})
 
 export const metadata: Metadata = {
   title: "PROJECT CAERULEUM",
@@ -24,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" >
+      <body className={goblin_one.className}>
         <Header />
         <Navbar />
         <div className="main_content">
