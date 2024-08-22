@@ -47,10 +47,11 @@ body {
   */
 nav {
   position: fixed;
-  top: 180px;
+  top: 140px;
   left: 0px;
   width: 200px;
   height: 750px;
+  margin-top: 40px;
 }
 .main_content {
 
@@ -160,6 +161,7 @@ nav.main_nav{
   .nav_open{
     display: none;
   } 
+
   .nav_close{
     position: fixed;
     width: 250;
@@ -228,14 +230,15 @@ nav.main_nav{
 
 /*?HERO*/
 .hero {
-  padding: 50px;
-  margin: 20px;
   position: relative;
-  height: 73vh;
+  height: 85vh;
   overflow: hidden;
-  .side_left {
+
+  .hero_content {
     position: relative;
-    width:30%;
+    margin-top: 160px;
+    margin-left: 70px;
+    width:66%;
     
     h1 {
       font-size: 80px;
@@ -244,10 +247,26 @@ nav.main_nav{
     .icon {
       position: absolute;
       top: 35px;
-      right: -20px;
+      right: 33%;
+    }
+    h3 {
+      text-align: right;
+      margin-right:170px;
+
+      &::before{
+        content:"";
+        display: inline-block;
+        position:absolute;
+        bottom:11px;
+        left: 0px;
+        width: 400px;
+        height: 4px;
+        background-color: white;
+        color: black;
+      }
     }
   }
-  .side_right{
+  .bg_image{
     position: absolute;
     top: 20px;
     right: 40px;

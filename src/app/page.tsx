@@ -4,7 +4,7 @@ export default function Home() {
   return (
    <main >
     <div className="hero">
-      <div className="side_left">
+      <div className="hero_content">
         <h1>Project <br /> Caeruleum</h1>
         <h3>By Matteo Sabbatini</h3>
         <div className="icon">
@@ -16,7 +16,7 @@ export default function Home() {
             />
         </div>        
       </div>
-      <div className="side_right">
+    <div className="bg_image">
         <Image
           src="/media/preview.webp"
           height={850}
