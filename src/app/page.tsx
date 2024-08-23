@@ -1,8 +1,29 @@
+'use client'
+
 import Image from "next/image";
+import { Goblin_One,  Goldman } from 'next/font/google'
+
+
+const font_header = Goblin_One({ 
+  subsets: ['latin'],
+  weight: ['400']
+})
+const font_text = Goldman({ 
+  subsets: ['latin'],
+  weight: ['400', '700']
+})
 
 export default function Home() {
   return (
-   <main >
+    <>
+     <style jsx global>{`
+        .hero {
+          font-family: ${font_header.style.fontFamily};
+        }
+        nav.main_nav, span {
+          font-family : ${font_text.style.fontFamily};
+        }
+      `}</style>
     <div className="hero">
       <div className="hero_content">
         <h1>Project <br /> Caeruleum</h1>
@@ -25,6 +46,6 @@ export default function Home() {
         />
       </div>
     </div>
-   </main>
+  </>
   );
 }
