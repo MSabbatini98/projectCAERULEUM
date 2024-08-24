@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <>
      <style jsx global>{`
-        .hero {
+        .hero h1, .hero h3 {
           font-family: ${font_header.style.fontFamily};
         }
-        nav.main_nav, span {
+        nav.main_nav, nav span {
           font-family : ${font_text.style.fontFamily};
         }
       `}</style>

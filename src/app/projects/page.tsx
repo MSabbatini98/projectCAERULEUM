@@ -1,3 +1,13 @@
+
+
+
+export async function generateMetadata() {
+    return {
+      title: 'Progetti ! CAERULEUM',
+      descriptiom : 'tutti i progetti del mio sito portfolio'
+    }
+  }
+
 export default function Project() {
     return (
         <main>

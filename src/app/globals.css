@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -52,6 +53,10 @@ body {
 
 /*?HEADER*/
 .header{
+  * {
+    border: red 1px solid;
+  }
+  
   background-color: #DEF3FF;
   height: 120px;
   margin-top: 20px;
@@ -82,6 +87,31 @@ body {
       rotate: 90deg;
       transform: scale(1.5);
       margin: auto;
+    }
+  }
+  .languages {
+    margin: auto;  
+    width: 25%;
+    text-align: center;
+    
+    .single_flag {
+      width: fit-content;
+      display: inline-block;
+      margin: 5px;
+      background-color: black;
+      border-radius: 100px;
+      
+      img{
+        border: #00113C solid 4px;
+        border-radius: 100px;
+        opacity: 0.5;
+  
+      }
+    }
+    .single_flag:hover img,
+    img.active{
+      opacity: 1;
+      transform: scale(1.2);
     }
   }
 }
@@ -117,31 +147,7 @@ body {
   border-radius: 100px;
 }
 
-.languages {
-  margin: auto;  
-  width: 25%;
-  text-align: center;
-  
-  .single_flag {
-    width: fit-content;
-    display: inline-block;
-    margin: 5px;
-    background-color: black;
-    border-radius: 100px;
-    
-    img{
-      border: #00113C solid 4px;
-      border-radius: 100px;
-      opacity: 0.5;
 
-    }
-  }
-  .single_flag:hover img,
-  img.active{
-    opacity: 1;
-    transform: scale(1.2);
-  }
-}
 
 
 
@@ -237,7 +243,7 @@ nav.main_nav{
     position: relative;
     margin-top: 160px;
     margin-left: 70px;
-    width:66%;
+    width:730px;
     
     h1 {
       font-size: 80px;
@@ -248,11 +254,10 @@ nav.main_nav{
     .icon {
       position: absolute;
       top: 12px;
-      right: 228px;
+      left: 540px;
     }
     h3 {
       text-align: right;
-      margin-right:12%;
 
       &::before{
         content:"";
@@ -260,7 +265,7 @@ nav.main_nav{
         position:absolute;
         bottom:11px;
         left: 0px;
-        width: 58%;
+        width: 480px;
         height: 4px;
         background-color: white;
         color: black;
@@ -295,3 +300,4 @@ html {
 h1 {
   font-family: var(--font-roboto-mono);
 }
+

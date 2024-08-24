@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Goblin_One, Gugi, Inter } from "next/font/google";
+import { Goblin_One, Gugi, Goldman } from "next/font/google";
 import Link from "../../node_modules/next/link";
 import "./globals.css";
 import {Roboto} from '@next/font/google'
@@ -13,6 +13,11 @@ import Footer from '../components/footer'
 
 
 const gugi = Gugi({ 
+  subsets: ["latin"],
+  weight: ['400'] 
+})
+
+const goldman = Goldman({ 
   subsets: ["latin"],
   weight: ['400'] 
 })
@@ -34,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body className={goblin_one.className}>
+      <body>
         <Header />
         <Navbar />
         <div className="main_content">
