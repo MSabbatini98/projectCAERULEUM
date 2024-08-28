@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import { Goblin_One, Gugi, Goldman } from "next/font/google";
 import Link from "../../node_modules/next/link";
-import "./globals.css";
+import "./globals.scss";
 import {Roboto} from '@next/font/google'
-
 
 //components
 import Navbar from '../components/navbar'
 import Header from '../components/header'
 import Footer from '../components/footer'
-
 
 
 const gugi = Gugi({ 
