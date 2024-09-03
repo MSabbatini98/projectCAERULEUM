@@ -1,10 +1,12 @@
 import Image from "next/image";
+import ImageSlider from '../../components/iconSlider'
+
 import "../styles/curriculum.scss"
 
 export default function Curriculum() {
     return (
         <main>
-            <h1> This is my pretty Curriculum</h1>
+            <h1> Curriculum</h1>
             <div className="cv_upper">
                 <div className="cv_txt">
                     <p>
@@ -26,6 +28,31 @@ export default function Curriculum() {
                     />                    
                 </div>
             </div>
+            <div className="cv_lower">
+                <div className="cv_box">
+                    <h3>Conoscenze</h3>
+                    <div className="cv_box_txt">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error dolores repellat, assumenda nam ut eius accusamus magni quibusdam quos ad animi beatae enim nisi expedita optio est reprehenderit earum? Quia!
+                    </div>
+                </div>
+                <div className="cv_box">
+                    <h3>Comnpetenze</h3>
+                    <div className="cv_box_txt">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error dolores repellat, assumenda nam ut eius accusamus magni quibusdam quos ad animi beatae enim nisi expedita optio est reprehenderit earum? Quia!
+                    </div>
+                </div>
+                <div className="cv_box">
+                    <h3>Passioni</h3>
+                    <div className="cv_box_txt">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error dolores repellat, assumenda nam ut eius accusamus magni quibusdam quos ad animi beatae enim nisi expedita optio est reprehenderit earum? Quia!
+                    </div>
+                </div>
+            </div>
+            <div className="cv_theatre">
+                {/* //Slider here */}
+
+            </div>
+
         </main>
     )
 }

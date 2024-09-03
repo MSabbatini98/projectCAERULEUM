@@ -3,10 +3,11 @@
   background-color: #DEF3FF;
   height: 120px;
   margin-top: 20px;
-  position: relative;
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   border-top: #00113C 2px solid;
   border-bottom: #00113C 2px solid;
 
@@ -20,7 +21,7 @@
     }
   }
   .logo-2{
-    margin: auto 0 auto 100px;
+    margin: auto 0 auto 100px    ;
   }
 
   .modes {
