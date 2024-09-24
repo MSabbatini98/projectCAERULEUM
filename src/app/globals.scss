@@ -7,6 +7,15 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --blue_1: #CCDAFE;
+  --blue_2: #87A7FF;
+  --blue_3: #2a52be;
+  --blue_4: #396CF7;
+  --blue_5: #172D67;
+  --dark: #00113C;
+  --light:  #DEF3FF;
+  --caeruleum : #2a52be;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,7 +30,7 @@ body {
   color: rgb(var(--foreground-rgb));
 
   background: rgb(42,82,190);
-  background: linear-gradient(#def3ff 20%, #2a52be 50%) fixed;
+  background: linear-gradient(var(--light) 20%, var(--blue_3) 50%) fixed;
 
 }
 
@@ -38,7 +47,8 @@ body {
 
 .main_content {
   margin-left: 200px;
-  margin-right: 20px 
+  margin-right: 20px;
+  max-width: 1400px;
 }
 
 main {
@@ -54,7 +64,7 @@ nav {
   left: 0px;
   width: 200px;
   height: 750px;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 nav.main_nav{
 
@@ -66,7 +76,7 @@ nav.main_nav{
     position: fixed;
     width: 180px;
     left: -25px;
-    border: solid #00113C 5px;
+    border: solid var(--light) 5px;
     padding: 0px 10px 10px 35px;
     border-radius: 30px;
 
@@ -74,16 +84,16 @@ nav.main_nav{
       margin: 15px;
       
       &#curriculum button{
-        background-color: #172D67;
+        background-color: var(--blue_5);
       }      
       &#projects button{
-        background-color: #396CF7;
+        background-color: var(--blue_4);
       }      
       &#about button{
-        background-color: #87A7FF;
+        background-color: var(--blue_2);
       }      
       &#contacts button{
-        background-color: #CCDAFE;
+        background-color: var(--blue_1);
       }
 
       button{
@@ -132,13 +142,13 @@ nav.main_nav{
 /*?HERO*/
 .hero {
   position: relative;
-  height: 80vh;
+  height: calc(100vh - 150px);
   overflow: hidden;
+  margin-left: 200px;
 
   .hero_content {
     position: relative;
     margin-top: 160px;
-    margin-left: 70px;
     width:730px;
     
     h1 {
@@ -171,7 +181,7 @@ nav.main_nav{
   .bg_image{
     position: absolute;
     top: 20px;
-    right: 40px;
+    right: 60px;
     transform: scale(1.5);
   }
 }

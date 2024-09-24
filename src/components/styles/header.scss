@@ -3,7 +3,8 @@
   background-color: #DEF3FF;
   height: 120px;
   margin-top: 20px;
-  position: fixed;
+  position: sticky;
+  top: 23px;
   width: 100%;
   display: flex;
   flex-direction: row;
