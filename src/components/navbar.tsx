@@ -8,20 +8,22 @@ export default function Navbar() {
             <div className="nav_open">
                 <ul>
                     <li>
-                <Link href="/">Homepage</Link>
+                        <Link href="/">Homepage</Link>
                     </li>
 
                     <li>
-                <Link href="/curriculum">Curriculum</Link>
+                        <Link href="/curriculum">Curriculum</Link>
                     </li>
 
                     <li>
-                <Link href="/projects">Projects</Link>
+                        <Link href="/projects">Projects</Link>
                     </li>
                     <li>
-                    <Link href="/about_me">Su di me</Link>
+                        <Link href="/about">Su di me</Link>
                     </li>
-                    <li><Link href="/contacts">Contatti</Link></li>
+                    <li>
+                        <Link href="/contacts">Contatti</Link>
+                    </li>
                 </ul>
             </div>  
             <div className="nav_close">
@@ -38,14 +40,16 @@ export default function Navbar() {
                         <Link href="/projects">  
                             <Button>
                                 <span>Progetti</span> 
-                            </Button></Link>
+                            </Button>
+                        </Link>
                     </li>
 
                     <li id='about'>
-                        <Link href="/about_me">  
+                        <Link href="/about">  
                             <Button>
                                 <span>Su di me</span> 
-                            </Button></Link>
+                            </Button>
+                        </Link>
                     </li>
 
                     <li id='contacts'>
@@ -68,6 +72,5 @@ export default function Navbar() {
                 </div>
             </div>  
         </nav>
-        
     )
 }

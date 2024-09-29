@@ -11,10 +11,6 @@ const config: Config = {
   ],
   theme:{
     extend: {
-      fontFamily : {
-        titleFont : ['var(--font-Goldman'],
-        textFont : ['var(--font-Goblin_One)']
-      }
     }
   },
   plugins: [nextui()],

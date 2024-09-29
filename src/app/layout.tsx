@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Goblin_One, Goldman } from "next/font/google";
+import { Goldman } from "next/font/google";
 import "./globals.scss";
 
 //components

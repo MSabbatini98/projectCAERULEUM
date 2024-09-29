@@ -1,12 +1,11 @@
-import Image from "next/image";
+import Image from "next/image"
 import ImageSlider from '../../components/iconSlider'
 
 import "../styles/curriculum.scss"
 
 export default function Curriculum() {
     return (
-        <main>
-            <h1> Curriculum</h1>
+        <main className="main_content">
             <div className="cv_upper">
                 <div className="cv_txt">
                     <p>

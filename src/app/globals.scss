@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,6 +15,8 @@
   --light:  #DEF3FF;
   --caeruleum : #2a52be;
 
+  --cv_cards_bg : linear-gradient( rgba(0,0,0,0) 0%, rgba(23,45,103,1) 35%, rgba(23,45,103,1) 65%, rgba(0,0,0,0) 100%);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,19 +27,17 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+body {
   background: rgb(42,82,190);
   background: linear-gradient(var(--light) 20%, var(--blue_3) 50%) fixed;
-
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 /*
 * {
   border: 1px solid red;
@@ -49,10 +48,6 @@ body {
   margin-left: 200px;
   margin-right: 20px;
   max-width: 1400px;
-}
-
-main {
-  padding-top: 140px;
 }
 
 
@@ -139,52 +134,6 @@ nav.main_nav{
 }
 
 
-/*?HERO*/
-.hero {
-  position: relative;
-  height: calc(100vh - 150px);
-  overflow: hidden;
-  margin-left: 200px;
-
-  .hero_content {
-    position: relative;
-    margin-top: 160px;
-    width:730px;
-    
-    h1 {
-      font-size: 80px;
-      text-transform: uppercase;
-      line-height: 80px;
-    }
-    
-    .icon {
-      position: absolute;
-      top: 12px;
-      left: 540px;
-    }
-    h3 {
-      text-align: right;
-
-      &::before{
-        content:"";
-        display: inline-block;
-        position:absolute;
-        bottom:11px;
-        left: 0px;
-        width: 480px;
-        height: 4px;
-        background-color: white;
-        color: black;
-      }
-    }
-  }
-  .bg_image{
-    position: absolute;
-    top: 20px;
-    right: 60px;
-    transform: scale(1.5);
-  }
-}
 
 
 /*?FONTS*/

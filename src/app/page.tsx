@@ -1,5 +1,6 @@
+import Image from "next/image"
+import "../app/styles/hero.scss"
 import { Goblin_One } from "next/font/google";
-import Image from "next/image";
 
 const font_header = Goblin_One({ 
   subsets: ['latin'],
@@ -9,7 +10,7 @@ const font_header = Goblin_One({
 export default function Home() {
   return (
     <>
-    <div className="hero">
+    <div className="hero main_content">
       <div className={`hero_content ` + font_header.className}>
         <h1>Project <br /> Caeruleum</h1>
         <h3>By Matteo Sabbatini</h3>
