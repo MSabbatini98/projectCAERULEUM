@@ -38,11 +38,6 @@ body {
   background: linear-gradient(var(--light) 20%, var(--blue_3) 50%) fixed;
 }
 
-/*
-* {
-  border: 1px solid red;
-}
-  */
 
 .main_content {
   margin-left: 200px;
@@ -134,14 +129,28 @@ nav.main_nav{
 }
 
 
-
-
-/*?FONTS*/
-html {
-  font-family: var(--font-inter);
+//* ACCESSIBILITY
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
 }
- 
-h1 {
-  font-family: var(--font-roboto-mono);
+.skip-link:focus-visible {
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.5rem;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: unset;
+  text-decoration: none;
+  color: black;
+  z-index: 100;
 }
-

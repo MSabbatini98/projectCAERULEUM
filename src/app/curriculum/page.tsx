@@ -47,8 +47,7 @@ export default function Curriculum() {
                     </div>
                 </div>
             </div>
-            <div className="cv_theatre">
-                {/* //Slider here */}
+            <div className="cv_theatre" style={{height:"2000px"}}>
 
             </div>
 

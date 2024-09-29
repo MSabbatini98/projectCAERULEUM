@@ -25,7 +25,7 @@ export default function Home() {
       </div>
     <div className="bg_image">
         <Image
-          src="/media/MatteoSabbatiniHP.png"
+          src="/media/MatteoSabbatiniHP.webp"
           height={850}
           width={400}
           alt="Foto dell'autore del sito: Matteo Sabbatini"
