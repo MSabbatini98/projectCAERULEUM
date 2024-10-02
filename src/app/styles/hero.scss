@@ -9,13 +9,15 @@
   
     .hero_content {
       position: relative;
-      margin-top: 160px;
+      margin: 180px 20px;
       width:730px;
       
       h1 {
         font-size: 80px;
         text-transform: uppercase;
         line-height: 80px;
+        color: var(--light);
+        text-shadow: var(--dark) 2px 5px;
       }
       
       .icon {
@@ -25,7 +27,9 @@
       }
       h3 {
         text-align: right;
-  
+        color: var(--light);
+        text-shadow: var(--dark) 2px 5px;
+        
         &::before{
           content:"";
           display: inline-block;

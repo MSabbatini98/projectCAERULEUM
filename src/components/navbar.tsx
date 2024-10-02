@@ -1,32 +1,16 @@
+'use client';
 import { Button } from '@mui/material'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
+
+import "./styles/navbar.scss"
 
 export default function Navbar() {
+    const [toggleMenu, setToggleMenu] = useState(false)
     return (
-        <nav className='main_nav'>
-            <div className="nav_open">
-                <ul>
-                    <li>
-                        <Link href="/">Homepage</Link>
-                    </li>
-
-                    <li>
-                        <Link href="/curriculum">Curriculum</Link>
-                    </li>
-
-                    <li>
-                        <Link href="/projects">Projects</Link>
-                    </li>
-                    <li>
-                        <Link href="/about">Su di me</Link>
-                    </li>
-                    <li>
-                        <Link href="/contacts">Contatti</Link>
-                    </li>
-                </ul>
-            </div>  
-            <div className="nav_close">
+        <section className={`${toggleMenu ? "main_nav main_nav_open" : "main_nav main_nav_close"} ` }> 
+            <nav className={`${toggleMenu ? "nav_open" : "nav_close"} ` }>
                 <ul>
                     <li  id='curriculum'>
                         <Link href="/curriculum">
@@ -61,7 +45,9 @@ export default function Navbar() {
                     </li>
                 </ul>
                 <div className="arrow">
-                    <Button>
+                    <Button
+                    onClick={()=> setToggleMenu(!toggleMenu)}
+                    >
                         <Image
                             src="/media/arrow-right.avif"
                             width={70}
@@ -70,7 +56,7 @@ export default function Navbar() {
                         />
                     </Button>
                 </div>
-            </div>  
-        </nav>
+            </nav>  
+        </section>
     )
 }
