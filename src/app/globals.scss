@@ -79,3 +79,29 @@ body {
   color: black;
   z-index: 100;
 }
+
+//*CT
+h3.blue_1 span::after,
+h3.blue_1::after {
+  background-color: var(--blue_1);
+}
+//*AM
+h3.blue_2 span::after,
+h3.blue_2::after {
+  background-color: var(--blue_2);
+}
+//*CE
+h3.blue_3 span::after,
+h3.blue_3::after {
+  background-color: var(--blue_3);
+}
+//*PR
+h3.blue_4 span::after,
+h3.blue_4::after {
+  background-color: var(--blue_4);
+}
+//*CV
+h3.blue_5 span::after,
+h3.blue_5::after {
+  background-color: var(--blue_5);
+}

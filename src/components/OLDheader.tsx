@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import CustomizedSwitches from "./modes"
+import CustomizedSwitches from "./Header/modes"
 import Link from "next/link"
 
 import "./styles/header.scss"

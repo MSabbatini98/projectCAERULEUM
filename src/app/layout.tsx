@@ -3,8 +3,8 @@ import { Goldman } from "next/font/google";
 import "./globals.scss";
 
 //components
-import Navbar from '../components/navbar'
-import Header from '../components/header'
+import Navbar from '@/components/navbar'
+import Header from '@/components/Header'
 import Footer from '../components/footer'
 
 
