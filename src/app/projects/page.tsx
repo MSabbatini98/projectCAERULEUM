@@ -1,5 +1,5 @@
 import Card from "@/components/card"
-
+import CoolTitle from "@/components/coolTitle"
 
 export async function generateMetadata() {
     return {
@@ -12,7 +12,30 @@ export default function Project() {
     return (
         <main className="main_content">
           <h1> This is the PROJECT PAGE</h1>
-          <Card />  
+          <Card>
+           <CoolTitle
+              title="Prova 1"
+              color="blue_3"
+            />  
+          </Card> 
+          <Card>
+           <CoolTitle
+              title="secondo Titolo "
+              color="blue_2"
+            />  
+          </Card> 
+          <Card>
+           <CoolTitle
+              title="Prova 1"
+              color="blue_5"
+            />  
+          </Card> 
+          <Card>
+           <CoolTitle
+              title="Prova 1"
+              color="blue_3"
+            />  
+          </Card> 
         </main>
     )
 }

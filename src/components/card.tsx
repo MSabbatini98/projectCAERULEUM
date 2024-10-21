@@ -1,18 +1,23 @@
-import Link from 'next/link'
+import { ReactNode } from "react";
 import Image from 'next/image'
 import "./styles/card.scss"
 import { Button } from '@mui/material'
 import CoolTitle from './coolTitle'
 
-export default function Card() {
+
+type CardProps = {
+    children: ReactNode;
+    // Your other props here.
+  }
+
+export default function Card({children, ...props} : CardProps) {
+
+
     return (
         <div className="card-container">
             <div className="card">
                 <div className="card_title">
-                    <CoolTitle
-                    title="Prova 1"
-                    color="blue_3"
-                    />
+                {children}
                 </div>
                 <div className="card_content">
                     <div className="card_text">
