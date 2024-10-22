@@ -9,6 +9,7 @@ type contactCardProps = {
         imageUrl: StaticImageData
         imageAlt: string
         url: string
+        text: string
     }[]
 }
 
@@ -16,7 +17,7 @@ export default function ContactCard({ cards } : contactCardProps) {
   console.log(cards)
     return ( <div className="contact_container">
 
-{cards.map(({ imageUrl, imageAlt, url }, index) => (
+{cards.map(({ imageUrl, imageAlt, url , text}, index) => (
           <div 
             className="contact_card card"
             key={index}
@@ -28,6 +29,7 @@ export default function ContactCard({ cards } : contactCardProps) {
                 height={90}
                 className="img-slider-img"
               />
+              <p>{text}</p>
           </div>
         ))}
         </div>

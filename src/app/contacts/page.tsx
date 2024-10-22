@@ -11,34 +11,52 @@ const HORCONTACTS = [
     { 
         imageUrl: car4, 
         imageAlt: "string", 
-        url: "string"
+        url: "string",
+        text: "provaaaa"
     },
     { 
         imageUrl: car4, 
         imageAlt: "string", 
-        url: "string"
+        url: "string",
+        text: "provaaaa"
     },
     { 
         imageUrl: car4, 
         imageAlt: "string", 
-        url: "string"
+        url: "string",
+        text: "provaaaa"
     }
 ]
 const VERCONTACTS = [
     { 
         imageUrl: car4, 
         imageAlt: "string", 
-        url: "string"
+        url: "string",
+        text: "provaaaa"
     },
     { 
         imageUrl: car4, 
         imageAlt: "string", 
-        url: "string"
+        url: "string",
+        text: "provaaaa"
     },
     { 
         imageUrl: car4, 
         imageAlt: "string", 
-        url: "string"
+        url: "string",
+        text: "provaaaa"
+    },
+    { 
+        imageUrl: car4, 
+        imageAlt: "string", 
+        url: "string",
+        text: "provaaaa"
+    },
+    { 
+        imageUrl: car4, 
+        imageAlt: "string", 
+        url: "string",
+        text: "provaaaa"
     }
   ]
 
