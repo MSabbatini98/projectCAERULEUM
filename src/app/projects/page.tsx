@@ -15,25 +15,25 @@ export default function Project() {
           <Card>
            <CoolTitle
               title="Prova 1"
-              color="blue_3"
+              colorClass="blue_3"
             />  
           </Card> 
           <Card>
            <CoolTitle
               title="secondo Titolo "
-              color="blue_2"
+              colorClass="blue_2"
             />  
           </Card> 
           <Card>
            <CoolTitle
               title="Prova 1"
-              color="blue_5"
+              colorClass="blue_5"
             />  
           </Card> 
           <Card>
            <CoolTitle
               title="Prova 1"
-              color="blue_3"
+              colorClass="blue_3"
             />  
           </Card> 
         </main>

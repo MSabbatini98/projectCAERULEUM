@@ -1,0 +1,26 @@
+.contacts {
+    height: 1000px;
+
+
+    .contact_container {
+        display: flex;
+        justify-content: space-between;
+
+        .contact_card {
+            background-color:rgba(0,17,60,0.7);
+            img {
+                margin: auto;
+            }
+        }
+
+        .cool_title {
+            margin-top: 20px;
+        }
+    }
+    .contacts_hor {
+
+    }
+    .contacts_ver {
+        border: solid green 5px!important;
+    }
+}

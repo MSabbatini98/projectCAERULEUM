@@ -2,13 +2,13 @@ import "../styles/card.scss"
 
 type titleProps = {
     title:string;
-    color:string;
+    colorClass:string;
 }
 
-export default function CoolTitle({title, color} : titleProps) {
+export default function CoolTitle({title, colorClass} : titleProps) {
     return (
         <div className="cool_title">
-            <h3 className={color}><span >{title}</span></h3>
+            <h3 className={colorClass}><span >{title}</span></h3>
         </div>
     )
 }
