@@ -82,7 +82,8 @@ body {
 
 //*CT
 h3.blue_1 span::after,
-h3.blue_1::after {
+h3.blue_1::after,
+.header.blue_1 {
   background-color: var(--blue_1);
 }
 h1.blue_1 {
@@ -90,7 +91,8 @@ h1.blue_1 {
 }
 //*AM
 h3.blue_2 span::after,
-h3.blue_2::after {
+h3.blue_2::after,
+.header.blue_2 {
   background-color: var(--blue_2);
 }
 h1.blue_2 {
@@ -98,7 +100,8 @@ h1.blue_2 {
 }
 //*CE
 h3.blue_3 span::after,
-h3.blue_3::after {
+h3.blue_3::after,
+.header.blue_3 {
   background-color: var(--blue_3);
 }
 h1.blue_3 {
@@ -106,7 +109,8 @@ h1.blue_3 {
 }
 //*PR
 h3.blue_4 span::after,
-h3.blue_4::after {
+h3.blue_4::after,
+.header.blue_4 {
   background-color: var(--blue_4);
 }
 h1.blue_4 {
@@ -114,7 +118,8 @@ h1.blue_4 {
 }
 //*CV
 h3.blue_5 span::after,
-h3.blue_5::after {
+h3.blue_5::after,
+.header.blue_5 {
   background-color: var(--blue_5);
 }
 h1.blue_5 {

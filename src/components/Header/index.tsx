@@ -14,16 +14,22 @@ const font_header = Goblin_One({
   weight: ['400']
 })
 
-const renderHeader = () => {
-    const pathname = usePathname();
+const renderHeader = (pathname : string) => {
     switch (pathname) {
         case "/curriculum": return <h1 className="header_title blue_5">Curriculum </h1>
         case "/projects": return <h1 className="header_title blue_4">Progetti </h1>
         case "/about": return <h1 className="header_title blue_2">Su di me </h1>
-        case "/contact": return <h1 className="header_title blue_1">Contatti  </h1>
+        case "/contacts": return <h1 className="header_title blue_1">Contatti  </h1>
     }
 }
-
+const renderHeaderBg = (pathname : string) => {
+    switch (pathname) {
+        case "/curriculum": return "blue_5"
+        case "/projects": return "blue_4"
+        case "/about": return "blue_2"
+        case "/contact":return "blue_1"
+    }
+}
 export default function Header() {
     const pathname = usePathname();
 
@@ -83,8 +89,7 @@ export default function Header() {
               </div>
          </div>
               ) : (
-        <div className="header">
-
+        <div className={`header ` + renderHeaderBg(pathname)}>
             <div className="logo">
                 <Link href="/">
                     <Image
@@ -96,7 +101,7 @@ export default function Header() {
                 </Link>
             </div>
               <div className={`page_title ` + font_header.className}>
-                { renderHeader() }
+                { renderHeader(pathname) }
               </div>
               <div className="single_mode">
                 <Image
