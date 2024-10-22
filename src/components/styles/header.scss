@@ -1,19 +1,21 @@
 /*?HEADER*/
-.header{    
+.header {
   background-color: #DEF3FF;
   height: 120px;
-  margin-top: 20px;
   position: sticky;
   top: 23px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   border-top: #00113C 2px solid;
   border-bottom: #00113C 2px solid;
   z-index: 100;
+  > {
+    margin: 0 10px;
+  }
 
-  .logo {
+  .logo_hp {
     margin: 5px 0 10px 0;
     width: 50%;
     text-align: center;
@@ -22,55 +24,14 @@
       display: inline;
     }
   }
-  .logo-2{
-    margin: auto 0 auto 100px    ;
-  }
 
-  .modes {
-    color: #00113C;
-    width: 25%;   
-    text-align: center;
-    margin: auto;
-    
-    span.MuiSwitch-root.MuiSwitch-sizeMedium.css-qfzxn8-MuiSwitch-root {
-      rotate: 90deg;
-      transform: scale(1.5);
-      margin: auto;
-    }
-    .css-jsexje-MuiSwitch-thumb {
-      box-shadow: none;
-    }
-    .css-qfzxn8-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb {
-      position: absolute;
-      background-color: transparent;
-      width: 46px;
-      height: 44px;
-      top: -6px;
-      left: -12px;
-    }
-    .css-qfzxn8-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb:before {
-      background-image: url('../../../public/media/header/mode-moon.avif');
-      background-size: 33px;
-      left: 12px;
-    }
-    .css-qfzxn8-MuiSwitch-root .MuiSwitch-thumb {
-      position: absolute;
-      background-color: transparent;
-      width: 46px;
-      height: 44px;
-      top: -6px;
-      left: -12px;
-    }
-    .css-qfzxn8-MuiSwitch-root .MuiSwitch-thumb::before {
-      background-image: url('../../../public/media/header/mode-sun.avif');
-      background-size: 37px;
-      background-color: transparent;
-      border-radius: 100px;
-    }
+  .logo {
+    margin: auto 50px auto 50px;
+    width: 300px;
   }
 
   .languages {
-    margin: auto;  
+    margin: auto;
     width: 25%;
     text-align: center;
 
@@ -80,23 +41,103 @@
       margin: 5px;
       background-color: black;
       border-radius: 100px;
-      img{
+
+      img {
         border: #00113C solid 4px;
         border-radius: 100px;
         opacity: 0.5;
-        
+
         &.active {
           opacity: 1;
+
           &:hover {
-            transform:none;
+            transform: none;
           }
         }
       }
     }
-    
-    .single_flag:hover img{
-        opacity: 1;
-        transform: scale(1.2);
+
+    .single_flag:hover img {
+      opacity: 1;
+      transform: scale(1.2);
     }
   }
+
+  .single_language {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+    right: 59px;
+    top: 28px;
+    opacity: 0.4;
+
+    img {
+      width: 60px;
+      margin: auto 10px;
+      border: solid 3px var(--dark);
+      border-radius: 100%;
+    }
+  }
+
+  .page_title h1.header_title {
+    font-size: 65px;
+    margin: 10px 0 0 30px;
+    text-transform: uppercase;
+    text-shadow: -8px 0 var(--dark), 3px 0 var(--dark), 0 4px var(--dark), 0 -3px var(--dark), 1px 1px var(--dark), -1px -1px var(--dark), -1px -1px var(--dark), -1px 1px var(--dark);
+  }
+
+  .modes {
+    color: #00113C;
+    width: 25%;
+    text-align: center;
+    margin: auto;
+
+    span.MuiSwitch-root.MuiSwitch-sizeMedium.css-qfzxn8-MuiSwitch-root {
+      rotate: 90deg;
+      transform: scale(1.5);
+      margin: auto;
+    }
+
+    .css-jsexje-MuiSwitch-thumb {
+      box-shadow: none;
+    }
+
+    .css-qfzxn8-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb {
+      position: absolute;
+      background-color: transparent;
+      width: 46px;
+      height: 44px;
+      top: -6px;
+      left: -12px;
+    }
+
+    .css-qfzxn8-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb:before {
+      background-image: url('../../../public/media/header/mode-moon.avif');
+      background-size: 33px;
+      left: 12px;
+    }
+
+    .css-qfzxn8-MuiSwitch-root .MuiSwitch-thumb {
+      position: absolute;
+      background-color: transparent;
+      width: 46px;
+      height: 44px;
+      top: -6px;
+      left: -12px;
+    }
+
+    .css-qfzxn8-MuiSwitch-root .MuiSwitch-thumb::before {
+      background-image: url('../../../public/media/header/mode-sun.avif');
+      background-size: 37px;
+      background-color: transparent;
+      border-radius: 100px;
+    }
+  }
+
+  .single_mode {
+    position: absolute;
+    right: 49px;
+    top: 8px;
+  }
+
 }

@@ -1,4 +1,4 @@
-import "./styles/card.scss"
+import "../styles/card.scss"
 
 type titleProps = {
     title:string;

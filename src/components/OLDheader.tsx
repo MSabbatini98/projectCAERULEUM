@@ -13,7 +13,7 @@ export default function Header() {
   console.log(pathname);
   return (
     pathname === '/' ? (
-        <div className="header header-HP">
+        <div className="header">
               <div className="languages">
                   <div className="single_flag">
                       <Image
@@ -51,7 +51,7 @@ export default function Header() {
                       />
                   </div>
               </div>
-              <div className="logo">
+              <div className="logo_hp">
                   <Link href="/">
                       <Image
                           src="/media/LOGO.avif"
@@ -66,8 +66,8 @@ export default function Header() {
               </div>
           </div>
   ) : (
-        <div className="header header-HP">
-              <div className="logo-2">
+        <div className="header ">
+              <div className="logo_hp">
                   <Link href="/">
                       <Image
                           src="/media/LOGO.avif"

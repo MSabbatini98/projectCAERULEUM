@@ -47,8 +47,8 @@ body {
 }
 
 .main_content {
-  margin-left: 200px;
-  margin-right: 20px;
+  margin: 20px 0 0 200px;
+  padding-right: 20px;
   max-width: 1400px;
 }
 
@@ -85,23 +85,66 @@ h3.blue_1 span::after,
 h3.blue_1::after {
   background-color: var(--blue_1);
 }
+h1.blue_1 {
+  color: var(--blue_1);
+}
 //*AM
 h3.blue_2 span::after,
 h3.blue_2::after {
   background-color: var(--blue_2);
+}
+h1.blue_2 {
+  color: var(--blue_1);
 }
 //*CE
 h3.blue_3 span::after,
 h3.blue_3::after {
   background-color: var(--blue_3);
 }
+h1.blue_3 {
+  color: var(--blue_1);
+}
 //*PR
 h3.blue_4 span::after,
 h3.blue_4::after {
   background-color: var(--blue_4);
+}
+h1.blue_4 {
+  color: var(--blue_1);
 }
 //*CV
 h3.blue_5 span::after,
 h3.blue_5::after {
   background-color: var(--blue_5);
 }
+h1.blue_5 {
+  color: var(--blue_1);
+}
+
+// * Link Animations
+body {
+  transition-property: opacity, transform, filter, background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition {
+  opacity: 0;
+  transform: translateX(40px);
+  filter: blur(12px);
+  margin: 0px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--blue_3);
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+}
+

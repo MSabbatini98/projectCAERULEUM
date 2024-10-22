@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Image from 'next/image'
 import "./styles/card.scss"
 import { Button } from '@mui/material'
-import CoolTitle from './coolTitle'
+import CoolTitle from './utils/coolTitle'
 
 
 type CardProps = {
