@@ -70,10 +70,15 @@ section.main_nav{
         width: 700px;
         background-color: var(--light);
 
-            ul li {
-                margin: 15px;
-                
-                button{
+        ul li {
+            margin: 15px;
+            
+            a {
+                display: flex;
+                flex-direction: row;
+            }
+
+            button {
                 border: solid var(--light) 5px;
                 position: relative;
                 display: block;
@@ -82,48 +87,45 @@ section.main_nav{
                 width: 70px;
                 height: 70px;
                 margin: 20px 10px 30px 10px;
-                
+            
                 span {
-                position: absolute;
-                bottom: -35px;
-                left: -35px;
-                right: -35px;
-                text-align:center;
-                color: white;
-                font-size: 1rem;
+                    position: absolute;
+                    bottom: -35px;
+                    left: -35px;
+                    right: -35px;
+                    text-align:center;
+                    color: white;
+                    font-size: 1rem;
                 } 
             }
+
             ul li button span {
                 color: var(--dark);
             }
-
         }
 
-            ul {
-                border: solid var(--light) 5px;
-                #popup::after {
-                    position: absolute; 
-                    display: block; 
-                    content:"";
-                    width: 100px;
-                    height: 100px;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: black; 
-                    opacity: 0.5;
-                    cursor: pointer;
-                  }
-            }
+        ul {
+            border: solid var(--light) 5px;
+            #popup::after {
+                position: absolute; 
+                display: block; 
+                content:"";
+                width: 100px;
+                height: 100px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: black; 
+                opacity: 0.5;
+                cursor: pointer;
+                }
+        }
         
     }
 }
 .main_nav_close{
     nav {
-
-
-
         button {
             padding: 2px 1px 0px 1px;
             margin: 0;
@@ -136,7 +138,7 @@ section.main_nav{
             border-radius: 20px;
 
         }
-        .nav_close{
+        nav.nav_close{
             width: 180px;
             ul li {
                 margin: 15px;
@@ -163,3 +165,34 @@ section.main_nav{
             }
         }
     }
+.nav_closed h3.title{
+    display: none;
+}
+.main_nav_open {
+    nav ul {
+        li.nav_open {
+             margin: 0 15px;
+
+            a {
+                height: 101px;
+
+                h3 {
+                    width: 80%;
+                    font-size: 55px;
+                    margin: 12px 0px 0px 5px;
+                    text-transform: uppercase;
+                }
+            }
+            button span {
+                display: none;
+            }
+        }
+        
+    }
+}
+.main_nav_open nav ul li.nav_open:nth-child(3) {
+    margin-top: 30px;
+}
+.main_nav_open nav ul li.nav_open:nth-child(4) {
+    margin-bottom: 16px;
+}
