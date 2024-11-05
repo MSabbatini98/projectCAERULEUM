@@ -1,5 +1,15 @@
 import Image from "next/image"
-import car4 from "../../../public/media/sliderImgs/car-4.jpg"
+import Facebook from "../../../public/media/social/facebook.png"
+import Linkedin from "../../../public/media/social/LINKEDIN-icon.avif"
+import Onlyfans from "../../../public/media/social/ONLYFANS-icon.avif"
+import Github from "../../../public/media/social/GITHUB-icon.avif"
+import Gmail from "../../../public/media/social/GMAIL-icon.avif"
+import Instagram from "../../../public/media/social/IG-icon.avif"
+import Treedom from "../../../public/media/social/TREEDOM-icon.svg"
+import Duolingo from "../../../public/media/social/DUOLINGO-icon.svg"
+import Telegram from "../../../public/media/social/TELEGRAM-icon.avif"
+
+
 
 import "../styles/contacts.scss"
 import "../styles/about.scss"
@@ -9,55 +19,65 @@ import ContactCard from "@/components/contactCard"
 
 const HORCONTACTS = [
     { 
-        imageUrl: car4, 
-        imageAlt: "string", 
-        url: "string",
-        text: "provaaaa"
+        imageUrl: Gmail, 
+        imageAlt: "Gmail", 
+        url: "mailto:matteosabbatini@gmail.com",
+        text: "matteosabbatini23\n(@gmail.com)"
     },
     { 
-        imageUrl: car4, 
-        imageAlt: "string", 
-        url: "string",
-        text: "provaaaa"
+        imageUrl: Linkedin, 
+        imageAlt: "Linkedin", 
+        url: "https://www.linkedin.com/in/23matteosabbatini/",
+        text: "@23matteosabbatini"
     },
     { 
-        imageUrl: car4, 
-        imageAlt: "string", 
-        url: "string",
-        text: "provaaaa"
+        imageUrl: Github, 
+        imageAlt: "Github", 
+        url: "https://github.com/MSabbatini98",
+        text: "@MSabbatini98"
     }
 ]
 const VERCONTACTS = [
     { 
-        imageUrl: car4, 
-        imageAlt: "string", 
-        url: "string",
-        text: "provaaaa"
+        imageUrl: Treedom, 
+        imageAlt: "Treedom", 
+        url: "https://www.treedom.net/it/forest/twentytrees-forest",
+        text: "Twenty Trees Forest"
     },
     { 
-        imageUrl: car4, 
-        imageAlt: "string", 
+        imageUrl: Facebook, 
+        imageAlt: "Facebook", 
+        url: "https://www.google.it",
+        text: "Davvero Facebook ?"
+    },
+// TODO CTA per gioco segreto per scoprire telegram
+    { 
+        imageUrl: Instagram, 
+        imageAlt: "Instagram", 
         url: "string",
-        text: "provaaaa"
+        text: "E' complicato con Instagram.."
     },
     { 
-        imageUrl: car4, 
-        imageAlt: "string", 
-        url: "string",
-        text: "provaaaa"
+        imageUrl: Duolingo, 
+        imageAlt: "Duolingo", 
+        url: "https://www.duolingo.com/profile/Sebb23",
+        text: "@Sebb23"
     },
+// TODO CTA per gioco segreto per scoprire telegram
     { 
-        imageUrl: car4, 
-        imageAlt: "string", 
-        url: "string",
-        text: "provaaaa"
-    },
-    { 
-        imageUrl: car4, 
-        imageAlt: "string", 
-        url: "string",
-        text: "provaaaa"
+        imageUrl: Telegram, 
+        imageAlt: "Telegram", 
+        url: "https://www.google.com",
+        text: "@BluedBlue"
     }
+    /*
+    { 
+        imageUrl: Onlyfans, 
+        imageAlt: "Onlyfans", 
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        text: " ... "
+    }
+    */
   ]
 
 export default function Contacts() {
@@ -77,6 +97,21 @@ export default function Contacts() {
                     colorClass="blue_1"
                     />
                     <ContactCard cards= {VERCONTACTS}/>
+                </div>
+                <div className="contacts_map">
+                    <CoolTitle 
+                        title="Zona di interesse"
+                        colorClass="blue_1"
+                        />
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quasi accusantium, ab quaerat provident ipsum itaque enim temporibus rerum quo fuga natus. Totam corrupti, iste nisi quia beatae repellendus voluptate.
+                        </p>
+                </div>
+                <div className="newsletter ">
+                <CoolTitle 
+                    title="Zona di interesse"
+                    colorClass="blue_3"
+                    />    
                 </div>
             </div>
         </main>

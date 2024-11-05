@@ -22,6 +22,7 @@ export default function ContactCard({ cards } : contactCardProps) {
             className="contact_card card"
             key={index}
           >
+            <a href={url} rel="noopener noreferrer" target="_blank">            
               <Image 
                 src={imageUrl}
                 alt={imageAlt}
@@ -30,6 +31,7 @@ export default function ContactCard({ cards } : contactCardProps) {
                 className="img-slider-img"
               />
               <p>{text}</p>
+            </a>
           </div>
         ))}
         </div>
