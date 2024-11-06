@@ -1,14 +1,12 @@
 .contacts {
-    height: 1000px;
-
 
     .contact_container {
         display: flex;
         justify-content: space-around;
 
-        .contact_card {
-
-            background-color:rgba(0,17,60,0.7);
+        .contact_card.card {
+            border: solid 4px var(--blue_1);
+            background-color:rgba(0, 17, 60, 0.43);
 
             position: relative;
 
@@ -30,9 +28,12 @@
             }
             &:hover {
                 background-color: var(--blue_1);
+                opacity: 0.8;
+                border: solid 4px var(--dark);
                 img {
                     z-index: 1;
-                    opacity: 0.5;
+                    opacity: 0.4;
+                    scale: 1.2;
                 };
                 p {
                     visibility: visible;
@@ -54,10 +55,9 @@
         }
     }
     .contacts_ver {
-        .contact_card {
+        .contact_card.card {
             height: 400px;
             width: 200px;
-
             &:first-of-type img{
                 scale: 1.7;
             }
@@ -68,6 +68,7 @@
             p {
                 top: 30%;
             }
+
         }
         .contact_container {
             flex-wrap: wrap;
@@ -75,7 +76,11 @@
         }
     }
     .newsletter {
+        position: relative;
+        display: bl;
         background-color: var(--blue_1);
         color: var(--dark);
+        padding: 20px;
     }
 }
+

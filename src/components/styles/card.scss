@@ -1,5 +1,5 @@
 .card {
-    border: solid 4px blue;
+    border: solid 4px var(--blue_3);
     border-radius: 20px;
     position: relative;
     padding: 20px;
@@ -31,7 +31,7 @@
         margin: 0 25px;
         font-size: 40px;
         z-index: 5;
-        text-shadow: -3px 2px 2px var(--light);;
+        text-shadow: -3px 2px 2px var(--light), 0px 0px 4px var(--light);
         
         span {
             display: block;

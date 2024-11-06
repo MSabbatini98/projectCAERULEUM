@@ -1,4 +1,5 @@
 import Image from "next/image"
+
 import Facebook from "../../../public/media/social/facebook.png"
 import Linkedin from "../../../public/media/social/LINKEDIN-icon.avif"
 import Onlyfans from "../../../public/media/social/ONLYFANS-icon.avif"
@@ -47,7 +48,7 @@ const VERCONTACTS = [
     { 
         imageUrl: Facebook, 
         imageAlt: "Facebook", 
-        url: "https://www.google.it",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         text: "Davvero Facebook ?"
     },
 // TODO CTA per gioco segreto per scoprire telegram
@@ -108,10 +109,17 @@ export default function Contacts() {
                         </p>
                 </div>
                 <div className="newsletter ">
-                <CoolTitle 
-                    title="Zona di interesse"
-                    colorClass="blue_3"
-                    />    
+                    <CoolTitle 
+                        title="Iscriviti alla newsletter"
+                        colorClass="blue_3"
+                        />
+                        Insert FORM HERE
+                        <div className="col_big">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore non et magnam dolores, soluta fugit impedit at nobis ab voluptate debitis similique commodi voluptas nihil corrupti excepturi iure veniam eius.
+                        </div>
+                        <div className="col_small">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci magnam cum eligendi debitis ducimus aut modi eaque blanditiis odio error maiores illum, facilis, alias, placeat similique mollitia hic exercitationem voluptatibus.
+                        </div>
                 </div>
             </div>
         </main>
