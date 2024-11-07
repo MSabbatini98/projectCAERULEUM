@@ -1,6 +1,7 @@
 // 'use client'
 import { ImageSlider } from "../../components/slider"
 import CoolTitle from "@/components/utils/coolTitle"
+import AboutMap from "@/components/aboutMap"
 
 import car1 from "../../../public/media/sliderImgs/car-1.jpg"
 import car2 from "../../../public/media/sliderImgs/car-2.jpg"
@@ -33,27 +34,9 @@ export default function About() {
       <ImageSlider images={SLIDES} />
       <a href="/" style={{ fontSize: "4rem" }}>
         Link
-      </a>
-
-
-
-      {/* Start map section */}
-      <div className="map_container">
-        <CoolTitle
-        title="Nazioni visitate"
-        color="blue_2"/>
-       
-        <div className="about_map">
-
-          <script src="https://static-bundles.visme.co/visme-embed.js"></script>
-
-          <div className="visme_d" data-title="Top 10 Countries Map Square" data-url="x40zw83y-untitled-project" data-w="800" data-full-h="false" data-h="600" data-domain="my">
-          </div>
-
-          <p>Made with <a href="https://www.visme.co/?vc=Made-With-Visme&amp;utm_medium=Embed" target="_blank" rel="noreferrer">Visme</a></p>
-        </div>
-      </div>
-
+      </a>  
+      <AboutMap/>
+      
     </div>
   </section>
   )
