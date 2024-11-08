@@ -17,16 +17,16 @@ section.about_slider {
 
       .about_slider-content {
         display: flex;
-        padding: 0 30px 30px 30px;
+        padding: 0 30px 40px 30px;
         height: 450px;
 
         p {
           margin: auto 20px;
         }
         img{
-          width: 65%;
+          width: 35%;
           border-radius: 20px;
-          border : solid 1px black;
+          border : solid 2px var(--dark);
         }
       }
 
@@ -54,18 +54,20 @@ section.about_slider {
   }
 
   .img-slider-btn {
-    all: unset;
     display: block;
     position: absolute;
-    top: 40px;
+    top: 74px;
     padding: 1rem;
+    scale: 1.8;
     cursor: pointer;
     transition: background-color 100ms ease-in-out;
+    border-radius: 100%;
+
     &.prev {
-      left: 60px;
+      left: 100px;
     }
     &.next{
-      right: 60px;
+      right: 100px;
     }
   }
 
