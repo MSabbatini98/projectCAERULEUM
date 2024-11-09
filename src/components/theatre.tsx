@@ -6,21 +6,23 @@ import Image from "next/image"
 import { StaticImageData } from 'next/image';
 
 
-type ImageSliderProps = {
-  images: {
-    url: StaticImageData
-    alt: string
+type SkillSliderProps = {
+  skills: {
+    urlIcon: StaticImageData
+    altIcon: string
+    urlMainImg : StaticImageData
+    altMainImg: string
     title: string
     content: string
   }[]
 }
 
-export function ImageSlider({ images }: ImageSliderProps) {
+export function ImageSlider({ skills }: SkillSliderProps) {
   const [imageIndex, setImageIndex] = useState(0)
 
   function showNextImage() {
     setImageIndex(index => {
-      if (index === images.length - 1) return 0
+      if (index === skills.length - 1) return 0
       return index + 1
     })
   }
@@ -33,33 +35,27 @@ export function ImageSlider({ images }: ImageSliderProps) {
   }
 
   return (
-    <section className="about_slider"
-      aria-label="Image Slider"
-
+    <section className="theatre"
+      aria-label="Skill Slider"
     >
       <a href="#after-image-slider-controls" className="skip-link">
-        Skip Image Slider Controls
+        SkipImage Slider Controls
       </a>
-      <div className="about_slide">
-        {images.map(({ url, alt, title }, index) => (
+      <div className="skill_div">
+        {skills.map(({ urlIcon, altIcon }, index) => (
           <div 
-            className="about_slide-container"
+            className="theatre-container"
             key={index}
-            style={{ translate: `${-100 * imageIndex}%` }}
+            // style={{ translate: `${-100 * imageIndex}%` }}
           >
-            <h1>{title}</h1>
-            <div className="about_slider-content">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque hic adipisci blanditiis molestiae aspernatur molestias tenetur repellendus atque, et cupiditate ut velit similique ea voluptas a illo animi aperiam obcaecati!</p>
               <Image 
-                src={url}
-                alt={alt}
-                width={800}
-                height={600}
+                src={urlIcon}
+                alt={altIcon}
+                width={200}
+                height={300}
                 aria-hidden={imageIndex !== index}
-                className="slider_img"
-                
+                className="threatre_img"
               />
-            </div>
           </div>
         ))}
       </div>

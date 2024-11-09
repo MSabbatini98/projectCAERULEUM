@@ -1,15 +1,34 @@
 import Image from "next/image"
-import ImageSlider from '../../components/iconSlider'
 
 import "../styles/curriculum.scss"
+import CoolTitle from "@/components/utils/coolTitle"
+
+
 
 export default function Curriculum() {
+    const PPF  = [
+        { 
+            title: "CONOSCENZE", 
+            content: "Lorem impsum UNO dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", 
+        },
+        { 
+            title: "COMPETENZE", 
+            content: "Lorem ipsum DUE dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+        },
+        { 
+            title: "PASSIONI",
+            content: "Lorem ipsum TRE dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+        }
+      ];
     return (
-        <main className="main_content">
+       <div className="main_content curriculum">
             <div className="cv_upper">
                 <div className="cv_txt">
-                    <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi ullam aliquam, quo sapiente quisquam tenetur ipsum vero ea placeat beatae blanditiis, eveniet vel consectetur. Corrupti blanditiis veritatis tenetur non quo.
+                    <p className="intro">
+                        Sono Matteo Sabbatini, scopri il mio percorso professionale che mi ha permesso di crescere e sviluppare un'ampia gamma di competenze.<br/>
+                        Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, ogni passo ha contribuito a costruire una professionalità versatile e responsabile.<br/>
+                        <span className="intro_CTA">Clicca sul curriculum per scaricarlo !</span><br/>
+                        Oppure scopri qui sotto cosa ho imparato a fare (<span className="cool_span">Compotenze</span>), cosa mi piace fare (<span className="cool_span">Passioni</span>) e cosa vorrei fare (<span className="cool_span">Ambizioni</span>)
                     </p>
                 </div>
                 <div className="cv_img">
@@ -21,36 +40,32 @@ export default function Curriculum() {
                     />
                     <Image
                         src="/media/cv/extract-cv.avif"
+                        className="hover"
                         width={400}
                         height={800}
                         alt="Author handing out his CV"
                     />                    
                 </div>
             </div>
-            <div className="cv_lower">
-                <div className="cv_box">
-                    <h3>Conoscenze</h3>
-                    <div className="cv_box_txt">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error dolores repellat, assumenda nam ut eius accusamus magni quibusdam quos ad animi beatae enim nisi expedita optio est reprehenderit earum? Quia!
-                    </div>
-                </div>
-                <div className="cv_box">
-                    <h3>Comnpetenze</h3>
-                    <div className="cv_box_txt">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error dolores repellat, assumenda nam ut eius accusamus magni quibusdam quos ad animi beatae enim nisi expedita optio est reprehenderit earum? Quia!
-                    </div>
-                </div>
-                <div className="cv_box">
-                    <h3>Passioni</h3>
-                    <div className="cv_box_txt">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error dolores repellat, assumenda nam ut eius accusamus magni quibusdam quos ad animi beatae enim nisi expedita optio est reprehenderit earum? Quia!
-                    </div>
+            {PPF.map(({ title, content}, index) => (
+          <div
+            className="PPF_single" 
+                key={index}
+            >
+                <CoolTitle
+                    title={title}
+                    colorClass="blue_5"
+                />
+                <div className="about_slider-content">
+                    <p>{content}</p>
                 </div>
             </div>
+            ))}
+
             <div className="cv_theatre" style={{height:"2000px"}}>
 
             </div>
 
-        </main>
+        </div>
     )
 }
