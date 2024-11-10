@@ -25,11 +25,9 @@ export default function Curriculum() {
             <div className="cv_upper">
                 <div className="cv_txt">
                     <p className="intro">
-                        Sono Matteo Sabbatini, scopri il mio percorso professionale che mi ha permesso di crescere e sviluppare un'ampia gamma di competenze.<br/>
-                        Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, ogni passo ha contribuito a costruire una professionalità versatile e responsabile.<br/>
-                        <span className="intro_CTA">Clicca sul curriculum per scaricarlo !</span><br/>
-                        Oppure scopri qui sotto cosa ho imparato a fare (<span className="cool_span">Compotenze</span>), cosa mi piace fare (<span className="cool_span">Passioni</span>) e cosa vorrei fare (<span className="cool_span">Ambizioni</span>)
+                        Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri i più importanti passi che hanno contribuito a costruire una professionalità versatile e responsabile.<br/><br/>
                     </p>
+                    <p className="fake_cta">Clicca sul curriculum per scaricarlo !</p>
                 </div>
                 <div className="cv_img">
                     <Image
