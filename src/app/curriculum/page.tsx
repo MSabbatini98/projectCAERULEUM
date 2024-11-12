@@ -2,6 +2,9 @@ import Image from "next/image"
 
 import "../styles/curriculum.scss"
 import CoolTitle from "@/components/utils/coolTitle"
+import Theater from "@/components/theater";
+import car5 from "../../../public/media/sliderImgs/car-5.jpg"
+import car4 from "../../../public/media/sliderImgs/car-4.jpg"
 
 
 
@@ -20,6 +23,50 @@ export default function Curriculum() {
             content: "Lorem ipsum TRE dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
         }
       ];
+        
+const SKILL_LIST = [ 
+    {
+      urlIcon: car5,
+      altIcon: "string",
+      urlMainImg : car5,
+      altMainImg: "string",
+      title: "string",
+      content: "string",
+    },
+    {
+        urlIcon: car4,
+        altIcon: "string",
+        urlMainImg : car4,
+        altMainImg: "string",
+        title: "string",
+        content: "string",
+    },
+    {
+        urlIcon: car4,
+        altIcon: "string",
+        urlMainImg : car4,
+        altMainImg: "string",
+        title: "string",
+        content: "string",
+    },
+    {
+        urlIcon: car4,
+        altIcon: "string",
+        urlMainImg : car4,
+        altMainImg: "string",
+        title: "string",
+        content: "string",
+    },
+    {
+        urlIcon: car4,
+        altIcon: "string",
+        urlMainImg : car4,
+        altMainImg: "string",
+        title: "string",
+        content: "string",
+      }
+  ];
+  
     return (
        <div className="main_content curriculum">
             <div className="cv_upper">
@@ -60,7 +107,8 @@ export default function Curriculum() {
             </div>
             ))}
 
-            <div className="cv_theatre" style={{height:"2000px"}}>
+            <div className="cv_theater" style={{height:"2000px"}}>
+                <Theater  skills={SKILL_LIST} />
 
             </div>
 

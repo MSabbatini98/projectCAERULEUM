@@ -1,0 +1,145 @@
+section.cv_theater {
+    position: relative;
+    padding: 40px;
+    
+    .about_slide {
+      width: 100%;
+      max-width: 1070px;
+      margin: auto;
+      display: flex;
+      overflow: hidden;
+  
+      &-container{
+        width: 100%;
+        background-color: var(--blue_2);
+        border-radius: 20px;
+        border: 2px solid var(--dark);
+  
+        .about_slider-content {
+          display: flex;
+          padding: 0 30px 30px 30px;
+          height: 450px;
+  
+          p {
+            margin: auto 20px;
+          }
+          img{
+            width: 65%;
+            border-radius: 20px;
+            border : solid 1px black;
+          }
+        }
+  
+      }
+      h1{
+        display: block;
+        width: 1070px;
+        text-align: center;
+        font-size: 70px;
+        padding: 20px;
+      }
+      img {
+        width: 40%;
+        height: auto;
+      }
+    }
+  
+    .img-slider-img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      display: block;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  
+    .img-slider-btn {
+      all: unset;
+      display: block;
+      position: absolute;
+      top: 40px;
+      padding: 1rem;
+      cursor: pointer;
+      transition: background-color 100ms ease-in-out;
+      &.prev {
+        left: 60px;
+      }
+      &.next{
+        right: 60px;
+      }
+    }
+  
+    .img-slider-btn:hover,
+    .img-slider-btn:focus-visible {
+      background-color: rgb(0, 0, 0, 0.2);
+    }
+  
+    .img-slider-btn > * {
+      stroke: white;
+      fill: black;
+
+    }
+  
+    @keyframes squish {
+      50% {
+        scale: 1.4 0.8;
+      }
+    }
+  
+    .skill_thumb {
+      all: unset;
+      display: block;
+      cursor: pointer;
+      width: 180px;
+      margin: auto 20px;
+    //   transition: scale 100ms ease-in-out;
+        
+      .card.active {
+        border: 2px solid yellow;
+      }
+    }
+  
+    .skill_thumb:hover,
+    .skill_thumb:focus-visible {
+      scale: 1.2;
+    }
+  
+    .skill_thumb > * {
+      stroke: white;
+      fill: black;
+      height: 100%;
+      width: 100%;
+    }
+  
+    .skill_thumb:focus-visible,
+    .img-slider-btn:focus-visible {
+      outline: auto;
+    }
+  
+  
+    @media not (prefers-reduced-motion) {
+      .img-slider-img {
+        transition: translate 300ms ease-in-out;
+      }
+      .img-slider-btn > *{
+        transition: all 0.5s ease-in-out;
+      }
+      .img-slider-btn:hover > *,
+      .img-slider-btn:focus-visible > * {
+        transform: scale(1.5);
+      }
+      .img-slider-btn:active > * {
+        animation: squish 200ms ease-in-out;
+      }
+    }
+}
+
+section.theater {
+    border: solid 1px yellow;
+
+    .skill_div{
+        display: flex;
+
+    }
+
+}
