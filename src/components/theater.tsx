@@ -23,6 +23,7 @@ export default function Theater({ skills }: SkillSliderProps) {
 
   function showNextImage() {
     setSkillIndex(index => {
+      console.log(index + "w2e");
       if (index === skills.length - 1) return 0
       return index + 1
     })
@@ -30,6 +31,7 @@ export default function Theater({ skills }: SkillSliderProps) {
 
   function showPrevImage() {
     setSkillIndex(index => {
+      console.log(index + "eee");
       if (index === 0) return skills.length - 1
       return index - 1
     })
@@ -46,14 +48,7 @@ export default function Theater({ skills }: SkillSliderProps) {
         Skip Image Slider Controls
       </a>
       <div className="about_slide">
-        <div
-          style={{
-            position: "relative",
-
-            display: "flex",
-            gap: "20px",
-          }}
-        >
+        <div className="skill_selection" >
         {skills.map(({urlIcon, altIcon,title}, index) => (
           <div
             key={index}
@@ -64,7 +59,7 @@ export default function Theater({ skills }: SkillSliderProps) {
             {index === skillIndex ? (
               <div className="card active">
                 <div className="about_slider-content">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque hic adipisci blanditiis molestiae aspernatur molestias tenetur repellendus atque, et cupiditate ut velit similique ea voluptas a illo animi aperiam obcaecati!</p>
+                  <p>{title}</p>
                   <Image 
                     src={urlIcon}
                     alt={altIcon}
@@ -74,11 +69,12 @@ export default function Theater({ skills }: SkillSliderProps) {
                     className="slider_img"
                   />
                 </div>
+               
               </div>
             )  : (
               <div className="card">
               <div className="about_slider-content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque hic adipisci blanditiis molestiae aspernatur molestias tenetur repellendus atque, et cupiditate ut velit similique ea voluptas a illo animi aperiam obcaecati!</p>
+                <p>{title}</p>
                 <Image 
                   src={urlIcon}
                   alt={altIcon}
@@ -94,9 +90,22 @@ export default function Theater({ skills }: SkillSliderProps) {
           </div>
         ))}
       </div>
-
-      </div>
       <button
+        onClick={showPrevImage}
+        className="cv_prev"
+        aria-label="View Previous Image"
+      >
+        <ArrowBigLeft aria-hidden />
+      </button>
+      <button
+        onClick={showNextImage}
+        className="cv_next"
+        aria-label="View Next Image"
+      >
+        <ArrowBigRight aria-hidden />
+      </button>
+      </div>
+      {/* <button
         onClick={showPrevImage}
         className="img-slider-btn prev"
         aria-label="View Previous Image"
@@ -109,7 +118,7 @@ export default function Theater({ skills }: SkillSliderProps) {
         aria-label="View Next Image"
       >
         <ArrowBigRight aria-hidden />
-      </button>
+      </button> */}
 
       <div id="after-image-slider-controls" />
     </section>

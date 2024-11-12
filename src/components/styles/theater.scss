@@ -7,8 +7,15 @@ section.cv_theater {
       max-width: 1070px;
       margin: auto;
       display: flex;
-      overflow: hidden;
-  
+      
+
+      .skill_selection {
+        display: flex;
+        flex-wrap: wrap;
+        gap:20px;
+      }
+      flex-wrap: wrap;  
+
       &-container{
         width: 100%;
         background-color: var(--blue_2);
@@ -132,14 +139,4 @@ section.cv_theater {
         animation: squish 200ms ease-in-out;
       }
     }
-}
-
-section.theater {
-    border: solid 1px yellow;
-
-    .skill_div{
-        display: flex;
-
-    }
-
 }
