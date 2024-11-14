@@ -19,7 +19,7 @@ type SkillSliderProps = {
 }
 
 export default function Theater({ skills }: SkillSliderProps) {
-  const [skillIndex, setSkillIndex] = useState(0)
+  const [skillIndex, setSkillIndex] = useState(-1)
 
   function showNextImage() {
     setSkillIndex(index => {
@@ -31,13 +31,10 @@ export default function Theater({ skills }: SkillSliderProps) {
 
   function showPrevImage() {
     setSkillIndex(index => {
-      console.log(index + "eee");
       if (index === 0) return skills.length - 1
-      return index - 1
+       return index - 1
     })
   }
-
-
 
   return (
     <section className="cv_theater"
@@ -69,7 +66,6 @@ export default function Theater({ skills }: SkillSliderProps) {
                     className="slider_img"
                   />
                 </div>
-               
               </div>
             )  : (
               <div className="card">
@@ -86,25 +82,44 @@ export default function Theater({ skills }: SkillSliderProps) {
               </div>
             </div>    
             )}
-
           </div>
         ))}
       </div>
-      <button
-        onClick={showPrevImage}
-        className="cv_prev"
-        aria-label="View Previous Image"
-      >
-        <ArrowBigLeft aria-hidden />
-      </button>
-      <button
-        onClick={showNextImage}
-        className="cv_next"
-        aria-label="View Next Image"
-      >
-        <ArrowBigRight aria-hidden />
-      </button>
+      <div className="arrow_nav">
+        <button
+          onClick={showPrevImage}
+          className="cv_prev"
+          aria-label="View Previous Image"
+          >
+          <ArrowBigLeft aria-hidden />
+        </button>
+        <button
+          onClick={showNextImage}
+          className="cv_next"
+          aria-label="View Next Image"
+          >
+          <ArrowBigRight aria-hidden />
+        </button>
       </div>
+      {skillIndex >= 0 && 
+      <div className="cv_stage card" >
+        <h3 className="cv_stage_title">{skills[skillIndex].title}</h3>
+        <div className="cv_stage_content">
+          <p>{skills[skillIndex].content}</p>
+        </div>
+        {skills[skillIndex].urlMainImg && 
+        <Image 
+          src={skills[skillIndex].urlMainImg }
+          alt={skills[skillIndex].altMainImg || "skill image preview"}
+          width={800}
+          height={600}
+          className="cv_stage_img"
+        />    
+        }
+      </div>
+    }
+    </div>
+
       {/* <button
         onClick={showPrevImage}
         className="img-slider-btn prev"
