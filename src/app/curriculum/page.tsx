@@ -48,7 +48,7 @@ export default function Curriculum() {
                     title={title}
                     colorClass="blue_5"
                 />
-                <div className="about_slider-content">
+                <div >
                     <p>{content}</p>
                 </div>
             </div>

@@ -2,103 +2,47 @@ section.cv_theater {
     position: relative;
     padding: 40px;
     
-    .about_slide {
-      width: 100%;
-      max-width: 1070px;
-      margin: auto;
+    .cv_slide {
       display: flex;
-      
+      width: 85%;
+      margin: 0;
+      overflow: hidden;
+      border: solid 1px red;
 
       .skill_selection {
         display: flex;
-        flex-wrap: wrap;
-        gap:20px;
+        gap: 20px;
       }
-      flex-wrap: wrap;  
-
-      &-container{
-        width: 100%;
-        background-color: var(--blue_2);
-        border-radius: 20px;
-        border: 2px solid var(--dark);
-  
-        .about_slider-content {
-          display: flex;
-          padding: 0 30px 30px 30px;
-          height: 450px;
-  
-          p {
-            margin: auto 20px;
-          }
-          img{
-            width: 65%;
-            border-radius: 20px;
-            border : solid 1px black;
-          }
-        }
-  
-      }
-      h1{
-        display: block;
-        width: 1070px;
-        text-align: center;
-        font-size: 70px;
-        padding: 20px;
-      }
-      img {
-        width: 40%;
-        height: auto;
-      }
-    }
-  
-    .img-slider-img {
-      object-fit: cover;
-      width: 100%;
-      height: auto;
-      display: block;
-      flex-shrink: 0;
-      flex-grow: 0;
-    }
-  
-    .img-slider-btn {
-      all: unset;
-      display: block;
-      position: absolute;
-      top: 40px;
-      padding: 1rem;
-      cursor: pointer;
-      transition: background-color 100ms ease-in-out;
-      &.prev {
-        left: 60px;
-      }
-      &.next{
-        right: 60px;
-      }
-    }
-  
-    .img-slider-btn:hover,
-    .img-slider-btn:focus-visible {
-      background-color: rgb(0, 0, 0, 0.2);
-    }
-  
-    .img-slider-btn > * {
-      stroke: white;
-      fill: black;
-
     }
   
     @keyframes squish {
-      50% {
-        scale: 1.4 0.8;
+        50% {
+          scale: 1.2;
+        }
       }
-    }
+
+  .arrow_nav{
+      position: absolute;
+      top: 90px;
+      right: 50px;
+      color: var(--blue_5);
+      border: yellow 3px solid;
+      button svg:hover {
+        fill: var(--light);
+        scale: 1.2;
+      }
+      button svg :active {
+        animation: squish 200ms ease-in-out;
+      }
+  }
   
     .skill_thumb {
       all: unset;
       display: block;
       cursor: pointer;
-      width: 180px;
-      margin: auto 20px;
+      width: 130px;
+      height: 160px;
+      transition: translate 0.5s ease-in-out; 
     //   transition: scale 100ms ease-in-out;
         
       .card.active {

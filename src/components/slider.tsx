@@ -20,8 +20,6 @@ export function ImageSlider({ images }: ImageSliderProps) {
 
   function showNextImage() {
     setImageIndex(index => {
-      console.log(index);
-
       if (index === images.length - 1) return 0
       return index + 1
     })
@@ -29,7 +27,6 @@ export function ImageSlider({ images }: ImageSliderProps) {
 
   function showPrevImage() {
     setImageIndex(index => {
-      console.log(index);
       if (index === 0) return images.length - 1
       return index - 1
     })
