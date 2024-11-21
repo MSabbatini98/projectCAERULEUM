@@ -1,5 +1,4 @@
 import Image from "next/image"
-import ImageSlider from '../../components/iconSlider'
 
 import "../styles/curriculum.scss"
 

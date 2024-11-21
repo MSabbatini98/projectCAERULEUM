@@ -10,7 +10,7 @@ export default function AboutMap() {
             <div className="map_container">
                 <CoolTitle
                 title="Nazioni visitate"
-                color="blue_2"/>
+                colorClass="blue_2"/>
             
                 <div className="about_map">
                     <Script src="https://static-bundles.visme.co/visme-embed.js" />
