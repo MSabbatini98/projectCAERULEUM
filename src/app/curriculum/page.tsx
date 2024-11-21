@@ -8,8 +8,8 @@ export default function Curriculum() {
         <main className="main_content">
             <div className="cv_upper">
                 <div className="cv_txt">
-                    <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi ullam aliquam, quo sapiente quisquam tenetur ipsum vero ea placeat beatae blanditiis, eveniet vel consectetur. Corrupti blanditiis veritatis tenetur non quo.
+                    <p className="intro">
+                        {"Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri i più importanti passi che hanno contribuito a costruire una professionalità versatile e responsabile.<br/><br/>"}
                     </p>
                 </div>
                 <div className="cv_img">
