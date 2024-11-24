@@ -10,7 +10,7 @@ export async function generateMetadata() {
 
 export default function Project() {
     return (
-        <main className="main_content">
+       <div className="main_content">
           <h1> This is the PROJECT PAGE</h1>
           <Card>
            <CoolTitle
@@ -36,6 +36,6 @@ export default function Project() {
               colorClass="blue_3"
             />  
           </Card> 
-        </main>
+        </div>
     )
 }
