@@ -1,0 +1,76 @@
+.card {
+    border: solid 4px var(--blue_3);
+    border-radius: 20px;
+    position: relative;
+    padding: 20px;
+
+
+
+    .card_content {
+        display: flex;
+        flex-direction: row;
+        
+
+        button {
+            background-color: red;
+        }
+    }
+    .card_skills{
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+.cool_title {
+    margin-bottom: 20px;
+
+    h3 {
+        position: relative;
+        margin: 0 25px;
+        font-size: 40px;
+        z-index: 5;
+        text-shadow: -3px 2px 2px var(--light), 0px 0px 4px var(--light);
+        
+        span {
+            display: block;
+            position: relative;
+            padding-left: 65px;
+            padding-bottom: 4px;
+
+            &::before {
+                position: absolute;
+                content:"";
+                bottom: 0px;
+                left: 0px;
+                height: 60px;
+                width: 60px;
+                border-radius: 100%;
+                background-color: var(--dark);
+                z-index: -20;
+            }
+            &::after {
+                position: absolute;
+                content:"";
+                bottom: 3px;
+                left: 3px;
+                height: 54px;
+                width: 54px;
+                border-radius: 100%;
+                z-index: -2;
+            }
+        }
+        &::after {
+            position: absolute;
+            content:"";
+            bottom: 13px;
+            left: 20px;
+            right: 25%;
+            height: 13px;
+            border: solid 2px var(--dark);
+            border-radius:10px;
+            z-index: -10;
+        }
+    }
+}

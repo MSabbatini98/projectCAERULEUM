@@ -1,0 +1,52 @@
+
+
+/*?HERO*/
+.hero {
+    position: relative;
+    height: calc(100vh - 150px);
+    overflow: hidden;
+    margin-left: 200px;
+  
+    .hero_content {
+      position: relative;
+      margin: 180px 20px;
+      width:730px;
+      
+      h1 {
+        font-size: 80px;
+        text-transform: uppercase;
+        line-height: 80px;
+        color: var(--light);
+        text-shadow: var(--dark) 2px 5px;
+      }
+      
+      .icon {
+        position: absolute;
+        top: 12px;
+        left: 540px;
+      }
+      h3 {
+        text-align: right;
+        color: var(--light);
+        text-shadow: var(--dark) 2px 5px;
+        
+        &::before{
+          content:"";
+          display: inline-block;
+          position:absolute;
+          bottom:11px;
+          left: 0px;
+          width: 480px;
+          height: 4px;
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+    .bg_image{
+      position: absolute;
+      top: 20px;
+      right: 60px;
+      transform: scale(1.5);
+    }
+  }

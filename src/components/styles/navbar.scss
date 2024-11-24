@@ -1,0 +1,199 @@
+/*?NAV*/
+section.main_nav{
+    position: fixed;
+    top: 140px;
+    left: 0px;
+    margin-top: 60px;
+
+    ul {
+        padding: 20px;
+        padding-top: 0px;
+        border: solid var(--light) 5px;
+        border-radius: 20px;
+
+        li:nth-child(3) {
+            margin-top: 60px;
+        }
+
+        #curriculum button{
+            background-color: var(--blue_5);
+        }      
+        #projects button{
+            background-color: var(--blue_4);
+        }      
+        #about button{
+            background-color: var(--blue_2);
+        }      
+        #contacts button{
+            background-color: var(--blue_1);
+        }
+        button span {
+            position: absolute;
+            text-align:center;
+            color: white;
+            font-size: 1rem;
+        }
+    }
+    nav {
+        left: -25px;
+        border-radius: 30px;
+        position: relative;
+        .arrow{
+        position: absolute;
+        top:45%;
+        right: -38px;
+        background-color: #1749d1;
+        border-radius: 100%;
+        width: 70px;
+    
+    
+        button {
+            padding: 2px 1px 0px 1px;
+            margin: 0;
+        }
+        }
+    }
+}
+.main_nav_open{
+    z-index: 10;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 2000px;
+        height: 2000px;
+        top: -300px;
+        left: 0;
+        background-color: var(--dark);
+        opacity: 0.8;
+    }
+    nav{
+        width: 700px;
+        background-color: var(--light);
+
+        ul li {
+            margin: 15px;
+            
+            a {
+                display: flex;
+                flex-direction: row;
+            }
+
+            button {
+                border: solid var(--light) 5px;
+                position: relative;
+                display: block;
+                border-radius: 100px;
+                border: solid 4px var(--dark);
+                width: 70px;
+                height: 70px;
+                margin: 20px 10px 30px 10px;
+            
+                span {
+                    position: absolute;
+                    bottom: -35px;
+                    left: -35px;
+                    right: -35px;
+                    text-align:center;
+                    color: white;
+                    font-size: 1rem;
+                } 
+            }
+
+            ul li button span {
+                color: var(--dark);
+            }
+        }
+
+        ul {
+            border: solid var(--light) 5px;
+            #popup::after {
+                position: absolute; 
+                display: block; 
+                content:"";
+                width: 100px;
+                height: 100px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: black; 
+                opacity: 0.5;
+                cursor: pointer;
+                }
+        }
+        
+    }
+}
+.main_nav_close{
+    nav {
+        button {
+            padding: 2px 1px 0px 1px;
+            margin: 0;
+        }
+        }
+        ul {
+            padding: 20px;
+            padding-top: 0px;
+            border: solid var(--light) 5px;
+            border-radius: 20px;
+
+        }
+        nav.nav_close{
+            width: 180px;
+            ul li {
+                margin: 15px;
+          
+                button{
+                  position: relative;
+                  display: block;
+                  border-radius: 100px;
+                  border: solid 4px #00113C;
+                  width: 70px;
+                  height: 70px;
+                  margin: 20px 10px 30px 10px;
+                  
+                  span {
+                    bottom: -35px;
+                    left: -35px;
+                    right: -35px;
+                    text-align:center;
+                  } 
+                }
+            }
+            ul li:nth-child(3) {
+            margin-top: 60px;
+            }
+        }
+    }
+.nav_closed h3.title{
+    display: none;
+}
+.main_nav_open {
+    nav ul {
+        li.nav_open {
+             margin: 0 15px;
+
+            a {
+                height: 101px;
+
+                h3 {
+                    width: 80%;
+                    font-size: 55px;
+                    margin: 12px 0px 0px 5px;
+                    text-transform: uppercase;
+                }
+            }
+            button span {
+                display: none;
+            }
+        }
+        
+    }
+}
+.main_nav_open nav ul li.nav_open:nth-child(3) {
+    margin-top: 30px;
+}
+.main_nav_open nav ul li.nav_open:nth-child(4) {
+    margin-bottom: 16px;
+}
+
