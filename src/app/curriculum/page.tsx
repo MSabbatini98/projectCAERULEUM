@@ -19,7 +19,7 @@ export default function Curriculum() {
             <div className="cv_upper">
                 <div className="cv_txt">
                     <p className="intro">
-                        Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri i più importanti passi che hanno contribuito a costruire una professionalità versatile e responsabile.<br/><br/>
+                        {"Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri i più importanti passi che hanno contribuito a costruire una professionalità versatile e responsabile.<br/><br/>"}
                     </p>
                     <p className="fake_cta">Clicca sul curriculum per scaricarlo !</p>
                 </div>
