@@ -99,16 +99,19 @@ export default function Theater({ skills }: SkillSliderProps) {
         <h3 className="cv_stage_title">{skills[skillIndex].title}</h3>
         <div className="cv_stage_content">
           <p>{skills[skillIndex].content}</p>
-        </div>
+
         {skills[skillIndex].urlMainImg && 
-        <Image 
-          src={skills[skillIndex].urlMainImg }
-          alt={skills[skillIndex].altMainImg || "skill image preview"}
-          width={800}
-          height={600}
-          className="cv_stage_img"
-        />    
+        <div className="cv_stage_img">
+          <Image 
+            src={skills[skillIndex].urlMainImg }
+            alt={skills[skillIndex].altMainImg || "skill image preview"}
+            width={400}
+            height={300}
+            className="cv_stage_img"
+            />    
+          </div>
         }
+        </div>
       </div>
     }
 
