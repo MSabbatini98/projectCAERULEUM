@@ -22,7 +22,7 @@ const HORCONTACTS = [
     { 
         imageUrl: Gmail, 
         imageAlt: "Gmail", 
-        url: "mailto:matteosabbatini@gmail.com",
+        url: "mailto:matteosabbatini23@gmail.com",
         text: "matteosabbatini23\n(@gmail.com)"
     },
     { 
@@ -55,7 +55,7 @@ const VERCONTACTS = [
     { 
         imageUrl: Instagram, 
         imageAlt: "Instagram", 
-        url: "string",
+        url: "social_warnings",
         text: "E' complicato con Instagram.."
     },
     { 

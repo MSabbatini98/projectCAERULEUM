@@ -174,3 +174,28 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--blue_3); 
 }
+
+.WIP {
+  color: white;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 15px,
+    rgba(255, 255, 255, 0.1) 15px,
+    rgba(255, 255, 255, 0.1) 30px,
+  );  
+  position: relative;
+
+  &::before {
+    position: absolute;
+    width: 70%;
+    margin: 15%;
+    content: "SORRY !! This component is not completed yet";
+
+    font-size: 60px;
+    color: red;
+    text-align: center;
+
+    background-color:rgba(0, 0, 0, 0.25);
+  }
+}
