@@ -22,7 +22,7 @@ import "../styles/about.scss"
 export default function About() {
 
     return (
-  <section className="main_content">
+  <section className="main_content about">
     <div
       style={{
         maxWidth: "1200px",
@@ -32,9 +32,7 @@ export default function About() {
       }}
     >
       <ImageSlider images={SLIDES} />
-      <a href="/" style={{ fontSize: "4rem" }}>
-        Link
-      </a>  
+
       <AboutMap/>
       
     </div>

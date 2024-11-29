@@ -56,7 +56,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
                 width={800}
                 height={600}
                 aria-hidden={imageIndex !== index}
-                className="img-slider-img"
+                className="slider_img"
                 
               />
             </div>

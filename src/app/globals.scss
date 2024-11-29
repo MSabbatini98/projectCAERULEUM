@@ -43,7 +43,7 @@
 
 body {
   background: rgb(42,82,190);
-  background: linear-gradient(var(--light) 20%, var(--blue_3) 50%) fixed;
+  background: linear-gradient(var(--light) 20%, var(--blue_3) 70%) fixed;
 }
 
 .main_content {
@@ -153,3 +153,24 @@ body {
   }
 }
 
+//* SCROLLBAR
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  background-color: var(--light);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dark); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue_3); 
+}

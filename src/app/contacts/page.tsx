@@ -83,7 +83,7 @@ const VERCONTACTS = [
 
 export default function Contacts() {
     return (
-        <main className="main_content">
+       <div className="main_content">
             <div className="contacts">
                 <div className="contacts_hor">
                     <CoolTitle
@@ -122,6 +122,6 @@ export default function Contacts() {
                         </div>
                 </div>
             </div>
-        </main>
+        </div>
     )
 }

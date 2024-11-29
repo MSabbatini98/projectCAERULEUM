@@ -28,7 +28,6 @@ export default function ContactCard({ cards } : contactCardProps) {
                 alt={imageAlt}
                 width={90}
                 height={90}
-                className="img-slider-img"
               />
               <p>{text}</p>
             </a>
