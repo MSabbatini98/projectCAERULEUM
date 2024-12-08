@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/projects/[projectId]/page.tsx"
-  ],
+, "src/app/pages/api/projects.tsx"  ],
   "exclude": [
     "node_modules"
   ]
