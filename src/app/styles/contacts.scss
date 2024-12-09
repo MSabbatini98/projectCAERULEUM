@@ -49,21 +49,18 @@
     .contacts_hor {
         .contact_card {
             width: 350px;
-
-
-
         }
     }
     .contacts_ver {
         .contact_card.card {
-            height: 400px;
+            height: 350px;
             width: 200px;
-            &:first-of-type img{
-                scale: 1.7;
-            }
-
+            
             img {
                 margin-top: 155px;
+            }
+            &:first-of-type img{
+                scale: 1.7;
             }
             p {
                 top: 30%;
@@ -77,10 +74,31 @@
     }
     .newsletter {
         position: relative;
-        display: bl;
         background-color: var(--blue_1);
         color: var(--dark);
         padding: 20px;
+        height: 4000px;
+
+
+
+        form_newsletter {
+            label {
+                display: flex;
+                align-items: center;
+              }
+              
+              span::after {
+                padding-left: 5px;
+              }
+              
+              input:invalid + span::after {
+                content: "✖";
+              }
+              
+              input:valid + span::after {
+                content: "✓";
+              }
+        }
     }
 }
 
