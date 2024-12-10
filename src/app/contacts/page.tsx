@@ -113,6 +113,11 @@ export default function Contacts() {
                 title="Iscriviti alla newsletter"
                 colorClass="blue_3"
                 />
+                <div className="intro">
+                    <p>Non perderti le ultime novità, aggiornamenti e contenuti esclusivi, tutti rigorosamente garantiti e certificati Matteo Sabbatini! <br/>Aggiungi una mail in più a quelle da cancellare senza neanche averle aperte e scopri in anteprima nuovi progetti per il web, il fai da te, la natura, ma anche meet-and-great e molto altro. 
+                    </p>
+                    <p className="small_fun">Non preoccuparti, potrai disinscriverti in ogni momento se trovi il link piccolo scritto in bianco su sfondo bianco (buona fortuna).</p>
+                </div>
                 <Newsletter />
         </div>
     </div>

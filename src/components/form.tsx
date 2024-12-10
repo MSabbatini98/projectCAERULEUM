@@ -6,6 +6,7 @@ export default function Contact() {
     name: "",
     lastname: "",
     email: "",
+    birth: "",
     topic: "",
     frequency: "",
     message: ""
@@ -48,6 +49,7 @@ export default function Contact() {
         name: "",
         lastname: "",
         email: "",
+        birth: "",
         topic: "",
         frequency: "",
         message: ""
@@ -59,56 +61,82 @@ export default function Contact() {
   }
 
   return (
-    <div>
-      <h1>Contact form</h1>
+    <div className="form_newsletter">
       {formSuccess ?
         <div>{formSuccessMessage}</div>
         :
         <form method="POST" action="" onSubmit={submitForm}>
             <div className="big_col">
-                <div className="intro">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, facili.</p>
-                </div>
-                <div>
-                    <label>Nome</label>
-                    <input type="text" name="name" onChange={handleInput} value={formData.name} />
-                </div>
-                <div>
-                    <label>Cognome</label>
-                    <input type="text" name="lastname" onChange={handleInput} value={formData.lastname} />
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input type="text" name="email" onChange={handleInput} value={formData.name} />
-                </div>
-                <div>
-                    <label>Anno di nascita </label>
-                    <input type="month" id="month" name="datemin" min="2000-01" max="2025-01" />
-                </div>
 
-                <div>
-                    <label>Choose a topic:</label>
+                <fieldset>
+                    <legend>Informazioni Personali <span>da vendere al migliore offerente:</span></legend>
+                    <div>
+                        <label>Nome</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            onChange={handleInput} 
+                            value={formData.name} 
+                            required 
+                        />
+                    </div>
+                    <div>
+                        <label>Cognome</label>
+                        <input 
+                            type="text" 
+                            name="lastname" 
+                            onChange={handleInput} 
+                            value={formData.lastname} 
+                            required 
+                        />
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input 
+                            type="text" 
+                            name="email" 
+                            onChange={handleInput} 
+                            value={formData.name} 
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label>Anno di nascita </label>
+                        <input 
+                            type="month" 
+                            id="month" 
+                            onChange={handleInput} 
+                            value={formData.name} 
+                            name="datemin" 
+                            min="2000-01" 
+                            max="2025-01" 
+                            required 
+                        />
+                    </div>
+                </fieldset>
+
+                <div className="topic">
+                    <p className="row">Scegli uno o più argomento da ignorare:</p>
                     <input type="checkbox" id="topic1" name="topic1" value="nature" />
-                    <label>Nature & Environment</label>
+                    <label>Natura & Ambiente<br/></label>
                     <input type="checkbox" id="topic2" name="topic2" value="diy" />
+
                     <label>Hack & Life Tips</label>
                     <input type="checkbox" id="topic3" name="topic3" value="projects" />
                     <label>Progetti Firmati Matteo Sabbatini</label>
-
+                    <input type="checkbox" id="topic4" name="topic4" value="all" />
+                    <label>Tutti quanti ! Rigorosamente in mail differenti</label>
                 </div>
 
             </div>
+            <div className="small_col">
                 <div>
                     <label>Message</label>
                     <textarea name="message" placeholder={"Scrivi qui qualsiasi nota o informazione aggiuntiva, sarò lieto di risponderti !"} onChange={handleInput} value={formData.message}>
-                        Scrivi qui qualsiasi nota o informazione aggiuntiva, sarò lieto di risponderti !
                     </textarea>
                 </div>
-            <div>
+                <button type="submit">Send message</button>
             </div>
-
-
-          <button type="submit">Send message</button>
         </form>
       }
     </div>

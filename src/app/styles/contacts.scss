@@ -73,32 +73,107 @@
         }
     }
     .newsletter {
+        font-size: 1.3rem;
+
         position: relative;
         background-color: var(--blue_1);
+        border-radius: 20px;
+        border: solid 4px var(--dark);
+        padding: 0 50px;
         color: var(--dark);
-        padding: 20px;
         height: 4000px;
 
+        .cool_title{
+            margin-bottom: 40px;
+        }
+        .small_fun {
+            font-size: 0.4rem;
+            color: var(--blue_1);
+            text-shadow: (--dark) 0px 0px 30px;
+            margin-bottom: 20px;
+        }
+        .form_newsletter form {
+            display: flex;
+            width: 100%;
+              
+            //   span::after {
+            //     padding-left: 5px;
+            //   }
+              
+            //   input:invalid + span::after {
+            //     content: "✖";
+            //   }
+              
+            //   input:valid + span::after {
+            //     content: "✓";
+            //   }
 
 
-        form_newsletter {
-            label {
+
+              .big_col {
+                width: 68%;
                 display: flex;
-                align-items: center;
-              }
-              
-              span::after {
-                padding-left: 5px;
-              }
-              
-              input:invalid + span::after {
-                content: "✖";
-              }
-              
-              input:valid + span::after {
-                content: "✓";
-              }
+                justify-content: space-between;
+                flex-direction: column;
+                
+
+                fieldset {
+                    display: flex;
+                    flex-wrap: wrap;
+                    background-color: rgba($color: var(--light), $alpha: 0.5);
+                    border: solid 3px var(--blue_3);
+                    border-radius: 20px;
+
+                    font-size: 1rem;
+                    padding : 10px 20px 20px 20px;
+                    margin-bottom: 20px;
+
+                    legend {
+                        border: var(--blue_3) solid 1px;
+                        border-radius: 10px;
+                        padding: 0 10px;
+                        font-size: 0.8rem;
+                    }
+
+                    div {
+                        width: 50%;
+
+                        input {
+                            width: 90%;
+                            border: solid 3px var(--dark);
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                .topic  {
+                    display: grid;
+                    grid-template-rows: auto auto auto;
+                    grid-template-columns: 5% 95%;
+                    grid-gap: 10px;
+
+                    
+                    /* Styling for the full-width row */
+                    .row {
+                        grid-column: 1 / -1;
+                        display: flex;
+
+                        font-size: 1.2rem;
+                    }
+                    
+                    /* Styling for small columns */
+                    input {
+                        border-radius: 100%;
+                    }
+                    
+                    /* Styling for large columns */
+                    label {
+    
+                    }
+                }
+            }
+            .small_col {
+                width: 30%;
+            }
         }
     }
 }
-
