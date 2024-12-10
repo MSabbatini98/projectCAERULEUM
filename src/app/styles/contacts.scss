@@ -49,18 +49,21 @@
     .contacts_hor {
         .contact_card {
             width: 350px;
+
+
+
         }
     }
     .contacts_ver {
         .contact_card.card {
-            height: 350px;
+            height: 400px;
             width: 200px;
-            
-            img {
-                margin-top: 155px;
-            }
             &:first-of-type img{
                 scale: 1.7;
+            }
+
+            img {
+                margin-top: 155px;
             }
             p {
                 top: 30%;
@@ -73,18 +76,9 @@
         }
     }
     .newsletter {
-        font-size: 1.3rem;
-
         position: relative;
         background-color: var(--blue_1);
-        border-radius: 20px;
-        border: solid 4px var(--dark);
-        padding: 0 50px;
         color: var(--dark);
-        height: 4000px;
-
-        .cool_title{
-            margin-bottom: 40px;
         padding: 20px;
         border-radius: 20px;
         border: solid 4px var(--dark);
@@ -102,10 +96,6 @@
             text-shadow: (--dark) 0px 0px 30px;
             margin-bottom: 20px;
         }
-        .form_newsletter form {
-            display: flex;
-            width: 100%;
-              
 
 
         .form_newsletter form {
@@ -133,11 +123,6 @@
             //   }
 
 
-
-              .big_col {
-                width: 68%;
-                display: flex;
-                justify-content: space-between;
               .big_col {
                 width: 65%;
                 display: flex;
@@ -151,7 +136,6 @@
                     border: solid 3px var(--blue_3);
                     border-radius: 20px;
 
-                    font-size: 1rem;
                     padding : 10px 20px 20px 20px;
                     margin-bottom: 20px;
 
@@ -164,42 +148,6 @@
 
                     div {
                         width: 50%;
-
-                        input {
-                            width: 90%;
-                            border: solid 3px var(--dark);
-                            border-radius: 10px;
-                        }
-                    }
-                }
-                .topic  {
-                    display: grid;
-                    grid-template-rows: auto auto auto;
-                    grid-template-columns: 5% 95%;
-                    grid-gap: 10px;
-
-                    
-                    /* Styling for the full-width row */
-                    .row {
-                        grid-column: 1 / -1;
-                        display: flex;
-
-                        font-size: 1.2rem;
-                    }
-                    
-                    /* Styling for small columns */
-                    input {
-                        border-radius: 100%;
-                    }
-                    
-                    /* Styling for large columns */
-                    label {
-    
-                    }
-                }
-            }
-            .small_col {
-                width: 30%;
                         padding: 10px;
                         input {
                             width: 100%;
@@ -259,6 +207,7 @@
                 margin: 20px auto;
                 padding: 0 30px;
                 h3 {
+                    font-size: 1.5rem;
                     margin-bottom: 10px;
                 }
                 p.message_intro {
@@ -286,10 +235,11 @@
                 left: calc(50% - 125px);
                 border-radius: 20px;
                 padding: 10px 0;
+                font-size: 2rem;
 
                 &:hover{
-                    border: solid 4px var(--light);
-                    background-color: var(--light);
+                    border: solid 4px var(--blue_3);
+                    background-color: var(--blue_1);
                     color: var(--blue_3);
                 }
             }

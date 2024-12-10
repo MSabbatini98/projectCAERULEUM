@@ -83,36 +83,13 @@ export default function Newsletter() {
                 <p className="message_intro">Ecco il mitico spazio per i tuoi pensieri aggiuntivi dove puoi scrivere quello che vuoi: domande, complimenti, complimenti o anche lamentele sul meteo.</p>
               </div>
                 <div>
-                    <label>Message</label>
-                    <textarea name="message" placeholder={"Prometto di leggerlo tutto… un giorno. Nel frattempo, stupiscimi: il campo è tuo!"} onChange={handleInput} value={formData.message}>
+                    <label>Messaggio</label>
+                    <textarea name="message" placeholder={"Prometto di leggerlo tutto… un giorno. Nel frattempo, stupiscimi: il campo è tuo!"} >
                     </textarea>
                 </div>
             </div>
             <button type="submit">Iscriviti !</button>
         </form>
-      }
     </div>
   )
 }
-
-// import Form from 'next/form'
- 
-// export default function Newsletter() {
-//   return (
-//     <Form action="/search">
-//         <div className="form_newsletter">
-//             <div className="big_col">
-//                 <div className="intro">
-//                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere corrupti sit earum in quo eveniet libero.</p>
-//                 </div>
-
-//             </div>
-//         <input name="query" />
-//         <button type="submit">Submit</button>
-
-//         </div>
-//       {/* On submission, the input value will be appended to 
-//           the URL, e.g. /search?query=abc */}
-//     </Form>
-//   )
-// }
