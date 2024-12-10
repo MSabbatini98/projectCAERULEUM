@@ -17,6 +17,7 @@ import "../styles/about.scss"
 import CoolTitle from "@/components/utils/coolTitle"
 import Card from "@/components/card"
 import ContactCard from "@/components/contactCard"
+import Newsletter from "@/components/form"
 
 const HORCONTACTS = [
     { 
@@ -79,49 +80,46 @@ const VERCONTACTS = [
         text: " ... "
     }
     */
-  ]
+]
 
 export default function Contacts() {
     return (
-       <div className="main_content">
-            <div className="contacts">
-                <div className="contacts_hor">
-                    <CoolTitle
-                    title="Mettiti in contatto"
-                    colorClass="blue_1"
-                    />
-                    <ContactCard cards= {HORCONTACTS}/>
-                </div>
-                <div className="contacts_ver">
-                    <CoolTitle
-                    title="Mettiti in contatto ancora meglio !!"
-                    colorClass="blue_1"
-                    />
-                    <ContactCard cards= {VERCONTACTS}/>
-                </div>
-                <div className="contacts_map">
-                    <CoolTitle 
-                        title="Zona di interesse"
-                        colorClass="blue_1"
-                        />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quasi accusantium, ab quaerat provident ipsum itaque enim temporibus rerum quo fuga natus. Totam corrupti, iste nisi quia beatae repellendus voluptate.
-                        </p>
-                </div>
-                <div className="newsletter ">
-                    <CoolTitle 
-                        title="Iscriviti alla newsletter"
-                        colorClass="blue_3"
-                        />
-                        Insert FORM HERE
-                        <div className="col_big">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore non et magnam dolores, soluta fugit impedit at nobis ab voluptate debitis similique commodi voluptas nihil corrupti excepturi iure veniam eius.
-                        </div>
-                        <div className="col_small">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci magnam cum eligendi debitis ducimus aut modi eaque blanditiis odio error maiores illum, facilis, alias, placeat similique mollitia hic exercitationem voluptatibus.
-                        </div>
-                </div>
-            </div>
+    <div className="main_content contacts">
+        <div className="contacts_hor">
+            <CoolTitle
+            title="Mettiti in contatto"
+            colorClass="blue_1"
+            />
+            <ContactCard cards= {HORCONTACTS}/>
         </div>
+        <div className="contacts_ver">
+            <CoolTitle
+            title="Mettiti in contatto ancora meglio !!"
+            colorClass="blue_1"
+            />
+            <ContactCard cards= {VERCONTACTS}/>
+        </div>
+        <div className="contacts_map">
+            <CoolTitle 
+                title="Zona di interesse"
+                colorClass="blue_1"
+                />
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quasi accusantium, ab quaerat provident ipsum itaque enim temporibus rerum quo fuga natus. Totam corrupti, iste nisi quia beatae repellendus voluptate.
+                </p>
+        </div>
+        <div className="newsletter ">
+            <CoolTitle 
+                title="Iscriviti alla newsletter"
+                colorClass="blue_3"
+                />
+                <div className="intro">
+                    <p>Non perderti le ultime novità, aggiornamenti e contenuti esclusivi, tutti rigorosamente garantiti e certificati Matteo Sabbatini! <br/>Aggiungi una mail in più a quelle da cancellare senza neanche averle aperte e scopri in anteprima nuovi progetti per il web, il fai da te, la natura, ma anche meet-and-great e molto altro. 
+                    </p>
+                    <p className="small_fun">Non preoccuparti, potrai disinscriverti in ogni momento se trovi il link piccolo scritto in bianco su sfondo bianco (buona fortuna).</p>
+                </div>
+                <Newsletter />
+        </div>
+    </div>
     )
 }
