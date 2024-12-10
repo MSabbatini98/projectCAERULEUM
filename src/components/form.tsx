@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from "react"
+import { FormEvent } from 'react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -11,53 +12,62 @@ export default function Contact() {
     frequency: "",
     message: ""
   });
+  // async function onSubmit(event: FormEvent<HTMLFormElement>) {
+  //   event.preventDefault()
+ 
+  //   const formData = new FormData(event.currentTarget)
+  //   const response = await fetch('/api/submit', {
+  //     method: 'POST',
+  //     body: formData,
+  //   })
+
 
   const [formSuccess, setFormSuccess] = useState(false)
   const [formSuccessMessage, setFormSuccessMessage] = useState("")
 
-  const handleInput = (e) => {
-    const fieldName = e.target.name;
-    const fieldValue = e.target.value;
+  // const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const fieldName = e.target.name;
+  //   const fieldValue = e.target.value;
 
-    setFormData((prevState) => ({
-      ...prevState,
-      [fieldName]: fieldValue
-    }));
-  }
+  //   setFormData((prevState) => ({
+  //     ...prevState,
+  //     [fieldName]: fieldValue
+  //   }));
+  // }
 
-  const submitForm = (e) => {
-    e.preventDefault()
+  const submitForm = () => {
+    // e.preventDefault()
 
-    const formURL = e.target.action
-    const data = new FormData()
+    // const formURL = e.target.action
+    // const data = new FormData()
 
-    // Turn our formData state into data we can use with a form submission
-    Object.entries(formData).forEach(([key, value]) => {
-      data.append(key, value);
-    })
+    // // Turn our formData state into data we can use with a form submission
+    // Object.entries(formData).forEach(([key, value]) => {
+    //   data.append(key, value);
+    // })
 
-    // POST the data to the URL of the form
-    fetch(formURL, {
-      method: "POST",
-      body: data,
-      headers: {
-        'accept': 'application/json',
-      },
-    }).then((response) => response.json())
-    .then((data) => {
-      setFormData({
-        name: "",
-        lastname: "",
-        email: "",
-        birth: "",
-        topic: "",
-        frequency: "",
-        message: ""
-      })
+    // // POST the data to the URL of the form
+    // fetch(formURL, {
+    //   method: "POST",
+    //   body: data,
+    //   headers: {
+    //     'accept': 'application/json',
+    //   },
+    // }).then((response) => response.json())
+    // .then((data) => {
+    //   setFormData({
+    //     name: "",
+    //     lastname: "",
+    //     email: "",
+    //     birth: "",
+    //     topic: "",
+    //     frequency: "",
+    //     message: ""
+    //   })
 
-      setFormSuccess(true)
-      setFormSuccessMessage(data.submission_text)
-    })
+    //   setFormSuccess(true)
+    //   setFormSuccessMessage(data.submission_text)
+    // })
   }
 
   return (
@@ -75,8 +85,8 @@ export default function Contact() {
                         <input 
                             type="text" 
                             name="name" 
-                            onChange={handleInput} 
-                            value={formData.name} 
+                            // onChange={handleInput} 
+                            // value={formData.name} 
                             required 
                         />
                     </div>
@@ -85,8 +95,8 @@ export default function Contact() {
                         <input 
                             type="text" 
                             name="lastname" 
-                            onChange={handleInput} 
-                            value={formData.lastname} 
+                            // onChange={handleInput} 
+                            // value={formData.lastname} 
                             required 
                         />
                     </div>
@@ -95,8 +105,8 @@ export default function Contact() {
                         <input 
                             type="text" 
                             name="email" 
-                            onChange={handleInput} 
-                            value={formData.name} 
+                            // onChange={handleInput} 
+                            // value={formData.name} 
                             required
                         />
                     </div>
@@ -105,8 +115,8 @@ export default function Contact() {
                         <input 
                             type="month" 
                             id="month" 
-                            onChange={handleInput} 
-                            value={formData.name} 
+                            // onChange={handleInput} 
+                            // value={formData.name} 
                             name="datemin" 
                             min="2000-01" 
                             max="2025-01" 
@@ -132,8 +142,12 @@ export default function Contact() {
             <div className="small_col">
                 <div>
                     <label>Message</label>
-                    <textarea name="message" placeholder={"Scrivi qui qualsiasi nota o informazione aggiuntiva, sarò lieto di risponderti !"} onChange={handleInput} value={formData.message}>
-                    </textarea>
+                    <textarea 
+                      name="message" 
+                      placeholder={"Scrivi qui qualsiasi nota o informazione aggiuntiva, sarò lieto di risponderti !"} 
+                      // onChange={handleInput} 
+                      value={formData.message}
+                      ></textarea>
                 </div>
                 <button type="submit">Send message</button>
             </div>
