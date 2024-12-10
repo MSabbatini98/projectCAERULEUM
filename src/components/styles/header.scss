@@ -11,9 +11,7 @@
   border-top: #00113C 2px solid;
   border-bottom: #00113C 2px solid;
   z-index: 100;
-  > {
-    margin: 0 10px;
-  }
+
 
   .logo_hp {
     margin: 5px 0 10px 0;
@@ -83,7 +81,7 @@
     font-size: 65px;
     margin: 10px 0 0 30px;
     text-transform: uppercase;
-    text-shadow: -8px 0 var(--dark), 3px 0 var(--dark), 0 4px var(--dark), 0 -3px var(--dark), 1px 1px var(--dark), -1px -1px var(--dark), -1px -1px var(--dark), -1px 1px var(--dark);
+    text-shadow: -1px 0px 0px #90ACFF, -2px 0px 0px #688DF1, -3px 0px 0px #456FDB, -4px 0px 0px var(--blue_3), -5px 0px 0px #243FA0, -7px 0px 0px #1C3A8D, -9px 0px 0px #1F368C, -12px 0px 3px black;
   }
 
   .modes {

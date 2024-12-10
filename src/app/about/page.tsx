@@ -1,4 +1,7 @@
+// 'use client'
 import { ImageSlider } from "../../components/slider"
+import CoolTitle from "@/components/utils/coolTitle"
+import AboutMap from "@/components/aboutMap"
 
 import car1 from "../../../public/media/sliderImgs/car-1.jpg"
 import car2 from "../../../public/media/sliderImgs/car-2.jpg"
@@ -14,10 +17,12 @@ const SLIDES = [
   { url: car5, alt: "Car Five", title: "Title 5", content: "content1"  }
 ]
 import "../styles/about.scss"
+
+
 export default function About() {
 
     return (
-        <section className="main_content">
+  <section className="main_content about">
     <div
       style={{
         maxWidth: "1200px",
@@ -27,11 +32,10 @@ export default function About() {
       }}
     >
       <ImageSlider images={SLIDES} />
-      <a href="/" style={{ fontSize: "4rem" }}>
-        Link
-      </a>
-    </div>
 
-        </section>
-    )
+      <AboutMap/>
+      
+    </div>
+  </section>
+  )
 }

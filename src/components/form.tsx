@@ -1,12 +1,12 @@
 'use client'
+import React, { useState } from "react"
+import { FormEvent } from 'react'
 
-
-
+export default function Newsletter() {
+  
   return (
     <div className="form_newsletter">
-      {formSuccess ?
-        <div>{formSuccessMessage}</div>
-        :
+
         <form method="POST" action="">
             <div className="big_col">
 
@@ -17,8 +17,6 @@
                         <input 
                             type="text" 
                             name="name" 
-                            onChange={handleInput} 
-                            value={formData.name} 
                             required 
                         />
                     </div>
@@ -27,8 +25,6 @@
                         <input 
                             type="text" 
                             name="lastname" 
-                            onChange={handleInput} 
-                            value={formData.lastname} 
                             required 
                         />
                     </div>
@@ -37,8 +33,6 @@
                         <input 
                             type="text" 
                             name="email" 
-                            onChange={handleInput} 
-                            value={formData.name} 
                             required
                         />
                     </div>
@@ -84,7 +78,7 @@
 
             </div>
             <div className="small_col">
-              <div >
+              <div>
                 <h3>Lascia un messaggio !</h3>
                 <p className="message_intro">Ecco il mitico spazio per i tuoi pensieri aggiuntivi dove puoi scrivere quello che vuoi: domande, complimenti, complimenti o anche lamentele sul meteo.</p>
               </div>

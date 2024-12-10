@@ -1,0 +1,35 @@
+.about {
+
+    .cool_title h3{
+
+        font-size: 70px;
+    
+        
+        span {
+            padding-left: 50px;
+            padding-bottom: 0px;
+            &::before {
+                bottom: 18px;
+            }
+            
+            &::after {
+                bottom: 21px;
+            }
+        }
+
+        &::after {
+            bottom: 26px;
+
+        }
+    }
+
+    .map_container {
+        position: relative;
+        p.map_intro{
+            position: absolute;
+            top: 110px;
+            color: var(--light);
+            font-size: 22px;
+        }
+    }
+}
