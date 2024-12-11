@@ -18,6 +18,7 @@ import CoolTitle from "@/components/utils/coolTitle"
 import Card from "@/components/card"
 import ContactCard from "@/components/contactCard"
 import Newsletter from "@/components/form"
+import GoogleMaps from "@/components/googleMap"
 
 const HORCONTACTS = [
     { 
@@ -99,14 +100,20 @@ export default function Contacts() {
             />
             <ContactCard cards= {VERCONTACTS}/>
         </div>
-        <div className="contacts_map">
-            <CoolTitle 
-                title="Zona di interesse"
-                colorClass="blue_1"
-                />
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quasi accusantium, ab quaerat provident ipsum itaque enim temporibus rerum quo fuga natus. Totam corrupti, iste nisi quia beatae repellendus voluptate.
-                </p>
+        <CoolTitle 
+            title="Vienimi a trovare"
+            colorClass="blue_1"
+            />
+        <div className="contacts_map clearfix">
+                <div className="map_intro">
+                    <p> Questa è la mia città, Bologna ! Ricca di storia, cultura e gastronomia, da assaporare sotto i portici o in una delle tipiche piazza rosse.</p>
+                    <button className="">
+                        Click me SENPAI
+                    </button>
+                </div>
+                <div className="google_maps">
+                    <GoogleMaps />
+                </div>
         </div>
         <div className="newsletter ">
             <CoolTitle 
@@ -120,6 +127,7 @@ export default function Contacts() {
                 </div>
                 <Newsletter />
         </div>
+
     </div>
     )
 }
