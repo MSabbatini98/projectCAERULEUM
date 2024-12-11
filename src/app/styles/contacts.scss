@@ -75,6 +75,44 @@
             justify-content: space-around;
         }
     }
+    .contacts_map{
+        // display: flex;
+
+        .map_intro {
+            width: 40%;
+            float: left;
+            padding: 30px 20px;
+            line-height: 1.5;
+            font-size: 1.4rem;
+            text-align: center;
+
+            button {
+                border: solid 4px var(--blue_3);
+                border-radius: 20px;
+                color: var(--blue_3);
+                background-color: var(--light);
+                font-size: 1.8rem;
+                padding: 10px 20px;
+                margin-top: 40px;
+            }
+        }
+        .google_maps {
+            float: right;
+            width: 60%;
+            
+            .map {
+                border: solid 4px var(--blue_3);
+                border-radius: 20px;
+
+                button {
+                    border-radius: 10px!important;
+                    border: solid 2px var(--blue_3) !important;
+                    background-color: var(--light)!important;
+                    color: var(--dark)!important;
+                }
+            }
+        }
+    }
     .newsletter {
         position: relative;
         background-color: var(--blue_1);

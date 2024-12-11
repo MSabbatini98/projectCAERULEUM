@@ -52,7 +52,11 @@ body {
   max-width: 1400px;
 }
 
-
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 //* ACCESSIBILITY
 .skip-link {
