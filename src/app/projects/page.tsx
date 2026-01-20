@@ -14,27 +14,15 @@ export default function Project() {
           <h1> This is the PROJECT PAGE</h1>
           <Card>
            <CoolTitle
-              title="Prova 1"
+              title="Calcolatrice classica"
               colorClass="blue_3"
             />  
-          </Card> 
-          <Card>
-           <CoolTitle
-              title="secondo Titolo "
-              colorClass="blue_2"
-            />  
-          </Card> 
-          <Card>
-           <CoolTitle
-              title="Prova 1"
-              colorClass="blue_5"
-            />  
-          </Card> 
-          <Card>
-           <CoolTitle
-              title="Prova 1"
-              colorClass="blue_3"
-            />  
+            {/* TODO passare grado di difficoltà in modo dinamico */}
+            {/* TODO passare tecnologia utilizzata in modo dinamico */}
+            {/* TODO passare link pagina in modo dinamico */}
+            {/* TODO passare grado di difficoltà in modo dinamico */}
+
+            <p> Una calcolatrice classica realizzata con HTML, CSS e JavaScript. </p>
           </Card> 
         </div>
     )
