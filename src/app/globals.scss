@@ -51,6 +51,15 @@ body {
   padding-right: 20px;
   max-width: 1400px;
 }
+.main_playground {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 15px,
+    rgba(255, 255, 255, 0.1) 15px,
+    rgba(255, 255, 255, 0.1) 30px,
+  );  
+}
 
 .clearfix::after {
   content: "";
