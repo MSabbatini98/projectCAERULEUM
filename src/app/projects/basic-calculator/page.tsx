@@ -23,8 +23,8 @@ function BasicCalculator() {
     <div className="b_calculator_container">
       <div className="calculator_grid"> 
         <div className="output">
-          <div className="prev-oper"></div>
-          <div className="curr-oper"></div>
+          <div className="prev-oper">TEST PREV</div>
+          <div className="curr-oper">Test curr</div>
 
         </div>
       <button className="span-two calc_operator">AC</button>

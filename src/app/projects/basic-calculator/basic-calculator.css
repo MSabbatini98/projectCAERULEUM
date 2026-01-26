@@ -8,7 +8,6 @@
 
 .calculator_grid {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 
@@ -28,16 +27,45 @@
     grid-column: 1 / -1;
     background-color: rgba(0, 0, 0, .15);
     border-radius: 10px; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .curr-oper {
+    font-size: 44px;
+    color: #e8e2db;
+}
+.output .prev-oper {
+    font-size: 28px;
+    margin: 10px;
+    color: #e8e2dbb9;
+
 }
 
-
-.calculator_grid > * {
+.calculator_grid > button {
     border: 1px solid #FAB95B; 
     border-radius: 10px;
     color: #E8E2DB;
     margin: 10px;
 }
-
+.calculator_grid > button:hover, 
+.calculator_grid > button:focus {
+    background-color: #FF9500;
+    color: #E8E2DB;
+    box-shadow: 0px 0px 10px #FF9500;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+button.calc_operator:hover, button.calc_operator:focus {
+        background-color: #E8E2DB;
+        color: #FF9500;
+}
 .calc_operator {
     background-color: #FF9500;
     color: #E8E2DB;
