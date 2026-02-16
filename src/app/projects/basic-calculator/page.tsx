@@ -1,5 +1,21 @@
+'use client'
 import CoolTitle from "@/components/utils/coolTitle"
 import "./basic-calculator.css"
+
+import { useReducer } from "react"
+import {DigitButton, OperatorButton} from "../../components/CalcButtons"
+
+
+export const ACTIONS = {
+  ADD_DIGIT : 'add-digit',
+  CHOOSE_OPERATION : 'choose-operation',
+  CLEAR : 'clear',
+  DELETE_DIGIT : 'delete-digit',
+  EVALUATE : 'evaluate'
+}
+
+
+
 export default function Calculator() {
   return (
     <main className="main_playground"  >
@@ -16,34 +32,106 @@ export default function Calculator() {
   )
 }
 
+function evaluate({currOpe, prevOpe, operation}) {
+  const prev = parseFloat(prevOpe)
+  const curr = parseFloat(currOpe)
+  if (isNaN(prev) || isNaN(curr)) return ""
+
+  let computation: number;
+  
+  switch (operation) {
+    case "+":
+      computation = prev + curr
+      break
+    case "-":
+      computation = prev - curr
+      break
+    case "*":
+      computation = prev * curr
+      break
+    case "÷":
+      computation = prev / curr
+      break
+    default:
+      return ""
+  }
+  return computation.toString()
+}
+
+function reducer(state, action) {
+  const { type, payload } = action
+    switch (type) {
+
+    case ACTIONS.ADD_DIGIT:
+      if (payload.digit === "0" && state.currOpe === "0") return state
+      if (payload.digit === "." && state.currOpe.includes(".")) return state
+      return {
+        ...state,
+        currOpe : `${state.currOpe || ""}${payload.digit}` //new operand if 0 or addition
+      }
+    case ACTIONS.CLEAR:
+      return {}
+
+    case ACTIONS.DELETE_DIGIT:
+      if (state.currOpe == null) return state
+      if (state.currOpe.length === 1) {
+        return {...state, currOpe: null}
+      }
+      return {
+        ...state,
+        currOpe: state.currOpe.slice(0, -1)
+      }
+
+      case ACTIONS.CHOOSE_OPERATION:
+        if (state.currOpe == null && state.prevOpe == null) return state
+        if (state.prevOpe == null) {
+          return {
+            ...state,
+            operation: payload.operation,
+            prevOpe: state.currOpe,
+            currOpe: null
+          }
+        }
+        return {
+          ...state,
+          prevOpe: evaluate(state),
+          operation: payload.operation,
+          currOpe: null
+        }
+      default:
+        return state  
+  }
+}
+
 function BasicCalculator() {
 
+  const [{currOpe, prevOpe, operation}, dispatch] = useReducer(reducer, {})
 
   return (
     <div className="b_calculator_container">
       <div className="calculator_grid"> 
         <div className="output">
-          <div className="prev-oper">TEST PREV</div>
-          <div className="curr-oper">Test curr</div>
+          <div className="prev-oper">{prevOpe} {operation}</div>
+          <div className="curr-oper">{currOpe}</div>
 
         </div>
-      <button className="span-two calc_operator">AC</button>
-      <button className="calc_operator">DEL</button>
-      <button className="calc_operator">+</button>
-      <button className="calc_number">1</button>
-      <button className="calc_number">2</button>
-      <button className="calc_number">3</button>
-      <button className="calc_operator">-</button>
-      <button className="calc_number">4</button>
-      <button className="calc_number">5</button>
-      <button className="calc_number">6</button>
-      <button className="calc_operator">*</button>
-      <button className="calc_number">7</button>
-      <button className="calc_number">8</button>
-      <button className="calc_number">9</button>
-      <button className="calc_operator">÷</button>
-      <button className="calc_operator">.</button>
-      <button className="calc_number">0</button>
+      <button className="span-two calc_operator" onClick={() => dispatch({type: ACTIONS.CLEAR})}>AC</button>
+      <button className="calc_operator" onClick={() => dispatch({type: ACTIONS.DELETE_DIGIT})}>DEL</button>
+      <OperatorButton dispatch={dispatch} operation="+"/>
+      <DigitButton dispatch={dispatch} digit="1"/>
+      <DigitButton dispatch={dispatch} digit="2"/>
+      <DigitButton dispatch={dispatch} digit="3"/>
+      <OperatorButton dispatch={dispatch} operation="-"/>
+      <DigitButton dispatch={dispatch} digit="4"/>
+      <DigitButton dispatch={dispatch} digit="5"/>
+      <DigitButton dispatch={dispatch} digit="6"/>
+      <OperatorButton dispatch={dispatch} operation="*"/>
+      <DigitButton dispatch={dispatch} digit="7"/>
+      <DigitButton dispatch={dispatch} digit="8"/>
+      <DigitButton dispatch={dispatch} digit="9"/>
+      <OperatorButton dispatch={dispatch} operation="÷"/>
+      <DigitButton dispatch={dispatch} digit="."/>
+      <DigitButton dispatch={dispatch} digit="0"/>
       <button className="span-two calc_operator">=</button>
 
 
