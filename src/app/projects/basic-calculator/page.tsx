@@ -3,42 +3,62 @@ import CoolTitle from "@/components/utils/coolTitle"
 import "./basic-calculator.css"
 
 import { useReducer } from "react"
-import {DigitButton, OperatorButton} from "../../components/CalcButtons"
-
+import { DigitButton, OperatorButton } from "../../components/CalcButtons"
 
 export const ACTIONS = {
-  ADD_DIGIT : 'add-digit',
-  CHOOSE_OPERATION : 'choose-operation',
-  CLEAR : 'clear',
-  DELETE_DIGIT : 'delete-digit',
-  EVALUATE : 'evaluate'
+  ADD_DIGIT: 'add-digit',
+  CHOOSE_OPERATION: 'choose-operation',
+  CLEAR: 'clear',
+  DELETE_DIGIT: 'delete-digit',
+  EVALUATE: 'evaluate',
+} as const
+
+type Operation = "+" | "-" | "*" | "÷"
+
+type State = {
+  currOpe: string | null
+  prevOpe: string | null
+  operation: Operation | null
+  overwrite: boolean
 }
 
+type Action =
+  | { type: typeof ACTIONS.ADD_DIGIT; payload: { digit: string } }
+  | { type: typeof ACTIONS.CHOOSE_OPERATION; payload: { operation: Operation } }
+  | { type: typeof ACTIONS.CLEAR }
+  | { type: typeof ACTIONS.DELETE_DIGIT }
+  | { type: typeof ACTIONS.EVALUATE }
 
+const initialState: State = {
+  currOpe: null,
+  prevOpe: null,
+  operation: null,
+  overwrite: false,
+}
 
 export default function Calculator() {
   return (
-    <main className="main_playground"  >
-        <div className="main_content">
+    <main className="main_playground">
+      <div className="main_content">
 
         <CoolTitle
             title="Calcolatrice classica"
             colorClass="blue_3"/>
         <p>Lorem This is a basic calculator built with React. It performs simple arithmetic operations such as addition, subtraction, multiplication, and division.</p>
 
-      <BasicCalculator />
-        </div>
+        <BasicCalculator />
+      </div>
     </main>
   )
 }
 
-function evaluate({currOpe, prevOpe, operation}) {
-  const prev = parseFloat(prevOpe)
-  const curr = parseFloat(currOpe)
+function evaluate({ currOpe, prevOpe, operation }: State): string {
+  const prev = parseFloat(prevOpe ?? "")
+  const curr = parseFloat(currOpe ?? "")
   if (isNaN(prev) || isNaN(curr)) return ""
 
-  let computation: number;
-  
+  let computation: number
+
   switch (operation) {
     case "+":
       computation = prev + curr
@@ -55,94 +75,105 @@ function evaluate({currOpe, prevOpe, operation}) {
     default:
       return ""
   }
+
   return computation.toString()
 }
 
-function reducer(state, action) {
-  const { type, payload } = action
-    switch (type) {
-
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
     case ACTIONS.ADD_DIGIT:
       if (state.overwrite) {
         return {
           ...state,
-          currOpe: payload.digit,
-          overwrite: false
+          currOpe: action.payload.digit,
+          overwrite: false,
         }
       }
-      if (payload.digit === "0" && state.currOpe === "0") return state
-      if (payload.digit === "." && state.currOpe.includes(".")) return state
+
+      if (action.payload.digit === "0" && state.currOpe === "0") return state
+      if (action.payload.digit === "." && state.currOpe?.includes(".")) return state
+
       return {
         ...state,
-        currOpe : `${state.currOpe || ""}${payload.digit}` //new operand if 0 or addition
-    }
-    case ACTIONS.CLEAR:
-      return {}
+        currOpe: `${state.currOpe ?? ""}${action.payload.digit}`,
+      }
 
+    case ACTIONS.CLEAR:
+      return initialState
 
     case ACTIONS.CHOOSE_OPERATION:
-        if (state.currOpe == null && state.prevOpe == null) return state
-        if (state.prevOpe == null) {
-          return {
-            ...state,
-            operation: payload.operation,
-            prevOpe: state.currOpe,
-            currOpe: null
-          }
+      if (state.currOpe == null && state.prevOpe == null) return state
+
+      if (state.prevOpe == null) {
+        return {
+          ...state,
+          operation: action.payload.operation,
+          prevOpe: state.currOpe,
+          currOpe: null,
         }
-        return {
-          ...state,
-          prevOpe: evaluate(state),
-          operation: payload.operation,
-          currOpe: null
-    }
-    case ACTIONS.DELETE_DIGIT:
-      if (state.currOpe == null) return state
-      if (state.currOpe.length === 1) {
-        return {...state, currOpe: null}
-    }
-    case ACTIONS.EVALUATE:
-        if (state.operation == null || state.currOpe == null || state.prevOpe == null) 
-          return state
-        return {
-          ...state,
-          overwrite: true,
-          prevOpe: null,
-          operation: null,
-          currOpe: evaluate(state)
-    }
-    
+      }
+
+      return {
+        ...state,
+        prevOpe: evaluate(state),
+        operation: action.payload.operation,
+        currOpe: null,
+      }
+
     case ACTIONS.DELETE_DIGIT:
       if (state.overwrite) {
         return {
           ...state,
           overwrite: false,
-          currOpe: null
+          currOpe: null,
         }
       }
+
       if (state.currOpe == null) return state
+
       if (state.currOpe.length === 1) {
-        return {...state, currOpe: null}
-      }
-      return {
-        ...state,
-        currOpe: state.currOpe.slice(0, -1)
+        return { ...state, currOpe: null }
       }
 
-      default:
-        return state  
+      return {
+        ...state,
+        currOpe: state.currOpe.slice(0, -1),
+      }
+
+    case ACTIONS.EVALUATE:
+      if (
+        state.operation == null ||
+        state.currOpe == null ||
+        state.prevOpe == null
+      )
+        return state
+
+      return {
+        ...state,
+        overwrite: true,
+        prevOpe: null,
+        operation: null,
+        currOpe: evaluate(state),
+      }
+
+    default:
+      return state
   }
 }
 
 function BasicCalculator() {
-
-  const [{currOpe, prevOpe, operation}, dispatch] = useReducer(reducer, {})
+  const [{ currOpe, prevOpe, operation }, dispatch] = useReducer(
+    reducer,
+    initialState
+  )
 
   return (
     <div className="b_calculator_container">
-      <div className="calculator_grid"> 
+      <div className="calculator_grid">
         <div className="output">
-          <div className="prev-oper">{prevOpe} {operation}</div>
+          <div className="prev-oper">
+            {prevOpe} {operation}
+          </div>
           <div className="curr-oper">{currOpe}</div>
 
         </div>
