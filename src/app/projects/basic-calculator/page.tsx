@@ -82,6 +82,10 @@ function evaluate({ currOpe, prevOpe, operation }: State): string {
 function reducer(state: State, action: Action): State {
   switch (action.type) {
     case ACTIONS.ADD_DIGIT:
+      if (state.currOpe && state.currOpe.length === 23) {
+        alert("YOU HAVE WON") //TODO Easter egg 
+        return state
+      }
       if (state.overwrite) {
         return {
           ...state,
