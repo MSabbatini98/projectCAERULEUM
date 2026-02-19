@@ -65,6 +65,12 @@ export default function Project() {
               title="secondo Titolo "
               colorClass="blue_2"
             />  
+            {/* TODO passare grado di difficoltà in modo dinamico */}
+            {/* TODO passare tecnologia utilizzata in modo dinamico */}
+            {/* TODO passare link pagina in modo dinamico */}
+            {/* TODO passare grado di difficoltà in modo dinamico */}
+
+            <p> Una calcolatrice classica realizzata con HTML, CSS e JavaScript. </p>
           </Card> 
         </div>
     )
