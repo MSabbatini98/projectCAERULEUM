@@ -49,6 +49,7 @@ export default function Project() {
           <Card
             href="/projects/prova2"
             hrefTitle="Prova 2"
+            projectLongDescription="Lorem Ipsum"
           >
            <CoolTitle
               title="secondo Titolo "
@@ -58,6 +59,7 @@ export default function Project() {
           <Card
             href="/projects/prova2"
             hrefTitle="Prova 2"
+            projectLongDescription="Lorem Ipsum"
           >
            <CoolTitle
               title="secondo Titolo "
