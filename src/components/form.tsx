@@ -25,7 +25,7 @@ export default function Contact() {
   const [formSuccess, setFormSuccess] = useState(false)
   const [formSuccessMessage, setFormSuccessMessage] = useState("")
 
-  // const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
   //   const fieldName = e.target.name;
   //   const fieldValue = e.target.value;
 
@@ -33,7 +33,7 @@ export default function Contact() {
   //     ...prevState,
   //     [fieldName]: fieldValue
   //   }));
-  // }
+   }
 
   const submitForm = () => {
     // e.preventDefault()
@@ -145,7 +145,7 @@ export default function Contact() {
                     <textarea 
                       name="message" 
                       placeholder={"Scrivi qui qualsiasi nota o informazione aggiuntiva, sarò lieto di risponderti !"} 
-                      // onChange={handleInput} 
+                      onChange={handleInput} 
                       value={formData.message}
                       ></textarea>
                 </div>
