@@ -3,15 +3,17 @@ import Image from 'next/image'
 import "./styles/card.scss"
 import { Button } from '@mui/material'
 import CoolTitle from './utils/coolTitle'
+import Link from 'next/link'
 
 
 type CardProps = {
-    children: ReactNode;
-    // Your other props here.
-  }
+        children: ReactNode;
+        href: string;
+        hrefTitle: string;
+        projectLongDescription: string;
+    }
 
-export default function Card({children, ...props} : CardProps) {
-
+export default function Card({children, href, hrefTitle, projectLongDescription, ...props} : CardProps) {
 
     return (
         <div className="card-container">
@@ -21,8 +23,8 @@ export default function Card({children, ...props} : CardProps) {
                 </div>
                 <div className="card_content">
                     <div className="card_text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione exercitationem nisi expedita numquam nam nesciunt pariatur quasi fuga quod veniam corrupti, laboriosam doloremque animi cum tempore ipsum. Voluptas, modi voluptate?</p>
-                        <Button>CIAOOO</Button>
+                        <p>{projectLongDescription}</p>
+                        <Link href={href}>{hrefTitle}</Link>
                     </div>
                     <div className="card_image">
                         <Image

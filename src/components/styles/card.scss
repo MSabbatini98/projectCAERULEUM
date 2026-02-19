@@ -3,24 +3,36 @@
     border-radius: 20px;
     position: relative;
     padding: 20px;
+    margin: 15px auto;
+    max-width: 1000px;
 
 
 
     .card_content {
         display: flex;
         flex-direction: row;
-        
-
-        button {
-            background-color: red;
-        }
     }
     .card_skills{
         position: absolute;
-        bottom: 0px;
+        bottom: 10px;
         right: 20px;
         display: flex;
         flex-direction: row;
+        img{
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
+        }
+    }
+    .card_text {
+        flex: 1;
+        margin-right: 20px;
+    }
+    .card_image {
+        width: 250px;
+        height: 180px;
+        background-color: var(--blue_3);
+        border-radius: 10px;    
     }
 }
 .cool_title {
