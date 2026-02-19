@@ -79,6 +79,19 @@ function evaluate({ currOpe, prevOpe, operation }: State): string {
   return computation.toString()
 }
 
+const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
+  maximumFractionDigits: 0,
+})
+
+function formatOperand(operand: string | null): string {
+  if (operand == null) return ""
+   
+  const [integer, decimal] = operand.split(".")
+  if (decimal == null) return INTEGER_FORMATTER.format(parseInt(integer))
+
+  return `${INTEGER_FORMATTER.format(parseInt(integer))}.${decimal}`
+}
+
 function reducer(state: State, action: Action): State {
   switch (action.type) {
     case ACTIONS.ADD_DIGIT:
@@ -176,9 +189,9 @@ function BasicCalculator() {
       <div className="calculator_grid">
         <div className="output">
           <div className="prev-oper">
-            {prevOpe} {operation}
+            {formatOperand(prevOpe)} {operation}
           </div>
-          <div className="curr-oper">{currOpe}</div>
+          <div className="curr-oper">{formatOperand(currOpe)}</div>
 
         </div>
       <button className="span-two calc_operator" onClick={() => dispatch({type: ACTIONS.CLEAR})}>AC</button>
