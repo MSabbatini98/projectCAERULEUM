@@ -2,8 +2,74 @@
 import React, { useState } from "react"
 import { FormEvent } from 'react'
 
-export default function Newsletter() {
-  
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    lastname: "",
+    email: "",
+    birth: "",
+    topic: "",
+    frequency: "",
+    message: ""
+  });
+  // async function onSubmit(event: FormEvent<HTMLFormElement>) {
+  //   event.preventDefault()
+ 
+  //   const formData = new FormData(event.currentTarget)
+  //   const response = await fetch('/api/submit', {
+  //     method: 'POST',
+  //     body: formData,
+  //   })
+
+
+  const [formSuccess, setFormSuccess] = useState(false)
+  const [formSuccessMessage, setFormSuccessMessage] = useState("")
+
+   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const fieldName = e.target.name;
+  //   const fieldValue = e.target.value;
+
+  //   setFormData((prevState) => ({
+  //     ...prevState,
+  //     [fieldName]: fieldValue
+  //   }));
+   }
+
+  const submitForm = () => {
+    // e.preventDefault()
+
+    // const formURL = e.target.action
+    // const data = new FormData()
+
+    // // Turn our formData state into data we can use with a form submission
+    // Object.entries(formData).forEach(([key, value]) => {
+    //   data.append(key, value);
+    // })
+
+    // // POST the data to the URL of the form
+    // fetch(formURL, {
+    //   method: "POST",
+    //   body: data,
+    //   headers: {
+    //     'accept': 'application/json',
+    //   },
+    // }).then((response) => response.json())
+    // .then((data) => {
+    //   setFormData({
+    //     name: "",
+    //     lastname: "",
+    //     email: "",
+    //     birth: "",
+    //     topic: "",
+    //     frequency: "",
+    //     message: ""
+    //   })
+
+    //   setFormSuccess(true)
+    //   setFormSuccessMessage(data.submission_text)
+    // })
+  }
+
   return (
     <div className="form_newsletter">
 
@@ -83,9 +149,13 @@ export default function Newsletter() {
                 <p className="message_intro">Ecco il mitico spazio per i tuoi pensieri aggiuntivi dove puoi scrivere quello che vuoi: domande, complimenti, complimenti o anche lamentele sul meteo.</p>
               </div>
                 <div>
-                    <label>Messaggio</label>
-                    <textarea name="message" placeholder={"Prometto di leggerlo tutto… un giorno. Nel frattempo, stupiscimi: il campo è tuo!"} >
-                    </textarea>
+                    <label>Message</label>
+                    <textarea 
+                      name="message" 
+                      placeholder={"Scrivi qui qualsiasi nota o informazione aggiuntiva, sarò lieto di risponderti !"} 
+                      onChange={handleInput} 
+                      value={formData.message}
+                      ></textarea>
                 </div>
             </div>
             <button type="submit">Iscriviti !</button>
