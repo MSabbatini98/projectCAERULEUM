@@ -15,10 +15,34 @@
   --dark: #00113C;
   --light:  #DEF3FF;
   --caeruleum : #2a52be;
+  --fun : red;
 
   --cv_cards_bg : linear-gradient( rgba(0,0,0,0) 0%, rgba(23,45,103,1) 35%, rgba(23,45,103,1) 65%, rgba(0,0,0,0) 100%);
 
 }
+
+
+// .light {
+//   --pColor: #7c9cf7;
+//   --pBgColor:  #DEF3FF;
+// }
+
+
+// .dark {
+//   --pColor: #000000;
+//   --pBgColor:  #63a7ce;
+// }
+
+
+// .fun {
+//   --pColor: #ff0000;
+//   --pBgColor:  #fa0000;
+// }
+// .abc p {
+//   color: var(--pColor);
+//   background-color: var(--pBgColor);
+// }
+
 @function rem($pixel) {
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + rem;

@@ -1,0 +1,41 @@
+.containerModes {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    border-radius: 100px;
+    border: 1px solid var(--dark);
+    overflow: hidden;
+    background-color: var(--light);
+  .buttonModes {
+    z-index: 10;
+    padding: 10px 0;
+    font-size: 16m;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease-in-out;
+
+    &.selectedMode {
+      color: var(--light);
+    }
+    &.unselectedMode {
+      color: var(--dark); 
+    }
+  }
+  .motion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 33.333%;
+    background: var(--caeruleum);
+    transition: left 0.3s ease-in-out;
+  }
+}
+
+.outerContainerModes {
+  display: grid;
+  place-content: center;
+  height: 111px;
+  width: 100%;
+}

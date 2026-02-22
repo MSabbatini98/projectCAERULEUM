@@ -82,7 +82,7 @@ export default function Header() {
                       />
                   </Link>
               </div>
-              <div className="modes">
+              <div className="modes_hp">
                   <CustomizedSwitches />
               </div>
          </div>

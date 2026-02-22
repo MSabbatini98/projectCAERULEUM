@@ -1,21 +1,22 @@
 /*?HEADER*/
 .header {
   background-color: #DEF3FF;
-  height: 120px;
+  height: 115px;
   position: sticky;
   top: 23px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   border-top: #00113C 2px solid;
   border-bottom: #00113C 2px solid;
   z-index: 100;
+  margin: auto;
 
 
   .logo_hp {
     margin: 5px 0 10px 0;
-    width: 50%;
+    max-width: 350px;
     text-align: center;
 
     img {
@@ -29,8 +30,7 @@
   }
 
   .languages {
-    margin: auto;
-    width: 25%;
+    margin: auto 40px;
     text-align: center;
 
     .single_flag {
@@ -84,58 +84,8 @@
     text-shadow: -1px 0px 0px #90ACFF, -2px 0px 0px #688DF1, -3px 0px 0px #456FDB, -4px 0px 0px var(--blue_3), -5px 0px 0px #243FA0, -7px 0px 0px #1C3A8D, -9px 0px 0px #1F368C, -12px 0px 3px black;
   }
 
-  .modes {
-    color: #00113C;
-    width: 25%;
-    text-align: center;
-    margin: auto;
-
-    span.MuiSwitch-root.MuiSwitch-sizeMedium.css-qfzxn8-MuiSwitch-root {
-      rotate: 90deg;
-      transform: scale(1.5);
-      margin: auto;
-    }
-
-    .css-jsexje-MuiSwitch-thumb {
-      box-shadow: none;
-    }
-
-    .css-qfzxn8-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb {
-      position: absolute;
-      background-color: transparent;
-      width: 46px;
-      height: 44px;
-      top: -6px;
-      left: -12px;
-    }
-
-    .css-qfzxn8-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb:before {
-      background-image: url('../../../public/media/header/mode-moon.avif');
-      background-size: 33px;
-      left: 12px;
-    }
-
-    .css-qfzxn8-MuiSwitch-root .MuiSwitch-thumb {
-      position: absolute;
-      background-color: transparent;
-      width: 46px;
-      height: 44px;
-      top: -6px;
-      left: -12px;
-    }
-
-    .css-qfzxn8-MuiSwitch-root .MuiSwitch-thumb::before {
-      background-image: url('../../../public/media/header/mode-sun.avif');
-      background-size: 37px;
-      background-color: transparent;
-      border-radius: 100px;
-    }
-  }
-
-  .single_mode {
-    position: absolute;
-    right: 49px;
-    top: 8px;
+  .modes_hp {
+    width: 40%;
   }
 
 }
