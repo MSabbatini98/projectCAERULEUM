@@ -4,17 +4,19 @@ import { motion } from "framer-motion";
 import { Dispatch, SetStateAction, useState } from "react";
 // import { FiMoon, FiSun } from "react-icons/fi";
 
-const TOGGLE_CLASSES =
-  "text-sm font-medium flex items-center gap-2 px-3 md:pl-3 md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10";
+type ToggleOptionsType = "light" | "dark" | "fun";
 
-type ToggleOptionsType = "light" | "dark";
+const OPTIONS: ToggleOptionsType[] = ["light", "dark", "fun"];
 
-const Example = () => {
+const ThemeDebug = () => {
   const [selected, setSelected] = useState<ToggleOptionsType>("light");
+
   return (
     <div
-      className={`grid h-[200px] place-content-center px-4 transition-colors ${
-        selected === "light" ? "bg-white" : "bg-slate-900"
+      className={`grid h-[200px] place-content-center transition-colors ${
+        selected === "light"
+          ? "bg-white" : selected === "dark"
+          ? "bg-black" : "bg-red-500"
       }`}
     >
       <SliderToggle selected={selected} setSelected={setSelected} />
@@ -29,43 +31,30 @@ const SliderToggle = ({
   selected: ToggleOptionsType;
   setSelected: Dispatch<SetStateAction<ToggleOptionsType>>;
 }) => {
+  const selectedIndex = OPTIONS.indexOf(selected);
+
   return (
-    <div className="relative flex w-fit items-center rounded-full">
-      <button
-        className={`${TOGGLE_CLASSES} ${
-          selected === "light" ? "text-white" : "text-slate-300"
-        }`}
-        onClick={() => {
-          setSelected("light");
-        }}
-      >
-        {/* <FiMoon className="relative z-10 text-lg md:text-sm" /> */}
-        <span className="relative z-10">Light</span>
-      </button>
-      <button
-        className={`${TOGGLE_CLASSES} ${
-          selected === "dark" ? "text-white" : "text-slate-800"
-        }`}
-        onClick={() => {
-          setSelected("dark");
-        }}
-      >
-        {/* <FiSun className="relative z-10 text-lg md:text-sm" /> */}
-        <span className="relative z-10">Dark</span>
-      </button>
-      <div
-        className={`absolute inset-0 z-0 flex ${
-          selected === "dark" ? "justify-end" : "justify-start"
-        }`}
-      >
-        <motion.span
-          layout
-          transition={{ type: "spring", damping: 15, stiffness: 250 }}
-          className="h-full w-1/2 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600"
-        />
-      </div>
+    <div className="relative grid grid-cols-3 w-[300px] rounded-full border border-slate-600 overflow-hidden">
+      <motion.span
+        layout 
+        transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+        className="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-violet-600 to-indigo-600"
+         style={{ left: `${selectedIndex * 33.333}%` }}
+      />
+
+      {OPTIONS.map((option) => (
+        <button
+          key={option}
+          className={`z-10 py-2 text-sm font-medium capitalize transition-colors ${
+            selected === option ? "text-white" : "text-slate-400"
+          }`}
+          onClick={() => setSelected(option)}
+        >
+          {option}
+        </button>
+      ))}
     </div>
   );
 };
 
-export default Example;
+export default ThemeDebug;
