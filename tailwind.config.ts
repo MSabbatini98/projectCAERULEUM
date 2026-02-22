@@ -18,7 +18,11 @@ const config: Config = {
         blue_4: '#396CF7',
         blue_5: '#172D67',
         dark:   '#00113C',
-        light : '#DEF3FF'
+        light : '#DEF3FF',
+        
+        fun: 'var(--fun)',
+        // pColor : 'var(--pColor)',
+        // pBgColor : 'var(--pBgColor)'
       }
     },
   },

@@ -49,26 +49,24 @@ export default function Header() {
                   </div>
                   <div className="single_flag">
                       <Image
-                          src="/media/header/flags/flag-germany.avif"
-                          alt="German flag icon"
-                          width={46}
-                          height={46}
-                      />
-                  </div>
-  
-                  <div className="single_flag">
-                      <Image
                           src="/media/header/flags/flag-united-kingdom.avif"
                           alt="UK flag icon"
                           width={46}
                           height={46}
                       />
                   </div>
-  
                   <div className="single_flag">
                       <Image
                           src="/media/header/flags/flag-france.avif"
                           alt="France flag icon"
+                          width={46}
+                          height={46}
+                      />
+                  </div>
+                  <div className="single_flag">
+                      <Image
+                          src="/media/header/flags/flag-germany.avif"
+                          alt="German flag icon"
                           width={46}
                           height={46}
                       />
@@ -84,7 +82,7 @@ export default function Header() {
                       />
                   </Link>
               </div>
-              <div className="modes">
+              <div className="modes_hp">
                   <CustomizedSwitches />
               </div>
          </div>
