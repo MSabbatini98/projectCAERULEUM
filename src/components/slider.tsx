@@ -4,6 +4,7 @@ import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react"
 import "./styles/slider.scss"
 import Image from "next/image"
 import { StaticImageData } from 'next/image';
+import CoolTitle from "./utils/coolTitle"
 
 
 type ImageSliderProps = {
@@ -40,8 +41,9 @@ export function ImageSlider({ images }: ImageSliderProps) {
       <a href="#after-image-slider-controls" className="skip-link">
         Skip Image Slider Controls
       </a>
+      
       <div className="about_slide">
-        {images.map(({ url, alt, title }, index) => (
+          {images.map(({ url, alt, title }, index) => (
           <div 
             className="about_slide-container"
             key={index}
@@ -49,7 +51,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
           >
             <h1>{title}</h1>
             <div className="about_slider-content">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque hic adipisci blanditiis molestiae aspernatur molestias tenetur repellendus atque, et cupiditate ut velit similique ea voluptas a illo animi aperiam obcaecati!</p>
+              <p>{images[index].content}</p>
               <Image 
                 src={url}
                 alt={alt}
