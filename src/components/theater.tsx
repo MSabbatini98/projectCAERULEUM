@@ -4,7 +4,6 @@ import { useState } from "react"
 import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react"
 import Image from "next/image"
 import { StaticImageData } from 'next/image';
-import { div } from "framer-motion/client"
 
 
 type SkillSliderProps = {
@@ -51,8 +50,8 @@ export default function Theater({ skills }: SkillSliderProps) {
             className="skill_thumb"
 
 
-            style={{ translate: skillIndex !== -1 ?  `${-55 * skillIndex}%` : `0`  }}
-
+            // style={{ translate: skillIndex !== -1 ?  `${-55 * skillIndex}%` : `0`  }}
+            //  fa scorrere le immagini in modo da farle centrate. Se sono poche non ha senso
             aria-label={`View Image ${index + 1}`}
             onClick={() => { 
               console.log(skillIndex, index)

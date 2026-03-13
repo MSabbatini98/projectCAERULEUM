@@ -4,10 +4,7 @@ import "../styles/curriculum.scss"
 import CoolTitle from "@/components/utils/coolTitle"
 import Theater from "@/components/theater";
 
-import car5 from "../../../public/media/sliderImgs/car-5.jpg"
-import car4 from "../../../public/media/sliderImgs/car-4.jpg"
-
-import {PPF, SKILL_LIST} from "./data"
+import {SKILLZ,  LANG_SLIDER} from "./data"
 
 export default function Curriculum() {
 
@@ -39,9 +36,9 @@ export default function Curriculum() {
                     />                    
                 </div>
             </div>
-            {PPF.map(({ title, content}, index) => (
+            {SKILLZ.map(({ title, content}, index) => (
           <div
-            className="PPF_single" 
+            className="SKILLZ_single" 
                 key={index}
             >
                 <CoolTitle
@@ -54,10 +51,13 @@ export default function Curriculum() {
             </div>
             ))}
 
+            <CoolTitle
+                title={"Lingue conosciute"}
+                colorClass="blue_5"
+            />
             <div className="cv_theater" style={{height:"2000px"}}>
-                <Theater  skills={SKILL_LIST} />
+                <Theater  skills={ LANG_SLIDER} />
             </div>
-
         </div>
     )
 }
