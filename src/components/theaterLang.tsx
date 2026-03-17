@@ -39,16 +39,16 @@ export default function Theater({ langs }: LangSliderProps) {
   }
 
   return (
-    <section className="cv_theater"
+    <section className="cv_theater theater_lang"
       aria-label="Image Slider"
 
     >
-      <div className="cv_slide">
-        <div className="skill_selection" >
+      <div className="cv_slide lang_slide">
+        <div className="skill_selection lang_selection" >
         {langs.map(({urlIcon, altIcon,title, example}, index) => (
           <div
             key={index}
-            className="skill_thumb"
+            className="skill_thumb lang_thumb"
             aria-label={`View Image ${index + 1}`}
             onClick={() => { 
               langIndex === index 
@@ -88,9 +88,10 @@ export default function Theater({ langs }: LangSliderProps) {
           <ArrowBigRight size={64}aria-hidden />
         </button>
       </div>
+      
     </div>
       {langIndex >= 0 && 
-      <div className="cv_stage card" >
+      <div className="cv_stage card lang_card" >
         <h3 className="cv_stage_title">{langs[langIndex].title}</h3>
         <div className="cv_stage_content">
           <div className="cv_stage_content_intro">
