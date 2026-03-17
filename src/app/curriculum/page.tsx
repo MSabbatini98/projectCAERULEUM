@@ -2,7 +2,9 @@ import Image from "next/image"
 
 import "../styles/curriculum.scss"
 import CoolTitle from "@/components/utils/coolTitle"
-import Theater from "@/components/theater";
+import Theater from "@/components/theater"
+import TheaterLang from "@/components/theaterLang";
+
 
 import {SKILLZ,  LANG_SLIDER} from "./data"
 
@@ -55,8 +57,12 @@ export default function Curriculum() {
                 title={"Lingue conosciute"}
                 colorClass="blue_5"
             />
-            <div className="cv_theater" style={{height:"2000px"}}>
+            {/* <div className="cv_theater" style={{height:"2000px"}}>
                 <Theater  skills={ LANG_SLIDER} />
+            </div> */}
+            <div className="cv_theater theater_lang" style={{height:"2000px", border:"1px solid red"}}>
+                <TheaterLang  langs={ LANG_SLIDER} />
+
             </div>
         </div>
     )
