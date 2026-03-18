@@ -57,9 +57,7 @@ export default function Curriculum() {
                 title={"Lingue conosciute"}
                 colorClass="blue_5"
             />
-            {/* <div className="cv_theater" style={{height:"2000px"}}>
-                <Theater  skills={ LANG_SLIDER} />
-            </div> */}
+            <p>Clicca sui vari banner per avere più informazioni sulle lingue che parlo e che sto imparando. Utilizza le frecce per spostarti e clicca di nuovo se vuoi chiudere.</p>
             <div className="cv_theater theater_lang" >
                 <TheaterLang  langs={ LANG_SLIDER} />
 

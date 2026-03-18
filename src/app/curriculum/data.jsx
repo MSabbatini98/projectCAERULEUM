@@ -38,7 +38,7 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_en,
         altMainImg: "Bandiera Inglese",
         title: "Inglese",
-        content: "Ho una ottima padronanza della lingua inglese, sia in ambito professionale che personale, grazie all'esperienza acquisita nell'anno in cui ho vissuto negli USA. ",
+        content: "Grazie all'anno trascorso vivendo negli USA, ho una ottima padronanza della lingua inglese, sia in ambito professionale che personale. L'accento, come per l'italiano, varia a seconda dell'ultima influenza predominante",
         example: "That fountain pen lies upon the smooth oaken table, beside a docile feline and a vermilion Annurca apple."
     },
     {
@@ -47,7 +47,7 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_fr,
         altMainImg: "Bandiera Francese",
         title: "Francese",
-        content: "Il mio livello di francese è relativamente basso, con una buona comprensione pessima pronuncia, dovuto in gran parte al fatto di aver inparato la lingua grazie a Duolingo. ",
+        content: "Il mio livello di francese è relativamente basso, con una minima comprensione pessima pronuncia, dovuto in gran parte al fatto di aver imparato la lingua esclusivamente tramite Duolingo. ",
         example: "Le stylo est sur la table, près d’un chat et une pomme rouge."
     },
     {
@@ -56,7 +56,7 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_sp,
         altMainImg: "Bandiera Spagnola",
         title: "Spagnolo",
-        content: "Ho una conoscenza scolastica dello spagnolo, livello A2. ",
+        content: "Ho una conoscenza scolastica dello spagnolo, livello A2. Posso comprendere e comunicare in situazioni quotidiane, ma ho difficoltà con conversazioni più complesse o tecniche se non dovesse funzionare la S alla fine. ",
         example: "Esa pluma estas sobre la mesa, con un gato y una manzana roja."
     },
     {
@@ -65,7 +65,7 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_de,
         altMainImg: "Bandiera Tedesca",
         title: "Tedesco",
-        content: "Ho una conoscenza estremamente limitata del tedesco, con una comprensione limitata ai saluti e ringraziamenti. ",
+        content: "Ho una conoscenza estremamente limitata del tedesco, con una comprensione limitata ai saluti e ringraziamenti, imparato grazie a Duolingo e qualche viaggio (il mio 'tschüss' è perfetto, dicono). ",
         example: "Der Stift und die Katze und der rote Apfel sind auf dem Tisch."
     },
     {
@@ -74,7 +74,7 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_jp,
         altMainImg: "Bandiera Giapponese",
         title: "Giapponese",
-        content: "Ho una conoscenza molto elementare della lingua, grazie ad anni di anime. Conosco abbastanza bene 1 dei 3 alfabeti, l'hiragana,  e sono in grado di leggere i kanji più semplici. Sono in grado di capire le frasi più comunemente usate negli anime (quindi ad esempio ‹ucciderò tutti i demoni› o ‹salverò il mondo/l'umanità/la tua anima› ) ",
+        content: "Anni ed anni di anime hanno dato qualche  - minimo - frutto: conosco abbastanza bene 1 dei 3 alfabeti, l'hiragana, e sono in grado di leggere i kanji più semplici. Riesco inoltre a capire le frasi più comunemente usate negli anime (quindi ad esempio ‹sono tornat a casa›, ma anche ‹ucciderò tutti i demoni› e ovviamente ‹salverò il mondo/l'umanità/la tua anima› ) ",
         example: "ペンはつくえの上にあります。ねことあかいりんごといっしょです。 (Pen wa tsukue no ue ni arimasu. Neko to akai ringo to issho desu.)"
     }
 ];
