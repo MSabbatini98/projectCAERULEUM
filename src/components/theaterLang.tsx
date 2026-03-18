@@ -44,6 +44,15 @@ export default function Theater({ langs }: LangSliderProps) {
 
     >
       <div className="cv_slide lang_slide">
+        <div className=" nav_left">
+          <button
+            onClick={showPrevImage}
+            className="cv_prev"
+            aria-label="View Previous Image"
+            >
+            <ArrowBigLeft size={64}aria-hidden />
+          </button>
+        </div>
         <div className="skill_selection lang_selection" >
         {langs.map(({urlIcon, altIcon,title, example}, index) => (
           <div
@@ -58,7 +67,7 @@ export default function Theater({ langs }: LangSliderProps) {
           >
               <div className={ index === langIndex ? "card active":"card"}>
                 <div className="about_slider-content">
-                  <p>{title}</p>
+                  <p className="thumb_lang">{title}</p>
                   <Image 
                     src={urlIcon}
                     alt={altIcon}
@@ -72,14 +81,7 @@ export default function Theater({ langs }: LangSliderProps) {
           </div>
         ))}
       </div>
-      <div className="arrow_nav">
-        <button
-          onClick={showPrevImage}
-          className="cv_prev"
-          aria-label="View Previous Image"
-          >
-          <ArrowBigLeft size={64}aria-hidden />
-        </button>
+      <div className=" nav_right">
         <button
           onClick={showNextImage}
           className="cv_next"
@@ -88,17 +90,14 @@ export default function Theater({ langs }: LangSliderProps) {
           <ArrowBigRight size={64}aria-hidden />
         </button>
       </div>
-      
     </div>
       {langIndex >= 0 && 
-      <div className="cv_stage card lang_card" >
+      <div className="cv_stage card stage_lang" >
         <h3 className="cv_stage_title">{langs[langIndex].title}</h3>
         <div className="cv_stage_content">
           <div className="cv_stage_content_intro">
-          <p>{langs[langIndex].content}</p>
-          <hr />
-          <br />
-          <br />
+          <p>{langs[langIndex].content} </p>
+          <h4>Esempio :</h4>
           <p>{langs[langIndex].example}</p> 
           </div>
 

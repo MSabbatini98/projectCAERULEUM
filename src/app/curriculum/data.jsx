@@ -29,7 +29,7 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_it,
         altMainImg: "Bandiera Italiana",
         title: "Italiano",
-        content: "Nato e cresciuto in Italia, parlo italiano come lingua madre. ",
+        content: "Nato e cresciuto in Italia, parlo l'italiano come lingua madre. ",
         example: "Codesta stilografica giace posata sul desco, adiacente a un docile felino ed un'annurca vermiglia."
     },
     {
@@ -38,8 +38,8 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_en,
         altMainImg: "Bandiera Inglese",
         title: "Inglese",
-        content: "Ho una ottima padronanza dell'inglese, sia in ambito professionale che personale. ",
-        example: "That fountain pen lies upon the table, beside a gentle cat and a vermilion Annurca apple."
+        content: "Ho una ottima padronanza della lingua inglese, sia in ambito professionale che personale, grazie all'esperienza acquisita nell'anno in cui ho vissuto negli USA. ",
+        example: "That fountain pen lies upon the smooth oaken table, beside a docile feline and a vermilion Annurca apple."
     },
     {
         urlIcon: banner_fr,
@@ -47,7 +47,7 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_fr,
         altMainImg: "Bandiera Francese",
         title: "Francese",
-        content: "Il mio livello di francese è relativamente basso, con una buona comprensione pessima pronuncia. ",
+        content: "Il mio livello di francese è relativamente basso, con una buona comprensione pessima pronuncia, dovuto in gran parte al fatto di aver inparato la lingua grazie a Duolingo. ",
         example: "Le stylo est sur la table, près d’un chat et une pomme rouge."
     },
     {
@@ -65,8 +65,8 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_de,
         altMainImg: "Bandiera Tedesca",
         title: "Tedesco",
-        content: "Ho una conoscenza estremamente limitata del tedesco, con una comprensione limitata ai saluti. ",
-        example: "Der Füller liegt auf dem Tisch, neben einer sanften Katze und einem roten Annurca-Obst."
+        content: "Ho una conoscenza estremamente limitata del tedesco, con una comprensione limitata ai saluti e ringraziamenti. ",
+        example: "Der Stift und die Katze und der rote Apfel sind auf dem Tisch."
     },
     {
         urlIcon: banner_jp,
@@ -74,7 +74,7 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_jp,
         altMainImg: "Bandiera Giapponese",
         title: "Giapponese",
-        content: "Ho una conoscenza molto base della lingua. Conosco 1 dei 3 alfabeti, l'hiragana, e sono in grado di leggere parole semplici. ",
-        example: "この万能筆はテーブル上にあり、穏やかな猫と赤いアンヌルカの果実の横にあります。"
+        content: "Ho una conoscenza molto elementare della lingua, grazie ad anni di anime. Conosco abbastanza bene 1 dei 3 alfabeti, l'hiragana,  e sono in grado di leggere i kanji più semplici. Sono in grado di capire le frasi più comunemente usate negli anime (quindi ad esempio ‹ucciderò tutti i demoni› o ‹salverò il mondo/l'umanità/la tua anima› ) ",
+        example: "ペンはつくえの上にあります。ねことあかいりんごといっしょです。 (Pen wa tsukue no ue ni arimasu. Neko to akai ringo to issho desu.)"
     }
 ];

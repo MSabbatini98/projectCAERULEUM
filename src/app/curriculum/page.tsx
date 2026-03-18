@@ -60,7 +60,7 @@ export default function Curriculum() {
             {/* <div className="cv_theater" style={{height:"2000px"}}>
                 <Theater  skills={ LANG_SLIDER} />
             </div> */}
-            <div className="cv_theater theater_lang" style={{height:"2000px", border:"1px solid red"}}>
+            <div className="cv_theater theater_lang" >
                 <TheaterLang  langs={ LANG_SLIDER} />
 
             </div>
