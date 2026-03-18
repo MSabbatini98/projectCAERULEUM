@@ -59,7 +59,7 @@
                 height: 60px;
                 width: 60px;
                 border-radius: 100%;
-                background-color: var(--dark);
+                background-color: var(--blue_3);
                 z-index: -20;
             }
             &::after {
@@ -80,7 +80,7 @@
             left: 20px;
             right: 25%;
             height: 13px;
-            border: solid 2px var(--dark);
+            border: solid 2px var(--blue_3);
             border-radius:10px;
             z-index: -10;
         }

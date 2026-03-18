@@ -18,9 +18,9 @@ export default function Curriculum() {
             <div className="cv_upper">
                 <div className="cv_txt">
                     <p className="intro">
-                        {"Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri i più importanti passi che hanno contribuito a costruire una professionalità versatile e responsabile."}
+                        {"Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formatice che hanno contribuito a costruire una professionalità versatile e responsabile."}
                     </p>
-                    <p className="fake_cta">Clicca sul curriculum per scaricarlo !</p>
+                    <p className="fake_cta">Clicca sul curriculum per scaricarlo   &rarr; </p>
                 </div>
                 <div className="cv_img">
                     <Image
@@ -38,20 +38,6 @@ export default function Curriculum() {
                     />                    
                 </div>
             </div>
-            {SKILLZ.map(({ title, content}, index) => (
-          <div
-            className="SKILLZ_single" 
-                key={index}
-            >
-                <CoolTitle
-                    title={title}
-                    colorClass="blue_5"
-                />
-                <div >
-                    <p>{content}</p>
-                </div>
-            </div>
-            ))}
 
             <CoolTitle
                 title={"Lingue conosciute"}
@@ -60,8 +46,26 @@ export default function Curriculum() {
             <p>Clicca sui vari banner per avere più informazioni sulle lingue che parlo e che sto imparando. Utilizza le frecce per spostarti e clicca di nuovo se vuoi chiudere.</p>
             <div className="cv_theater theater_lang" >
                 <TheaterLang  langs={ LANG_SLIDER} />
-
             </div>
+
+            {/* <p> {SKILLZ[0].title}</p> Single item from DATA - SKILLZ*/}
+
+            {SKILLZ.map(({ title, content}, index) => (
+          <div
+            className="PPF" //Past (soft skills ), Present (programming skills), Future (mission)-> Conoscenze passate (), presenti e future 
+                key={index}
+            >
+                <CoolTitle
+                    title={title}
+                    colorClass="blue_5"
+                />
+                <div >
+                    <p className="PPFcontent">{content}</p>
+                </div>
+            </div>
+            ))}
+
+
         </div>
     )
 }
