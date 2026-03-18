@@ -4,7 +4,6 @@ import { useState } from "react"
 import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react"
 import Image from "next/image"
 import { StaticImageData } from 'next/image';
-import { div } from "framer-motion/client"
 
 
 type SkillSliderProps = {
@@ -52,7 +51,7 @@ export default function Theater({ skills }: SkillSliderProps) {
 
 
             style={{ translate: skillIndex !== -1 ?  `${-55 * skillIndex}%` : `0`  }}
-
+            //  fa scorrere le immagini in modo da farle centrate. Se sono poche non ha senso
             aria-label={`View Image ${index + 1}`}
             onClick={() => { 
               console.log(skillIndex, index)
@@ -115,7 +114,7 @@ export default function Theater({ skills }: SkillSliderProps) {
       </div>
     }
 
-      {/* <button
+     <button
         onClick={showPrevImage}
         className="img-slider-btn prev"
         aria-label="View Previous Image"
@@ -128,9 +127,10 @@ export default function Theater({ skills }: SkillSliderProps) {
         aria-label="View Next Image"
       >
         <ArrowBigRight aria-hidden />
-      </button> */}
+      </button>
 
 
     </section>
   )
 }
+
