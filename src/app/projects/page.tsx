@@ -38,7 +38,7 @@ export default function Project() {
           </Card> 
           <Card
             href="/projects/basic-calculator"
-            hrefTitle="Calcolatrice base"
+            hrefTitle="Calcolatrice classica"
             projectLongDescription="Esercizio semplice per prendere dimestichezza con useReducer."
           >
            <CoolTitle

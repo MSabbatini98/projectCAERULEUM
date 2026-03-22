@@ -9,11 +9,12 @@ import Link from 'next/link'
 type CardProps = {
         children: ReactNode;
         href: string;
-        hrefTitle: string;
+        hrefCTA: string;
         projectLongDescription: string;
+        projectLinkCTA: string;
     }
 
-export function Card({children, href, hrefTitle, projectLongDescription, ...props} : CardProps) {
+export function Card({children, href, hrefCTA, projectLongDescription, ...props} : CardProps) {
 
     return (
         <div className="card-container">
@@ -24,7 +25,7 @@ export function Card({children, href, hrefTitle, projectLongDescription, ...prop
                 <div className="card_content">
                     <div className="card_text">
                         <p>{projectLongDescription}</p>
-                        <Link href={href}>{hrefTitle}</Link>
+                        <Link href={href}>{hrefCTA}</Link>
                     </div>
                     <div className="card_image">
                         <Image
@@ -64,7 +65,7 @@ export function Card({children, href, hrefTitle, projectLongDescription, ...prop
     )
 }
 
-export function CardHalf({children, href, hrefTitle, projectLongDescription, ...props} : CardProps) {
+export function CardHalf({children, href, hrefCTA, projectLongDescription, projectLinkCTA, ...props} : CardProps) {
 
     return (
         <div className="card-half-container">
@@ -73,10 +74,6 @@ export function CardHalf({children, href, hrefTitle, projectLongDescription, ...
                 {children}
                 </div>
                 <div className="card_content">
-                    <div className="card_text">
-                        <p>{projectLongDescription}</p>
-                        <Link href={href}>{hrefTitle}</Link>
-                    </div>
                     <div className="card_image">
                         <Image
                                 className="active"
@@ -86,29 +83,10 @@ export function CardHalf({children, href, hrefTitle, projectLongDescription, ...
                                 height={100}
                             />
                     </div>
-                </div>
-                <div className="card_skills">
-                    <Image
-                            className="active"
-                            src="/media/header/flags/flag-italy.avif"
-                            alt="Italian flag icon"
-                            width={30}
-                            height={30}
-                        />
-                    <Image
-                            className="active"
-                            src="/media/header/flags/flag-italy.avif"
-                            alt="Italian flag icon"
-                            width={30}
-                            height={30}
-                        />
-                    <Image
-                            className="active"
-                            src="/media/header/flags/flag-italy.avif"
-                            alt="Italian flag icon"
-                            width={30}
-                            height={30}
-                        />
+                    <div className="card_text">
+                        <p>{projectLongDescription}</p>
+                    </div>
+                <Link href={href}>{projectLinkCTA}</Link>
                 </div>
             </div>
         </div>

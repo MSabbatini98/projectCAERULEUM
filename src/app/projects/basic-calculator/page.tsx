@@ -38,14 +38,13 @@ const initialState: State = {
 
 export default function Calculator() {
   return (
-    <main className="main_playground">
+    <main >
       <div className="main_content">
 
         <CoolTitle
             title="Calcolatrice classica"
             colorClass="blue_3"/>
-        <p>Lorem This is a basic calculator built with React. It performs simple arithmetic operations such as addition, subtraction, multiplication, and division.</p>
-
+        <p>Seguendo un tutorial, ho sviluppato una semplice calcolatrice classica con HTML, CSS e JavaScript.</p>
         <BasicCalculator />
       </div>
     </main>

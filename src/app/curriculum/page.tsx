@@ -96,18 +96,21 @@ export default function Curriculum() {
           
           <CardHalf
             href="/projects/prova1"
-            hrefTitle="Albero di Cirene"
+            hrefCTA="Albero di Cirene"
             projectLongDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con Albero di Cirene collaboriamo per promuovere l'integrazione sociale e culturale nella comunità. I progetti a cui partecipo la scuola di italiano per extracomunitari e il progetto di ascolto per le persone sole/anziane/emarginate."
+            projectLinkCTA="Scopri di più"
           >
             <CoolTitle title="Albero di Cirene" colorClass="blue_5" />
           </CardHalf>
           
           <CardHalf
             href="/projects/prova1"
-            hrefTitle="Scopri la sezione PlasticFree dedicata"
+            hrefCTA="Scopri la sezione PlasticFree dedicata"
             projectLongDescription="Sono ormai referente per il Comune di Bologna da Maggio 2024. Grazie a PlasticFree ho potuto organizzare diverse raccolte e diverse sensibilizzazioni con scuole ed aziende"
+            projectLinkCTA="Scopri di più"
+
           >
-            <CoolTitle title="PlastcFree Bologna" colorClass="blue_3" />
+          <CoolTitle title="PlasticFree " colorClass="blue_3" />
           </CardHalf>
         </div>
 
