@@ -92,12 +92,10 @@ export default function Curriculum() {
           persone sole/anziane/emarginate.
         </p>
         <div className="volunteer-cards">
-
-          
           <CardHalf
             href="/projects/prova1"
             hrefCTA="Albero di Cirene"
-            projectLongDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con Albero di Cirene collaboriamo per promuovere l'integrazione sociale e culturale nella comunità. I progetti a cui partecipo la scuola di italiano per extracomunitari e il progetto di ascolto per le persone sole/anziane/emarginate."
+            projectLongDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con Albero di Cirene collaboriamo per promuovere l'integrazione sociale e culturale nella comunità."
             projectLinkCTA="Scopri di più"
           >
             <CoolTitle title="Albero di Cirene" colorClass="blue_5" />

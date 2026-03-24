@@ -49,6 +49,9 @@
     position: relative;
     padding: 10px 20px;
     height: 600px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 
     .card_content {
         display: flex;
@@ -57,21 +60,27 @@
         justify-content: space-between;
     }
     .card_text {
-        flex: 1;
-        margin-right: 20px;
+        margin-right: 0;
     }
     .card_image {
         width: 250px;
         height: 180px;
         background-color: var(--blue_3);
         border-radius: 10px;   
-        margin: 20px auto; 
+        margin: 10px auto; 
+    }
+    a.card_CTA {
+        display: inline-block;
+        border: solid 2px var(--light);
+        background-color: var(--blue_5);
+        border-radius: 5px;
+        color: var(--light);
+        font-weight: bold;
+        font-size: 20px;
     }
 
-}
-
-.cool_title {
-    margin-bottom: 20px;
+    .cool_title {
+    margin-bottom: 0px;
 
     h3 {
         position: relative;
@@ -121,6 +130,9 @@
         }
     }
 }
+
+}
+
 
 
 .volunteer-cards {

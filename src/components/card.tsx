@@ -73,22 +73,20 @@ export function CardHalf({children, href, hrefCTA, projectLongDescription, proje
                 <div className="card_title">
                 {children}
                 </div>
-                <div className="card_content">
-                    <div className="card_image">
-                        <Image
-                                className="active"
-                                src="/media/header/flags/flag-italy.avif"
-                                alt="Italian flag icon"
-                                width={100}
-                                height={100}
-                            />
-                    </div>
-                    <div className="card_text">
-                        <p>{projectLongDescription}</p>
-                    </div>
-                <Link href={href}>{projectLinkCTA}</Link>
+                <div className="card_image">
+                    <Image
+                            className="active"
+                            src="/media/header/flags/flag-italy.avif"
+                            alt="Italian flag icon"
+                            width={100}
+                            height={100}
+                        />
+                </div>
+                <div className="card_text">
+                    <p>{projectLongDescription}</p>
+                </div>
+                <Link className="card_CTA" href={href}>{projectLinkCTA}</Link>
                 </div>
             </div>
-        </div>
     )
 }
