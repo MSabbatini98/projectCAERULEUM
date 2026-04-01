@@ -4,8 +4,8 @@
     pointer-events: none;
 
     
-    &:hover .cv_img img:last-of-type {
-        transform: scale(1.2);
+    &:hover .cv_img .cv_hover {
+        transform: scale(1.25);
         opacity: 1;
     }
 
@@ -35,10 +35,10 @@
         padding: 20px;
         pointer-events: auto;
 
-        img:last-of-type{
+        .cv_hover{
             position: absolute;
-            bottom: 20px;
-            right: 32px;
+            bottom: 42px;
+            right: 20px;
             opacity: 0;
         }
     }
@@ -68,16 +68,6 @@
            text-align: center;
            text-transform: uppercase;
         }
-       .cv_box_txt {
-        //  display: none;
-        position: absolute;
-        bottom: -150px;
-        left: 0;
-        padding: 30px;
-        border-radius: 23px;
-        background-color:  #172D67;
-        border: 3px solid #DEF3FF;
-       }
     }
 
 }

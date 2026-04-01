@@ -7,6 +7,7 @@ import TheaterLang from "@/components/theaterLang";
 import { SKILLZ, LANG_SLIDER } from "./data";
 import {Card, CardHalf} from "@/components/card";
 import CoolTitle from "@/components/utils/coolTitle";
+import DownloadableImg from "@/components/DownloadableImg";
 
 export default function Curriculum() {
   return (
@@ -29,13 +30,15 @@ export default function Curriculum() {
             height={800}
             alt="Author handing out his CV"
           />
-          <Image
+
+          <DownloadableImg
             src="/media/cv/extract-cv.avif"
-            className="hover"
             width={400}
             height={800}
             alt="Author handing out his CV"
+            downloadLink="/media/cv/CV04-26.pdf"
           />
+
         </div>
       </div>
 
