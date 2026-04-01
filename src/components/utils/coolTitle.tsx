@@ -1,4 +1,5 @@
 import "../styles/card.scss"
+import "../../../src/app/styles/contacts.scss"
 
 type titleProps = {
     title:string;
