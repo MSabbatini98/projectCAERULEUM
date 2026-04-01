@@ -19,7 +19,7 @@ export default function Project() {
         projectLongDescription="Semplice esercizio in react per prendere dimestichezza e allenarmi con useReducer. L'esercizio è stato svolto seguendo un tutorial ma con alcune personalizzazioni stilistiche e funzionali."
         projectLinkCTA=""
         projectDifficulty="Facile"
-        projectSkills={["HTML", "CSS", "JS", "React"]}
+        projectSkills={["HTML", "CSS", "JS", "REACT"]}
         projectStatus="Completato"
         projectDate="2026-02"
         isProjectProgramming={true}

@@ -20,7 +20,38 @@ type CardProps = {
     }
 const BROKEN_IMAGE = '/media/broken-img.png';
 
-export function Card({children, href, hrefCTA, projectLongDescription, projectMainImage, isProjectProgramming, projectLinkCTA} : CardProps) {
+// Skill to image mapping. Skill icons in public/media/skills/
+const SKILL_IMAGES: Record<string, string> = {
+    'HTML': '/media/skills/HTML.png',
+    'CSS': '/media/skills/CSS.png',
+    'JS': '/media/skills/JS.png',
+    'Python': '/media/skills/PHYTON.png',
+    'PHP': '/media/skills/PHP.png',
+    'SQL': '/media/skills/SQL.png',
+    'PostgreSQL': '/media/skills/POSTGRES.png',
+    'REACT': '/media/skills/REACT.png',
+    'Sass': '/media/skills/SASS.png',
+    'TypeScript': '/media/skills/TYPESCRIPT.png',
+    // 'Java': '/media/skills/java.svg',
+    // 'Node.js': '/media/skills/nodejs.svg',
+    // 'MongoDB': '/media/skills/mongodb.svg',
+    // 'Git': '/media/skills/git.svg',
+    // 'Docker': '/media/skills/docker.svg',
+    // 'AWS': '/media/skills/aws.svg',
+    // 'Azure': '/media/skills/azure.svg',
+    // 'GCP': '/media/skills/gcp.svg',
+    // 'Kubernetes': '/media/skills/kubernetes.svg',
+    // 'GraphQL': '/media/skills/graphql.svg',
+    // 'Django': '/media/skills/django.svg',
+    // 'Flask': '/media/skills/flask.svg',
+    // 'Spring': '/media/skills/spring.svg',
+    // 'Laravel': '/media/skills/laravel.svg',
+    // 'Symfony': '/media/skills/symfony.svg',
+    // 'Vue.js': '/media/skills/vuejs.svg',
+    // 'Angular': '/media/skills/angular.svg',
+};
+
+export function Card({children, href, hrefCTA, projectLongDescription, projectMainImage, isProjectProgramming, projectSkills, projectLinkCTA} : CardProps) {
 
     return (
         <div className="card-container">
@@ -38,35 +69,24 @@ export function Card({children, href, hrefCTA, projectLongDescription, projectMa
                                 className="active"
                                 src={projectMainImage || BROKEN_IMAGE}
                                 alt="Italian flag icon"
-                                width={100}
-                                height={100}
+                                fill
+                                style={{ objectFit: 'contain' }}
                             />
                     </div>
                 </div>
-                {isProjectProgramming && (
+                {isProjectProgramming && projectSkills && projectSkills.length > 0 && (
                     <div className="card_skills">
-                        <Image
-                            className="active"
-                            src={BROKEN_IMAGE}
-                            alt="Italian flag icon"
-                            width={30}
-                            height={30}
-                        />
-                    <Image
-                            className="active"
-                                src={BROKEN_IMAGE}
-                            alt="Italian flag icon"
-                            width={30}
-                            height={30}
-                        />
-                    <Image
-                            className="active"
-                            src={BROKEN_IMAGE}
-                            alt="Italian flag icon"
-                            width={30}
-                            height={30}
-                        />
-                </div>
+                        {projectSkills.slice(0, 4).map((skill, index) => (
+                            <Image
+                                key={`${skill}-${index}`}
+                                className="active"
+                                src={SKILL_IMAGES[skill] || BROKEN_IMAGE}
+                                alt={`${skill} icon`}
+                                width={50}
+                                height={50}
+                            />
+                        ))}
+                    </div>
                 )}
             </div>
         </div>
