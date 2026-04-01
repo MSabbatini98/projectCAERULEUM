@@ -1,4 +1,4 @@
-import Card from "@/components/card"
+import {Card} from "@/components/card"
 import CoolTitle from "@/components/utils/coolTitle"
 
 export async function generateMetadata() {
@@ -38,7 +38,7 @@ export default function Project() {
           </Card> 
           <Card
             href="/projects/basic-calculator"
-            hrefTitle="Calcolatrice base"
+            hrefTitle="Calcolatrice classica"
             projectLongDescription="Esercizio semplice per prendere dimestichezza con useReducer."
           >
            <CoolTitle

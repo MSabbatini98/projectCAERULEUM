@@ -15,7 +15,7 @@ import Telegram from "../../../public/media/social/TELEGRAM-icon.avif"
 import "../styles/contacts.scss"
 import "../styles/about.scss"
 import CoolTitle from "@/components/utils/coolTitle"
-import Card from "@/components/card"
+import {Card} from "@/components/card"
 import ContactCard from "@/components/contactCard"
 import Newsletter from "@/components/form"
 import GoogleMaps from "@/components/googleMap"
@@ -107,8 +107,10 @@ export default function Contacts() {
         <div className="contacts_map clearfix">
                 <div className="map_intro">
                     <p> Questa è la mia città, Bologna ! Ricca di storia, cultura e gastronomia, da assaporare sotto i portici o in una delle tipiche piazza rosse.</p>
+                    <br/>
+                    <p> Scarica la mappa al tesoro dei 7 segreti bolognesi, per ricopercorrere i luoghi più folkloristici Bolognesi, con qualche aggiunta gastronimica necessaria (per qualisasi ora) e consigli personali. </p>
                     <button className="">
-                        Click me SENPAI
+                        Scarica la mappa
                     </button>
                 </div>
                 <div className="google_maps">

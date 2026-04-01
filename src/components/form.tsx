@@ -25,7 +25,7 @@ export default function Contact() {
   const [formSuccess, setFormSuccess] = useState(false)
   const [formSuccessMessage, setFormSuccessMessage] = useState("")
 
-   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+   const handleInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
   //   const fieldName = e.target.name;
   //   const fieldValue = e.target.value;
 
@@ -149,7 +149,7 @@ export default function Contact() {
                 <p className="message_intro">Ecco il mitico spazio per i tuoi pensieri aggiuntivi dove puoi scrivere quello che vuoi: domande, complimenti, complimenti o anche lamentele sul meteo.</p>
               </div>
                 <div>
-                    <label>Message</label>
+                    <label>Messaggio</label>
                     <textarea 
                       name="message" 
                       placeholder={"Scrivi qui qualsiasi nota o informazione aggiuntiva, sarò lieto di risponderti !"} 
