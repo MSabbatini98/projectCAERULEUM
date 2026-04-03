@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Image from 'next/image'
 import "./styles/card.scss"
+import "./styles/cooltitle.scss"
 import { Button } from '@mui/material'
 import CoolTitle from './utils/coolTitle'
 import Link from 'next/link'

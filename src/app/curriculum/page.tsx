@@ -6,7 +6,7 @@ import TheaterLang from "@/components/theaterLang";
 
 import { SKILLZ, LANG_SLIDER } from "./data";
 import {Card, CardHalf} from "@/components/card";
-import CoolTitle from "@/components/utils/coolTitle";
+import CoolTitle, { SuperCoolTitle } from "@/components/utils/coolTitle";
 import DownloadableImg from "@/components/DownloadableImg";
 
 export default function Curriculum() {
@@ -58,7 +58,7 @@ export default function Curriculum() {
         ))}
       </div>
       <div className="mission">
-        <CoolTitle title={"Missione personale"} colorClass="blue_5" />
+        <SuperCoolTitle title={"Missione personale"} colorClass="blue_5" />
         <p>
           La mia missione personale è quella di contribuire attivamente alla
           creazione di un futuro più sostenibile e consapevole, mettendo a
