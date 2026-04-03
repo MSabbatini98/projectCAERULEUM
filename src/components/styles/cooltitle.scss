@@ -53,16 +53,18 @@ h3 {
 
 .super_cool_title {
   margin-bottom: 0px;
-  color: red!important;
+  color: var(--light);
 
   h3 {
+    color: var(--blue_5);
     position: relative;
     margin: 0 25px;
     font-size: 40px;
     z-index: 5;
     text-align: center;
-    text-shadow: -3px 2px 2px var(--light), 0px 0px 4px var(--light);
-
+    // text-shadow: -3px 2px 2px var(--light), 0px 0px 4px var(--light);
+    text-shadow:1px 1px 1px var(--light), 0px 0px 12px var(--light), 0px 0px 10px var(--blue_5);
+    
     span.left-sct {
       display: block;
       position: relative;

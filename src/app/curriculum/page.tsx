@@ -45,7 +45,7 @@ export default function Curriculum() {
       <div className="skillz">
         {/* <p> {SKILLZ[0].title}</p> Single item from DATA - SKILLZ*/}
 
-        {SKILLZ.map(({ title, content }, index) => (
+        {SKILLZ.map(({ title, content, content_link }, index) => (
           <div
             className="PPF" //Past (soft skills ), Present (programming skills), Future (mission)-> Conoscenze passate (), presenti e future
             key={index}
@@ -54,6 +54,7 @@ export default function Curriculum() {
             <div>
               <p className="PPFcontent">{content}</p>
             </div>
+            <a href={content_link}>Eplora di più</a>
           </div>
         ))}
       </div>
