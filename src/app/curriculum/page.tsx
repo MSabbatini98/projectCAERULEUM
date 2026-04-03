@@ -36,7 +36,7 @@ export default function Curriculum() {
             width={400}
             height={800}
             alt="Author handing out his CV"
-            downloadLink="/media/cv/CV04-26.pdf"
+            downloadLink="/media/cv/CV Matteo Sabbatini 2026.pdf"
           />
 
         </div>

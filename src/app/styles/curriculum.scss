@@ -81,12 +81,9 @@ p.PPFcontent, p.volontariato{
     line-height: 1.5;
 }
 
-.cv_img:hover .cv_hover {
-    opacity: 1;
-    transform: scale(1.25);
-}
 
-.cv_upper:hover .cv_hover {
+
+.cv_upper .cv_hover:hover {
     opacity: 1;
     transform: scale(1.25);
 }
