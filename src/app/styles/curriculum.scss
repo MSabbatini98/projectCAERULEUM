@@ -1,20 +1,13 @@
 .cv_upper {
     display: flex;
     margin-top: 40px;
-    pointer-events: none;
 
     
-    &:hover .cv_img .cv_hover {
-        transform: scale(1.25);
-        opacity: 1;
-    }
-
     .cv_txt {
         width: 50%;
         text-align: center;
         margin: auto;
         font-size: 22px;
-        pointer-events: none;
         
         .fake_cta {
             border: solid 2px var(--light);
@@ -23,8 +16,12 @@
             background-color: var(--blue_5);
             font-weight: bold;
             color: var(--light);
-            pointer-events: auto;
             margin-top: 20px;
+        }
+        .fake_cta:hover {
+            background-color: var(--light);
+            color: var(--blue_5);
+            cursor: e-resize;
         }
     }
 
@@ -34,6 +31,7 @@
         max-width: 400px;
         padding: 20px;
         pointer-events: auto;
+        overflow: hidden;
 
         .cv_hover{
             position: absolute;
@@ -41,6 +39,12 @@
             right: 20px;
             opacity: 0;
         }
+    }
+    .fake_cta:hover {
+        transform: scale(1.1);
+    }
+    .cv_img:hover .cv_hover {
+        transform: scale(1.25);
     }
 }
 .cv_lower {
@@ -72,7 +76,17 @@
 
 }
 p.PPFcontent, p.volontariato{
-    // margin: 20px 50px;
-    font-size: 16px;
+    margin: 20px 50px;
+    font-size: 20px;
     line-height: 1.5;
+}
+
+.cv_img:hover .cv_hover {
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+.cv_upper:hover .cv_hover {
+    opacity: 1;
+    transform: scale(1.25);
 }

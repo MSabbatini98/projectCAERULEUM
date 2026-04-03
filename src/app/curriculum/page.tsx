@@ -19,9 +19,9 @@ export default function Curriculum() {
               "Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formatice che hanno contribuito a costruire una professionalità versatile e responsabile."
             }
           </p>
-          <p className="fake_cta">
+          <button className="fake_cta">
             Clicca sul curriculum per scaricarlo &rarr;{" "}
-          </p>
+          </button>
         </div>
         <div className="cv_img">
           <Image
@@ -56,6 +56,19 @@ export default function Curriculum() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="mission">
+        <CoolTitle title={"Missione personale"} colorClass="blue_5" />
+        <p>
+          La mia missione personale è quella di contribuire attivamente alla
+          creazione di un futuro più sostenibile e consapevole, mettendo a
+          frutto le mie competenze, la mia creatività e la mia passione per l'ambiente. Attraverso
+          il mio lavoro, mi impegno a promuovere pratiche eco-friendly e a
+          sensibilizzare le persone sull'importanza di adottare stili di vita
+          più sostenibili. Sono dalla parte del cambiamento positivo che il
+          mondo ha bisogno, lavorando per un futuro in cui l'armonia tra uomo e
+          natura sia una realtà concreta.
+        </p>
       </div>
 
       <div className="lang_theater">
