@@ -1,0 +1,67 @@
+.expanding-panel {
+    * {
+        border: solid 1px;
+    }
+  position: relative;
+  display: inline-block;
+
+  &__trigger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    color: inherit;
+
+    /* 4px border illusion */
+    box-shadow: 0 0 0 4px currentColor;
+
+    transition: all 0.3s ease;
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    /* same initial border */
+    box-shadow: 0 0 0 4px currentColor;
+
+    transition: all 0.3s ease;
+  }
+
+  &.expanded {
+    .expanding-panel__trigger {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .expanding-panel__container {
+      width: 300px;
+      height: 200px;
+
+      padding: 12px;
+
+      pointer-events: auto;
+
+      /* growing border */
+      box-shadow: 0 0 0 12px currentColor;
+    }
+
+    .expanding-panel__content {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    opacity: 0;
+    transition: opacity 0.2s ease 0.15s;
+
+    width: 100%;
+    height: 100%;
+  }
+}

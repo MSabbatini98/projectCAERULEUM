@@ -8,6 +8,7 @@ import { SKILLZ, LANG_SLIDER } from "./data";
 import {Card, CardHalf} from "@/components/card";
 import CoolTitle, { SuperCoolTitle } from "@/components/utils/coolTitle";
 import DownloadableImg from "@/components/DownloadableImg";
+import ExpandingPanel from "@/components/utils/expandCTA";
 
 export default function Curriculum() {
   return (
@@ -128,6 +129,10 @@ export default function Curriculum() {
           <CoolTitle title="PlasticFree " colorClass="blue_3" />
           </CardHalf>
         </div>
+
+        <ExpandingPanel color="red" CTAtext="Open">
+          <p>Anything goes here</p>
+        </ExpandingPanel>
 
       </div>
     </div>
