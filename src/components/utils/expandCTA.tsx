@@ -19,25 +19,24 @@ export default function ExpandingPanel({
 
   return (
     <div
-      className={`expanding-panel ${expanded ? "expanded" : ""}`}
+      className={`expanding ${expanded ? "expanded" : ""}`}
       style={{ color }}
     >
       <button
-        className="expanding-panel__trigger"
+        className="expanding_trigger"
         onClick={() => setExpanded(true)}
         disabled={expanded}
       >
         {CTAtext}
       </button>
 
-      <div className="expanding-panel__container">
-        <div className="expanding-panel__content">
+      <div className="expanding_container">
+        <div className="expanded_content">
           {children}
-
           {/* Close button */}
           {expanded && (
             <button
-              className="expanding-panel__close"
+              className="expanding_close"
               onClick={() => setExpanded(false)}
             >
               Close
