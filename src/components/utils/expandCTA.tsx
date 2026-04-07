@@ -15,34 +15,32 @@ export default function ExpandingPanel({
   children,
   defaultExpanded = false,
 }: ExpandingPanelProps) {
-  const [expanded, setExpanded] = useState(defaultExpanded);
+  const [is_expanded, setExpanded] = useState(defaultExpanded);
 
   return (
     <div
-      className={`expanding ${expanded ? "expanded" : ""}`}
+      className={`expanding ${is_expanded ? "expanded" : ""}`}
       style={{ color }}
+      onClick={() => !is_expanded && setExpanded(true)}
     >
-      <button
-        className="expanding_trigger"
-        onClick={() => setExpanded(true)}
-        disabled={expanded}
-      >
-        {CTAtext}
-      </button>
+      {!is_expanded && (
+        <p className="expanding_label">{CTAtext}</p>
+      )}
 
-      <div className="expanding_container">
-        <div className="expanded_content">
-          {children}
-          {/* Close button */}
-          {expanded && (
-            <button
-              className="expanding_close"
-              onClick={() => setExpanded(false)}
-            >
-              Close
-            </button>
-          )}
-        </div>
+      <div className="expanded_content">
+        {is_expanded && children}
+
+        {is_expanded && (
+          <button
+            className="expanding_close"
+            onClick={(e) => {
+              e.stopPropagation();
+              setExpanded(false);
+            }}
+          >
+            Close
+          </button>
+        )}
       </div>
     </div>
   );

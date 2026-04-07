@@ -1,77 +1,79 @@
 .expanding {
-
+  display: inline-flex;
+  align-items: center;
   position: relative;
-  display: inline-block;
-  margin: 40px 0px;
+  justify-content: center;
+  flex-direction: column;
 
-  &_trigger {
-    
-    border-radius: 12px;
-    width: 120px;
-    height: 40px;
+  margin: 40px 0;
+  border-radius: 12px;
+  cursor: pointer;
 
-    /* 4px border illusion */
-    box-shadow: 0 0 0 4px var(--light);
+  //Start size
+  width: 160px;
+  height: 100px;
 
-    transition: all 0.3s ease;
+  box-shadow: 0 0 0 6px var(--light);
+
+  //Closing with delay
+  transition:
+    width 1s ease,
+    height 1s ease;
+
+  &_label {
+    width: 70px;
+    font-size: 24px;
+    text-align: center;
+    pointer-events: none;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: calc(50% - 35px);
+    right: 0;
   }
 
-  &_container {
-    position: absolute;
-    top: 0;
-    left: 0;
-
+  .expanded_content {
+    position: relative;
     width: 100%;
     height: 100%;
 
-    pointer-events: none;
-
-    /* same initial border */
-    box-shadow: 0 0 0 6px var(--light);
-    border-radius: 12px;
-    transition: all 0.3s ease;
+    opacity: 0;
+    //close immediately
+    transition: opacity 0.2s ease;
   }
 
   &.expanded {
-    .expanding_trigger {
-      opacity: 0;
-      pointer-events: none;
-    }
+    //Final size
+    width: 400px;
+    height: 400px;
 
-    .expanding_container {
-      width: 400px;
-      height: 300px;
+    padding: 16px;
 
-      padding: 12px;
-      pointer-events: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-      /* growing border */
-      box-shadow: 0 0 0 12px var(--light);
-    }
+    box-shadow: 0 0 0 6px var(--light);
+    transition:
+      height 1s ease,
+      width 1s ease 1s;
+  }
 
-    .expanded_content {
-      opacity: 1;
-    }
+  &.expanded .expanded_content {
+    opacity: 1;
+    transition: opacity 0.6s ease 2s;
+  }
+
+  &:not(.expanded) {
+    transition:
+      width 1s ease,
+      height 1s ease 1s;
   }
 
   &_close {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
-    font-size: 16px;
+    bottom: 10px;
+    right: 24px;
     cursor: pointer;
   }
-  .expanded_content {
-    opacity: 0;
-    transition: opacity 0.2s ease 0.15s;
-
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.fake_content {
-  width: 100%;
-  height: 100%;
-  background-color: pink;
 }
