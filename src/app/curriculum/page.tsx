@@ -6,7 +6,9 @@ import TheaterLang from "@/components/theaterLang";
 
 import { SKILLZ, LANG_SLIDER } from "./data";
 import {Card, CardHalf} from "@/components/card";
-import CoolTitle from "@/components/utils/coolTitle";
+import CoolTitle, { SuperCoolTitle } from "@/components/utils/coolTitle";
+import DownloadableImg from "@/components/DownloadableImg";
+import ExpandingPanel from "@/components/utils/expandCTA";
 
 export default function Curriculum() {
   return (
@@ -18,9 +20,9 @@ export default function Curriculum() {
               "Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formatice che hanno contribuito a costruire una professionalità versatile e responsabile."
             }
           </p>
-          <p className="fake_cta">
+          <button className="fake_cta">
             Clicca sul curriculum per scaricarlo &rarr;{" "}
-          </p>
+          </button>
         </div>
         <div className="cv_img">
           <Image
@@ -29,20 +31,22 @@ export default function Curriculum() {
             height={800}
             alt="Author handing out his CV"
           />
-          <Image
+
+          <DownloadableImg
             src="/media/cv/extract-cv.avif"
-            className="hover"
             width={400}
             height={800}
             alt="Author handing out his CV"
+            downloadLink="/media/cv/CV Matteo Sabbatini 2026.pdf"
           />
+
         </div>
       </div>
 
       <div className="skillz">
         {/* <p> {SKILLZ[0].title}</p> Single item from DATA - SKILLZ*/}
 
-        {SKILLZ.map(({ title, content }, index) => (
+        {SKILLZ.map(({ title, content, content_link }, index) => (
           <div
             className="PPF" //Past (soft skills ), Present (programming skills), Future (mission)-> Conoscenze passate (), presenti e future
             key={index}
@@ -51,8 +55,24 @@ export default function Curriculum() {
             <div>
               <p className="PPFcontent">{content}</p>
             </div>
+            <a className="fake_cta" href={content_link}>
+              Esplora di più
+            </a>
           </div>
         ))}
+      </div>
+      <div className="mission">
+        <SuperCoolTitle title={"Missione personale"} colorClass="blue_5" />
+        <p>
+          La mia missione personale è quella di contribuire attivamente alla
+          creazione di un futuro più sostenibile e consapevole, mettendo a
+          frutto le mie competenze, la mia creatività e la mia passione per l'ambiente. Attraverso
+          il mio lavoro, mi impegno a promuovere pratiche eco-friendly e a
+          sensibilizzare le persone sull'importanza di adottare stili di vita
+          più sostenibili. Sono dalla parte del cambiamento positivo che il
+          mondo ha bisogno, lavorando per un futuro in cui l'armonia tra uomo e
+          natura sia una realtà concreta.
+        </p>
       </div>
 
       <div className="lang_theater">
@@ -95,7 +115,7 @@ export default function Curriculum() {
           <CardHalf
             href="/projects/prova1"
             hrefCTA="Albero di Cirene"
-            projectLongDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con Albero di Cirene collaboriamo per promuovere l'integrazione sociale e culturale nella comunità."
+            projectLongDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con l'Albero di Cirene collaboro tramite l'insegnamento della lingua italiana a persone extracomunitarie."
             projectLinkCTA="Scopri di più"
           >
             <CoolTitle title="Albero di Cirene" colorClass="blue_5" />
@@ -104,15 +124,17 @@ export default function Curriculum() {
           <CardHalf
             href="/projects/prova1"
             hrefCTA="Scopri la sezione PlasticFree dedicata"
-            projectLongDescription="Sono ormai referente per il Comune di Bologna da Maggio 2024. Grazie a PlasticFree ho potuto organizzare diverse raccolte e diverse sensibilizzazioni con scuole ed aziende"
+            projectLongDescription="Sono ormai referente per il Comune di Bologna da Maggio 2024. Con Plastic free effettuiamo diversi progetti sul territorio: dalla sensibilizzazione nelle scuole alla partecipazione attiva durante le attività di raccolta rifiuti. Personalmente mi sono occupato di organizzare, divulgare, raccogliere e molto altro. Il tutto con l'obiettivo di sensibilizzare e coinvolgere sempre più persone nella lotta contro l'inquinamento da plastica."
             projectLinkCTA="Scopri di più"
 
           >
           <CoolTitle title="PlasticFree " colorClass="blue_3" />
           </CardHalf>
         </div>
-
       </div>
+        <ExpandingPanel color="red" CTAtext="Open">
+          <p>This is a secret section. It will be avaiable after the GO LIVE of the fun mode.</p>
+        </ExpandingPanel>
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import "./styles/card.scss"
+import "./styles/cooltitle.scss"
+
 import Image from "next/image"
 import { StaticImageData } from 'next/image';
 

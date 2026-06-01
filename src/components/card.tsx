@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Image from 'next/image'
 import "./styles/card.scss"
+import "./styles/cooltitle.scss"
 import { Button } from '@mui/material'
 import CoolTitle from './utils/coolTitle'
 import Link from 'next/link'
@@ -113,7 +114,7 @@ export function CardHalf({children, href, hrefCTA, projectLongDescription, proje
                 <div className="card_text">
                     <p>{projectLongDescription}</p>
                 </div>
-                <Link className="card_CTA" href={href}>{projectLinkCTA}</Link>
+                <Link className="fake_cta" href={href}>{projectLinkCTA}</Link>
                 </div>
             </div>
     )

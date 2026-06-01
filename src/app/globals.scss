@@ -74,6 +74,7 @@ body {
   padding: 30px 0 40px 200px;
   padding-right: 20px;
   max-width: 1400px;
+  margin: auto;
 }
 .main_playground {
   background: repeating-linear-gradient(
@@ -236,3 +237,9 @@ body {
     background-color:rgba(0, 0, 0, 0.25);
   }
 }
+
+
+.test_page {
+  min-height: 1000px;
+  background-color: grey;
+  }

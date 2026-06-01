@@ -13,7 +13,7 @@ export default function Footer() {
                 <Link href="/docs/credits">Credits</Link>
             </div>
             <div className="footer_right">
-                <Link href="/">Homepage</Link>
+                <Link href="/testpage">TestPage</Link>
             </div>
         </div>
     )

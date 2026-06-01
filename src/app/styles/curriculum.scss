@@ -1,31 +1,14 @@
 .cv_upper {
     display: flex;
     margin-top: 40px;
-    pointer-events: none;
 
     
-    &:hover .cv_img img:last-of-type {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-
     .cv_txt {
         width: 50%;
         text-align: center;
         margin: auto;
         font-size: 22px;
-        pointer-events: none;
         
-        .fake_cta {
-            border: solid 2px var(--light);
-            border-radius: 5px;
-            padding: 5px 20px;
-            background-color: var(--blue_5);
-            font-weight: bold;
-            color: var(--light);
-            pointer-events: auto;
-            margin-top: 20px;
-        }
     }
 
 
@@ -34,13 +17,18 @@
         max-width: 400px;
         padding: 20px;
         pointer-events: auto;
+        overflow: hidden;
 
-        img:last-of-type{
+        .cv_hover{
             position: absolute;
-            bottom: 20px;
-            right: 32px;
+            bottom: 42px;
+            right: 20px;
             opacity: 0;
         }
+    }
+    
+    .cv_img:hover .cv_hover {
+        transform: scale(1.25);
     }
 }
 .cv_lower {
@@ -68,21 +56,65 @@
            text-align: center;
            text-transform: uppercase;
         }
-       .cv_box_txt {
-        //  display: none;
-        position: absolute;
-        bottom: -150px;
-        left: 0;
-        padding: 30px;
-        border-radius: 23px;
-        background-color:  #172D67;
-        border: 3px solid #DEF3FF;
-       }
     }
 
 }
-p.PPFcontent, p.volontariato{
-    // margin: 20px 50px;
-    font-size: 16px;
-    line-height: 1.5;
+.cv_upper .cv_hover:hover {
+    opacity: 1;
+    transform: scale(1.25);
 }
+
+
+.fake_cta {
+        border: solid 2px var(--light);
+        border-radius: 5px;
+        padding: 5px 20px;
+        background-color: var(--blue_5);
+        font-weight: bold;
+        color: var(--light);
+        margin-top: 20px;
+    &:hover {
+        background-color: var(--light);
+        color: var(--blue_5);
+        cursor: e-resize;
+        transform: scale(1.1);
+    }
+}
+
+.skillz {
+    margin-bottom: 60px;
+    .PPF {
+        position: relative;
+    }
+    div.cool_title{
+        margin-bottom: -26px;
+        margin-top: 20px;
+    }
+    p.PPFcontent, p.volontariato, .mission p{
+        padding: 50px 60px;
+        font-size: 20px;
+        line-height: 1.6;
+        border: solid 2px var(--dark);
+        border-radius: 15px;
+        background-color: var(--light);
+
+
+    }
+    .fake_cta {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        margin: 0;
+    }
+}
+
+.mission {
+    margin-bottom: 60px;
+    p {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+
