@@ -55,7 +55,9 @@ export default function Curriculum() {
             <div>
               <p className="PPFcontent">{content}</p>
             </div>
-            <a href={content_link}>Eplora di più</a>
+            <a className="fake_cta" href={content_link}>
+              Esplora di più
+            </a>
           </div>
         ))}
       </div>
@@ -113,7 +115,7 @@ export default function Curriculum() {
           <CardHalf
             href="/projects/prova1"
             hrefCTA="Albero di Cirene"
-            projectLongDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con Albero di Cirene collaboriamo per promuovere l'integrazione sociale e culturale nella comunità."
+            projectLongDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con l'Albero di Cirene collaboro tramite l'insegnamento della lingua italiana a persone extracomunitarie."
             projectLinkCTA="Scopri di più"
           >
             <CoolTitle title="Albero di Cirene" colorClass="blue_5" />
@@ -122,19 +124,17 @@ export default function Curriculum() {
           <CardHalf
             href="/projects/prova1"
             hrefCTA="Scopri la sezione PlasticFree dedicata"
-            projectLongDescription="Sono ormai referente per il Comune di Bologna da Maggio 2024. Grazie a PlasticFree ho potuto organizzare diverse raccolte e diverse sensibilizzazioni con scuole ed aziende"
+            projectLongDescription="Sono ormai referente per il Comune di Bologna da Maggio 2024. Con Plastic free effettuiamo diversi progetti sul territorio: dalla sensibilizzazione nelle scuole alla partecipazione attiva durante le attività di raccolta rifiuti. Personalmente mi sono occupato di organizzare, divulgare, raccogliere e molto altro. Il tutto con l'obiettivo di sensibilizzare e coinvolgere sempre più persone nella lotta contro l'inquinamento da plastica."
             projectLinkCTA="Scopri di più"
 
           >
           <CoolTitle title="PlasticFree " colorClass="blue_3" />
           </CardHalf>
         </div>
-
-        <ExpandingPanel color="red" CTAtext="Open">
-          <p>Anything goes here</p>
-        </ExpandingPanel>
-
       </div>
+        <ExpandingPanel color="red" CTAtext="Open">
+          <p>This is a secret section. It will be avaiable after the GO LIVE of the fun mode.</p>
+        </ExpandingPanel>
     </div>
   );
 }

@@ -114,7 +114,7 @@ export function CardHalf({children, href, hrefCTA, projectLongDescription, proje
                 <div className="card_text">
                     <p>{projectLongDescription}</p>
                 </div>
-                <Link className="card_CTA" href={href}>{projectLinkCTA}</Link>
+                <Link className="fake_cta" href={href}>{projectLinkCTA}</Link>
                 </div>
             </div>
     )

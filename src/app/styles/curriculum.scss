@@ -9,20 +9,6 @@
         margin: auto;
         font-size: 22px;
         
-        .fake_cta {
-            border: solid 2px var(--light);
-            border-radius: 5px;
-            padding: 5px 20px;
-            background-color: var(--blue_5);
-            font-weight: bold;
-            color: var(--light);
-            margin-top: 20px;
-        }
-        .fake_cta:hover {
-            background-color: var(--light);
-            color: var(--blue_5);
-            cursor: e-resize;
-        }
     }
 
 
@@ -40,9 +26,7 @@
             opacity: 0;
         }
     }
-    .fake_cta:hover {
-        transform: scale(1.1);
-    }
+    
     .cv_img:hover .cv_hover {
         transform: scale(1.25);
     }
@@ -75,15 +59,62 @@
     }
 
 }
-p.PPFcontent, p.volontariato, .mission p{
-    margin: 20px 50px;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-
-
 .cv_upper .cv_hover:hover {
     opacity: 1;
     transform: scale(1.25);
 }
+
+
+.fake_cta {
+        border: solid 2px var(--light);
+        border-radius: 5px;
+        padding: 5px 20px;
+        background-color: var(--blue_5);
+        font-weight: bold;
+        color: var(--light);
+        margin-top: 20px;
+    &:hover {
+        background-color: var(--light);
+        color: var(--blue_5);
+        cursor: e-resize;
+        transform: scale(1.1);
+    }
+}
+
+.skillz {
+    margin-bottom: 60px;
+    .PPF {
+        position: relative;
+    }
+    div.cool_title{
+        margin-bottom: -26px;
+        margin-top: 20px;
+    }
+    p.PPFcontent, p.volontariato, .mission p{
+        padding: 50px 60px;
+        font-size: 20px;
+        line-height: 1.6;
+        border: solid 2px var(--dark);
+        border-radius: 15px;
+        background-color: var(--light);
+
+
+    }
+    .fake_cta {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        margin: 0;
+    }
+}
+
+.mission {
+    margin-bottom: 60px;
+    p {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+
