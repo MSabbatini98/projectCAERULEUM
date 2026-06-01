@@ -1,6 +1,5 @@
 'use client'
 import Image, { ImageProps } from "next/image";
-import { use } from "react";
 
 interface DownloadableImgProps extends ImageProps {
   downloadLink: string;
@@ -11,27 +10,18 @@ export default function DownloadableImg({
   ...imgProps
 }: DownloadableImgProps) {
   const handleClick = () => {
-    const link = document.createElement("a");
-    link.href = downloadLink;
-    link.download = downloadLink.split("/").pop() || "download.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const link = document.createElement("a");
+  link.href = "/media/cv/CV_Matteo_Sabbatini_2026.pdf";
+  link.download = "CV_Matteo_Sabbatini_2026.pdf";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   return (
-    <div
-      onClick={handleClick}
-      className="cv_hover"
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          handleClick();
-        }
-      }}
-    >
+    <button onClick={handleClick} className="cv_hover">
       <Image {...imgProps} />
-    </div>
+    </button>
   );
 }
