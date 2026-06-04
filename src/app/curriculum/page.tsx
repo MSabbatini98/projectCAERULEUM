@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import "../styles/curriculum.scss";
 import Theater from "@/components/theater";
 import TheaterLang from "@/components/theaterLang";
 
