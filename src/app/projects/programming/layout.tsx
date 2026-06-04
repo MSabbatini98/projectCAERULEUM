@@ -6,18 +6,12 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
 
-export default function ProjectLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ProgrammingLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="project_layout main_content">
       <Navbar />
-        <div className="project_layout main_content">
-          {children}  
-        </div>
+      {children}
       <Footer />
-    </>
+    </div>
   );
 }
