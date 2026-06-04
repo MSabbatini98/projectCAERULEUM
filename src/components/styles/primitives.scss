@@ -1,0 +1,50 @@
+.prjct_title {
+  margin-bottom: 20px;
+}
+
+.prjct_subtitle {
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.prjct_text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.prjct_image {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.prjct_grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.prjct_grid img {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.prjct_list {
+  margin-bottom: 16px;
+  padding-left: 18px;
+}
+
+.prjct_link {
+  text-decoration: underline;
+}
+
+.prjct_highlight {
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  margin-bottom: 16px;
+}

@@ -48,3 +48,14 @@
     }
   }
 }
+
+.project_layout {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding: 40px 20px;
+}
