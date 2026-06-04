@@ -11,7 +11,7 @@ export async function generateMetadata() {
 export default function Project() {
   return (
     <div className="main_content">
-      <h1> This is the PROJECT PAGE</h1>
+      <p className="project-into">I’m the kind of person who gets interested in almost everything — and I mean it. Over time, that’s turned into a collection of personal projects across different areas of my life. They all share a common thread: simple to try, sustainable, and accessible to anyone who wants to challenge themselves. Here is a non-exhaustive list of them. </p>
 
       <Card
         href="/projects/basic-calculator"
@@ -23,7 +23,7 @@ export default function Project() {
         projectStatus="Completato"
         projectDate="2026-02"
         isProjectProgramming={true}
-        projectMainImage="/media/Basic-calculator.png"        
+        projectMainImage="/media/projects/basic_calculator.png"        
       >
         <CoolTitle title="Calcolatrice semplice" colorClass="blue_3" />
 
@@ -38,18 +38,21 @@ export default function Project() {
         projectDifficulty="Impossibile da definire"
         projectStatus="In corso"
         isProjectProgramming={false}
-        projectMainImage="/media/plasticfree.jpeg" 
+        projectMainImage="/media/cv/logo_PlasticFree.jpeg" 
         >
         <CoolTitle title="PlasticFree" colorClass="blue_2" />
       </Card>
+
       <Card
-        href="/projects/basic-calculator"
-        hrefCTA="Calcolatrice classica"
-        projectLongDescription="Esercizio semplice per prendere dimestichezza con useReducer."
-        projectLinkCTA=""
+        href="/projects/kintsugi"
+        hrefCTA="Kintsugi"
+        projectLongDescription="Il kintzugi è l'arte giapponese di riparare oggetti rotti con l'oro, trasformando le crepe in elementi di bellezza. Il progetto Kintsugi è nato dal desiderio di riparare e valorizzare oggetti danneggiati, dando loro una nuova vita. Attraverso tecniche di restauro e design, Kintsugi mira a creare pezzi unici che raccontano storie di resilienza e trasformazione."
+        projectLinkCTA="Scopri di più sul Kintsugi"
       >
+        
         <CoolTitle title="secondo Titolo " colorClass="blue_2" />
       </Card>
+
       <Card
         href="/projects/prova2"
         hrefCTA="Prova 2"
@@ -58,6 +61,8 @@ export default function Project() {
       >
         <CoolTitle title="secondo Titolo " colorClass="blue_2" />
       </Card>
+
+
       <Card
         href="/projects/prova2"
         hrefCTA="Prova 2"
@@ -75,6 +80,8 @@ export default function Project() {
           Una calcolatrice classica realizzata con HTML, CSS e JavaScript.{" "}
         </p>
       </Card>
+
+
     </div>
   );
 }

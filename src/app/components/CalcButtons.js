@@ -1,4 +1,4 @@
-import {ACTIONS } from "../projects/basic-calculator/page"
+import {ACTIONS } from "../curriculum/basic-calculator/page"
 
 
 export  function DigitButton({dispatch, digit}) {

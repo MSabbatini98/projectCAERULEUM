@@ -1,6 +1,18 @@
-type Params = Promise<{ projectId: string[] }>
-export default async function ProjectDetail ({ params }: { params: Params }) {
-    const { projectId } = await params;
+import Test from "./test";
+import Pasta from "./pasta";
 
-    return <h1>Details about project {projectId}</h1>
+export default async function ProjectPage({ params }: any) {
+  const { projectId } = await params;
+
+  // Conditionally render based on projectId
+  switch (projectId) {
+    case "test":
+      return <Test />;
+
+    case "pasta":
+      return <Pasta />;
+      
+    default:
+      return <div>Project "{projectId}" not found</div>;
+  }
 }
