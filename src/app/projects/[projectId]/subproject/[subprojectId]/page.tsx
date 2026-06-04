@@ -1,6 +1,12 @@
-type Params = Promise<{ projectId: string[], subprojectId: string[] }>
-export default async function ReviewDetail ({ params }: { params: Params }) {
-    const { projectId, subprojectId } = await params;
-
-    return <h1>Subproject {subprojectId} for project  {projectId} </h1>
-}
+export default function SubprojectPage({
+    params,
+  }: {
+    params: { projectId: string; subprojectId: string };
+  }) {
+    return (
+      <div>
+        <h1>{params.projectId}</h1>
+        <h2>{params.subprojectId}</h2>
+      </div>
+    );
+  }

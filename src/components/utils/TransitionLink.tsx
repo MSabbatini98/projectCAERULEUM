@@ -1,14 +1,15 @@
 "use client";
+
 import Link, { LinkProps } from "next/link";
-import React from "react";
 import { useRouter } from "next/navigation";
+import React from "react";
 
 interface TransitionLinkProps extends LinkProps {
   children: React.ReactNode;
   href: string;
 }
 
-function sleep(ms: number): Promise<void> {
+function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
@@ -20,22 +21,31 @@ export const TransitionLink: React.FC<TransitionLinkProps> = ({
   const router = useRouter();
 
   const handleTransition = async (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    e: React.MouseEvent<HTMLAnchorElement>
   ) => {
     e.preventDefault();
-    const body = document.querySelector("body");
 
-    body?.classList.add("page-transition");
+    // safety guard for SSR edge cases
+    if (typeof document !== "undefined") {
+      document.body.classList.add("page-transition");
+    }
 
-    await sleep(700);
+    // wait for animation to start
+    await sleep(300);
+
+    // trigger navigation (do NOT delay this too much)
     router.push(href);
-    await sleep(700);
 
-    body?.classList.remove("page-transition");
+    // cleanup AFTER navigation starts (non-blocking)
+    setTimeout(() => {
+      if (typeof document !== "undefined") {
+        document.body.classList.remove("page-transition");
+      }
+    }, 700);
   };
 
   return (
-    <Link {...props} href={href} onClick={handleTransition}>
+    <Link href={href} {...props} onClick={handleTransition}>
       {children}
     </Link>
   );
