@@ -10,7 +10,7 @@ export default function ProjectLayout({ children }: { children: React.ReactNode 
   return (
     <>
       <Navbar />
-        <div className="project_layout main_content">
+        <div className="project_layout mainContent">
           {children}  
         </div>
       <Footer />

@@ -8,7 +8,7 @@ import Footer from "@/components/footer"
 
 export default function ProgrammingLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="project_layout main_content">
+    <div className="project_layout mainContent">
       <Navbar />
       {children}
       <Footer />

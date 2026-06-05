@@ -41,7 +41,7 @@ const initialState: State = {
 export default function Calculator() {
   return (
     <main >
-      <div className="main_content">
+      <div className="mainContent">
 
         <CoolTitle
             title="Calcolatrice classica"

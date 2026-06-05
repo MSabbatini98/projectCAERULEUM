@@ -11,7 +11,7 @@ import ExpandingPanel from "@/components/utils/expandCTA";
 
 export default function Curriculum() {
   return (
-    <div className="main_content curriculum">
+    <div className="mainContent curriculum">
       <div className="cv_upper">
         <div className="cv_txt">
           <p className="intro">

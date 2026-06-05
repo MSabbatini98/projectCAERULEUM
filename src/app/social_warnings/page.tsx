@@ -9,7 +9,7 @@ export async function generateMetadata() {
 
 export default function Project() {
     return (
-       <div className="main_content WIP">
+       <div className="mainContent WIP">
           <h1> This is the SOCIAL WARNING page</h1>
           <p>
             the following document has been written by chatgdp. In order to chek all it's content, a deep review has been made, citing sources used to verify specific informations. 

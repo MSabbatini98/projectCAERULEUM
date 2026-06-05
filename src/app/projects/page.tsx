@@ -8,11 +8,15 @@ export async function generateMetadata() {
   };
 }
 
+
+
 export default function Project() {
   return (
-    <div className="main_content">
-      <p className="project-into">I’m the kind of person who gets interested in almost everything — and I mean it. Over time, that’s turned into a collection of personal projects across different areas of my life. They all share a common thread: simple to try, sustainable, and accessible to anyone who wants to challenge themselves. Here is a non-exhaustive list of them. </p>
+    <div className="mainContent projects">
+      <p className="projectIntro">I’m the kind of person who <b>gets interested in almost everything </b>— and I mean it. <br/>
+      Over time, that’s turned into a collection of personal projects across different areas of my life.<br/> They all share a common thread: simple to tryout, sustainable, and accessible to anyone who wants to challenge themselves.  </p>
 
+      <h3 className="projectIntroH">Here is a non-exhaustive list of them:</h3>
       <Card
         href="/projects/basic-calculator"
         hrefCTA="Vai alla Calcolatrice"
@@ -23,9 +27,10 @@ export default function Project() {
         projectStatus="Completato"
         projectDate="2026-02"
         isProjectProgramming={true}
-        projectMainImage="/media/projects/basic_calculator.png"        
+        projectMainImage="/media/projects/basic_calculator.png"
+        githubLink="https://github.com/MSabbatini98/REACT-eruditio/tree/main/hook-use-reducer"        
       >
-        <CoolTitle title="Calcolatrice semplice" colorClass="blue_3" />
+        <CoolTitle title="Calcolatrice semplice" colorClass="blue_4" />
 
       </Card>
 
@@ -40,7 +45,7 @@ export default function Project() {
         isProjectProgramming={false}
         projectMainImage="/media/cv/logo_PlasticFree.jpeg" 
         >
-        <CoolTitle title="PlasticFree" colorClass="blue_2" />
+        <CoolTitle title="PlasticFree" colorClass="blue_4" />
       </Card>
 
       <Card
