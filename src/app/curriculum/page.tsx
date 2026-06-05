@@ -3,7 +3,7 @@ import Image from "next/image";
 import Theater from "@/components/theater";
 import TheaterLang from "@/components/theaterLang";
 
-import { SKILLZ, LANG_SLIDER } from "./data";
+import { IKIGAI, LANG_SLIDER } from "./data";
 import {Card, CardHalf} from "@/components/card";
 import CoolTitle, { SuperCoolTitle } from "@/components/utils/coolTitle";
 import DownloadableImg from "@/components/DownloadableImg";
@@ -16,7 +16,7 @@ export default function Curriculum() {
         <div className="cv_txt">
           <p className="intro">
             {
-              "Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formatice che hanno contribuito a costruire una professionalità versatile e responsabile."
+              "Dall'esperienza accumulata nell'e-Commerce  alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formative che hanno contribuito a costruire una professionalità versatile e responsabile."
             }
           </p>
           <button className="fake_cta">
@@ -42,17 +42,17 @@ export default function Curriculum() {
         </div>
       </div>
 
-      <div className="skillz">
-        {/* <p> {SKILLZ[0].title}</p> Single item from DATA - SKILLZ*/}
+      <div className="ikigai">
+        {/* <p> {IKIGAI[0].title}</p> Single item from DATA - IKIGAI*/}
 
-        {SKILLZ.map(({ title, content, content_link }, index) => (
+        {IKIGAI.map(({ title, content, content_link }, index) => (
           <div
-            className="PPF" //Past (soft skills ), Present (programming skills), Future (mission)-> Conoscenze passate (), presenti e future
+            className="ikigai" //Past (soft skills ), Present (programming skills), Future (mission)-> Conoscenze passate (), presenti e future
             key={index}
           >
             <CoolTitle title={title} colorClass="blue_5" />
             <div>
-              <p className="PPFcontent">{content}</p>
+              <p className="ikigaiContent">{content}</p>
             </div>
             <a className="fake_cta" href={content_link}>
               Esplora di più
@@ -127,7 +127,7 @@ export default function Curriculum() {
             projectLinkCTA="Scopri di più"
 
           >
-          <CoolTitle title="PlasticFree " colorClass="blue_3" />
+          <CoolTitle title="PlasticFree " colorClass="blue_5" />
           </CardHalf>
         </div>
       </div>
