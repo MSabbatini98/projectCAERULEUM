@@ -25,14 +25,14 @@
         border-radius: 10px;    
     }
 }
-.card-half-container {
+.singleHalfContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
 }
 
-.card-half {
+.singleHalf {
     border: solid 2px var(--blue_3);
     border-radius: 20px;
     width: 100%;
@@ -61,7 +61,7 @@
     }
 }
 
-.volunteer-cards {
+.volunteerCards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

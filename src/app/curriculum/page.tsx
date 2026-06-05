@@ -127,22 +127,21 @@ export default function Curriculum() {
           scuola di italiano per extracomunitari e il progetto di ascolto per le
           persone sole/anziane/emarginate.
         </p>
-        <div className="volunteer-cards">
+        <div className="volunteerCards">
           <CardHalf
-            href="/projects/prova1"
-            hrefCTA="Albero di Cirene"
-            projectLongDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con l'Albero di Cirene collaboro tramite l'insegnamento della lingua italiana a persone extracomunitarie."
-            projectLinkCTA="Scopri di più"
+            hrefCta="Albero di Cirene"
+            textCta="Scopri di più"
+            longDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con l'Albero di Cirene collaboro tramite l'insegnamento della lingua italiana a persone extracomunitarie."
+            imgURL="/media/cv/logo_AlberoCirene.png"
           >
             <CoolTitle title="Albero di Cirene" colorClass="blue_5" />
           </CardHalf>
           
           <CardHalf
-            href="/projects/prova1"
-            hrefCTA="Scopri la sezione PlasticFree dedicata"
-            projectLongDescription="Sono ormai referente per il Comune di Bologna da Maggio 2024. Con Plastic free effettuiamo diversi progetti sul territorio: dalla sensibilizzazione nelle scuole alla partecipazione attiva durante le attività di raccolta rifiuti. Personalmente mi sono occupato di organizzare, divulgare, raccogliere e molto altro. Il tutto con l'obiettivo di sensibilizzare e coinvolgere sempre più persone nella lotta contro l'inquinamento da plastica."
-            projectLinkCTA="Scopri di più"
-
+            longDescription="Sono ormai referente per il Comune di Bologna da Maggio 2024. Con Plastic free effettuiamo diversi progetti sul territorio: dalla sensibilizzazione nelle scuole alla partecipazione attiva durante le attività di raccolta rifiuti. Personalmente mi sono occupato di organizzare, divulgare, raccogliere e molto altro. Il tutto con l'obiettivo di sensibilizzare e coinvolgere sempre più persone nella lotta contro l'inquinamento da plastica."
+            hrefCta="/projects/prova1"
+            textCta="Scopri di più"
+            imgURL="/media/cv/logo_PlasticFree.jpeg"
           >
           <CoolTitle title="PlasticFree " colorClass="blue_5" />
           </CardHalf>

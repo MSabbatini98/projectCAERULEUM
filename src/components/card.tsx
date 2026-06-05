@@ -19,6 +19,15 @@ type CardProps = {
         projectMainImage?: string; //immagine principale del progetto
         isProjectProgramming?: boolean; //indica se il progetto è di programmazione o meno
         githubLink?: string; //link al repository GitHub del progetto
+        imgURL?: string; //URL dell'immagine del progetto
+    }
+    type HalfCardProps = {
+        children: ReactNode;
+        title?: string; //testo del link alla pagina del progetto
+        longDescription: string; //descrizione più lunga del progetto
+        imgURL?: string; //URL dell'immagine del progetto
+        textCta: string; //testo del link per ulteriori informazioni (Es. Duolingo, GitHub, ecc. )
+        hrefCta: string; //link alla pagina del progetto
     }
 const BROKEN_IMAGE = '/media/broken-img.png';
 
@@ -105,28 +114,24 @@ export function Card({children, href, hrefCTA, projectLongDescription, projectMa
     )
 }
 
-export function CardHalf({children, href, hrefCTA, projectLongDescription, projectLinkCTA, githubLink} : CardProps) {
+export function CardHalf({children, title, longDescription, hrefCta, textCta, imgURL} : HalfCardProps) {
 
     return (
-        <div className="card-half-container">
-            <div className="card-half card">
-                <div className="cardTitle">
+        <div className="singleHalfContainer">
+            <div className="singleHalf card">
                 {children}
-                </div>
-                <div className="card_image">
-                    <Image
-                            className="active"
-                            src="/media/header/flags/flag-italy.avif"
-                            alt="Italian flag icon"
-                            width={100}
-                            height={100}
-                        />
-                </div>
+                <Image
+                    className="active"
+                    src={imgURL || "/media/header/flags/flag-italy.avif"}
+                    alt="Italian flag icon"
+                    width={100}
+                    height={100}
+                />
                 <div className="cardText">
-                    <p>{projectLongDescription}</p>
+                    <p>{longDescription}</p>
                 </div>
-                <Link className="realCta" href={href}>
-                    {projectLinkCTA}
+                <Link className="realCta" href={hrefCta}>
+                    {textCta}
                 </Link>
                 </div>
             </div>

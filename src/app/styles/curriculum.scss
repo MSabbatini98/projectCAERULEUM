@@ -63,7 +63,7 @@
 }
 
 
-.fake_cta {
+.realCta {
         border: solid 2px var(--light);
         border-radius: 8px;
         padding: 5px 20px;
@@ -123,7 +123,6 @@
 .ikigai {
     .ikigaiTextWrapper {
         position: relative;
-        border: solid 2px red;
     }
     .ikigaiCard {
         width: 100%;
@@ -177,7 +176,30 @@
             border: 1px solid currentColor;
             overflow: hidden;
             transition: all 0.3s ease;
-            text
+        }
+    }
+}
+
+.volunteerCards {
+    .coolTitle h3{
+        font-size: 35px;
+        margin: 20px 0 10px 0;
+
+        span {
+            padding-bottom: 8px;
+            padding-left: 50px;
+        }
+        &::after {
+            right: 10%;
+        }
+    }
+    .singleHalf{
+        img {
+            border-radius: 20px;
+            object-fit: cover;
+            width: 100%;
+            min-height: 200px;
+            margin: 20px 0;
         }
     }
 }
