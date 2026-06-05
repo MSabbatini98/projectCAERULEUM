@@ -132,27 +132,27 @@
         position: relative;
         
         div.coolTitle{
-        margin-bottom: -26px;
-        margin-top: 20px;
-    }
+            margin-bottom: -26px;
+            margin-top: 20px;
+        }
         p.ikigaiText {
-        padding: 50px 60px;
-        font-size: 20px;
-        line-height: 1.6;
-        border: solid 2px var(--dark);
-        border-radius: 15px;
-        background-color: var(--light);
+            padding: 50px 60px;
+            font-size: 20px;
+            line-height: 1.6;
+            border: solid 2px var(--dark);
+            border-radius: 15px;
+            background-color: var(--light);
 
 
-    }
+        }
  
         .realCta {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        margin: 0;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            margin: 0;
+        }
     }
-}
 
     .ikigaiCard:nth-child(2) {
         > div:nth-child(1) {
@@ -178,6 +178,6 @@
             overflow: hidden;
             transition: all 0.3s ease;
             text
+        }
     }
-}
 }

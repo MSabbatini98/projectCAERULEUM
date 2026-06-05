@@ -15,9 +15,7 @@ export default function Curriculum() {
       <div className="cv_upper">
         <div className="cv_txt">
           <p className="intro">
-            {
-              "Dall'esperienza accumulata nell'e-Commerce  alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formative che hanno contribuito a costruire una professionalità versatile e responsabile."
-            }
+          Dall'esperienza accumulata nell'e-Commerce  alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formative che hanno contribuito a costruire una professionalità versatile e responsabile.
           </p>
           <button className="fakeCta">
             Clicca sul <span>curriculum</span> per scaricarlo<span> &rarr;{" "}</span>
@@ -54,7 +52,7 @@ export default function Curriculum() {
             key={index}
           >
             <div className="ikigaiTextWrapper">
-            <CoolTitle title={title} colorClass="blue_5" />
+              <CoolTitle title={title} colorClass="blue_5" />
               <p className="ikigaiText">{content}</p>
               {content_link && (
                 <a className="realCta" href={content_link}>
