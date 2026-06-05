@@ -15,7 +15,7 @@ export const IKIGAI = [
     { 
         title: "What I'm good at", 
         content: "I have a strong background in e-commerce platforms such as Shopify, BigCommerce - for which i have a certificate, but also Magento2, and custom hybrid solutions with nextJs and wordpress. I'm currently the sole Web Master of multiple different websites, such as this one. I am skilled at analyzing data, identifying trends, and I'm currently working on developing data analytics skills thanks to my google Certificate. I'm also working to perfect my Ux/Ui design skills. I am also a creative problem solver and a strong communicator, able to collaborate effectively with cross-functional teams and stakeholders.", 
-        content_link: "certifications"
+        content_link: ""
     },
     { 
         title: "What I want to do", 

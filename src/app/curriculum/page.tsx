@@ -8,7 +8,7 @@ import {Card, CardHalf} from "@/components/card";
 import CoolTitle, { SuperCoolTitle } from "@/components/utils/coolTitle";
 import DownloadableImg from "@/components/DownloadableImg";
 import ExpandingPanel from "@/components/utils/expandCTA";
-
+import Link from "next/link";
 export default function Curriculum() {
   return (
     <div className="mainContent curriculum">
@@ -19,9 +19,12 @@ export default function Curriculum() {
               "Dall'esperienza accumulata nell'e-Commerce  alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formative che hanno contribuito a costruire una professionalità versatile e responsabile."
             }
           </p>
-          <button className="fake_cta">
-            Clicca sul curriculum per scaricarlo &rarr;{" "}
+          <button className="fakeCta">
+            Clicca sul <span>curriculum</span> per scaricarlo<span> &rarr;{" "}</span>
           </button>
+          <p className="intro">
+          O continua a leggere per scoprire di più su di me, le mie competenze e i miei progetti.
+          </p>
         </div>
         <div className="cv_img">
           <Image
@@ -47,16 +50,32 @@ export default function Curriculum() {
 
         {IKIGAI.map(({ title, content, content_link }, index) => (
           <div
-            className="ikigai" //Past (soft skills ), Present (programming skills), Future (mission)-> Conoscenze passate (), presenti e future
+            className="ikigaiCard" 
             key={index}
           >
+            <div className="ikigaiTextWrapper">
             <CoolTitle title={title} colorClass="blue_5" />
-            <div>
-              <p className="ikigaiContent">{content}</p>
+              <p className="ikigaiText">{content}</p>
+              {content_link && (
+                <a className="realCta" href={content_link}>
+                  Esplora di più
+                </a>
+              )}
             </div>
-            <a className="fake_cta" href={content_link}>
-              Esplora di più
-            </a>
+
+            {index === 1 && (
+              <div className="ikigaiSide">
+                <Link className="sideCta" href="/certifications">
+                  Certifications
+                </Link>
+                <Link className="sideCta" href="/certifications">
+                  Projects
+                </Link>
+                <Link className="sideCta" href="/certifications">
+                  Skills
+                </Link>
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -1,7 +1,5 @@
 .cv_upper {
     display: flex;
-    margin-top: 40px;
-
     
     .cv_txt {
         width: 50%;
@@ -81,16 +79,63 @@
     }
 }
 
-.ikigai {
-    margin-bottom: 60px;
-    .ikigai {
-        position: relative;
+.fakeCta {
+    padding: 5px 20px;
+    font-weight: bold;
+    color: var(--light);
+    margin: 25px 0 30px 0;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: -5px;
+        width: 100%;
+        height: 100%;
+        border: solid 1px var(--light);
+        border-radius: 8px;
+        z-index: 1;
     }
-    div.cool_title{
+        &::after{
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        width: 100%;
+        height: 100%;
+        border: solid 1px var(--light);
+        border-radius: 8px;
+        z-index: 1;
+    }
+    &:active span{
+        color: var(--blue_5);
+        cursor: e-resize;
+        text-decoration: underline;
+    }
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+
+}
+.ikigai {
+    .ikigaiTextWrapper {
+        position: relative;
+        border: solid 2px red;
+    }
+    .ikigaiCard {
+        width: 100%;
+        margin-bottom: 60px;
+        display: flex;
+        position: relative;
+        
+        div.coolTitle{
         margin-bottom: -26px;
         margin-top: 20px;
     }
-    p.ikigaiContent, p.volontariato, .mission p{
+        p.ikigaiText {
         padding: 50px 60px;
         font-size: 20px;
         line-height: 1.6;
@@ -100,7 +145,8 @@
 
 
     }
-    .fake_cta {
+ 
+        .realCta {
         position: absolute;
         bottom: 20px;
         right: 20px;
@@ -108,13 +154,30 @@
     }
 }
 
-.mission {
-    margin-bottom: 60px;
-    p {
-        margin-top: 20px;
-        font-size: 20px;
-        line-height: 1.6;
+    .ikigaiCard:nth-child(2) {
+        > div:nth-child(1) {
+            width: 70%;
+        }
+    }
+
+    .ikigaiSide {
+        width: 25%;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+
+        .sideCta {
+            display: inline-block;
+            padding: 10px 14px;
+            text-decoration: none;
+            color: white;
+            border: 1px solid currentColor;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text
     }
 }
-
-
+}

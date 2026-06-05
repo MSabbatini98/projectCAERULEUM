@@ -52,7 +52,7 @@
           }
         }
         
-        .fake_cta.github_link {
+        .realCta.github_link {
           display: inline-flex;
           align-items: center;
           gap: 6px;
@@ -60,7 +60,7 @@
           
         }
 
-        .fake_cta.github_link::before {
+        .realCta.github_link::before {
           content: "";
           display: inline-block;
           background-color: var(--light );
@@ -74,7 +74,7 @@
           mask-size: contain;
 
         }
-        .fake_cta.github_link:hover::before {
+        .realCta.github_link:hover::before {
           background-color: var(--blue_4);
         }
       }
