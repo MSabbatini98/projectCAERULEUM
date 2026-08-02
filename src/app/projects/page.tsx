@@ -18,7 +18,7 @@ export default function Project() {
 
       <h3 className="projectIntroH">Here is a non-exhaustive list of them:</h3>
       <Card
-        href="/projects/basic-calculator"
+        href="/projects/basicCalculator"
         hrefCTA="Vai alla Calcolatrice"
         projectLongDescription="Semplice esercizio in react per prendere dimestichezza e allenarmi con useReducer. L'esercizio è stato svolto seguendo un tutorial ma con alcune personalizzazioni stilistiche e funzionali."
         projectLinkCTA=""
@@ -28,7 +28,7 @@ export default function Project() {
         projectDate="2026-02"
         isProjectProgramming={true}
         projectMainImage="/media/projects/basic_calculator.png"
-        githubLink="https://github.com/MSabbatini98/REACT-eruditio/tree/main/hook-use-reducer"        
+        githubLink="https://github.com/MSabbatini98/REACT-eruditio/tree/main/hook-use-reducer"
       >
         <CoolTitle title="Calcolatrice semplice" colorClass="blue_4" />
 
