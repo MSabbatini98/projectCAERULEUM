@@ -63,13 +63,13 @@ export default function Curriculum() {
 
             {index === 1 && (
               <div className="ikigaiSide">
-                <Link className="sideCta" href="/certifications">
+                <Link className=" primaryBtn " href="/certifications">
                   Certifications
                 </Link>
-                <Link className="sideCta" href="/certifications">
+                <Link className=" primaryBtn" href="/certifications">
                   Projects
                 </Link>
-                <Link className="sideCta" href="/certifications">
+                <Link className=" primaryBtn" href="/certifications">
                   Skills
                 </Link>
               </div>

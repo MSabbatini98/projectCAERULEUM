@@ -74,11 +74,11 @@ export function Card({children, href, hrefCTA, projectLongDescription, projectMa
                     <div className="cardText">
                         <p>{projectLongDescription}</p>
                         <div className="cardCTAs">
-                            <Link className="realCta" href={href}>
+                            <Link className="themeBtn" href={href}>
                                 {hrefCTA}
                             </Link>
                             {githubLink && (
-                                <a className="realCta github_link" href={githubLink} target="_blank" rel="noopener noreferrer">
+                                <a className="themeBtn github_link" href={githubLink} target="_blank" rel="noopener noreferrer">
                                     {projectLinkCTA || "GitHub"}
                                 </a>
                             )}
@@ -130,7 +130,7 @@ export function CardHalf({children, title, longDescription, hrefCta, textCta, im
                 <div className="cardText">
                     <p>{longDescription}</p>
                 </div>
-                <Link className="realCta" href={hrefCta}>
+                <Link className="themeBtn" href={hrefCta}>
                     {textCta}
                 </Link>
                 </div>

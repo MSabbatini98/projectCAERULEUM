@@ -1,6 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
-import SourceLayout from "@/components/source-layout/SourceLayout";
+import SourceLayout from "@/components/source/SourceLayout";
 
 type SourceFile = {
   label: string;

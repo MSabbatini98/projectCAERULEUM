@@ -52,7 +52,7 @@
           }
         }
         
-        .realCta.github_link {
+        .themeBtn.github_link {
           display: inline-flex;
           align-items: center;
           gap: 6px;
@@ -60,7 +60,7 @@
           
         }
 
-        .realCta.github_link::before {
+        .themeBtn.github_link::before {
           content: "";
           display: inline-block;
           background-color: var(--light );
@@ -74,7 +74,7 @@
           mask-size: contain;
 
         }
-        .realCta.github_link:hover::before {
+        .themeBtn.github_link:hover::before {
           background-color: var(--blue_4);
         }
       }

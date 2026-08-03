@@ -63,7 +63,7 @@
 }
 
 
-.realCta {
+.themeBtn {
         border: solid 2px var(--light);
         border-radius: 8px;
         padding: 5px 20px;
@@ -145,7 +145,7 @@
 
         }
  
-        .realCta {
+        .themeBtn {
             position: absolute;
             bottom: 20px;
             right: 20px;
@@ -166,17 +166,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 30px;
-
-        .sideCta {
-            display: inline-block;
-            padding: 10px 14px;
-            text-decoration: none;
-            color: white;
-            border: 1px solid currentColor;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
+        gap: 40px;
     }
 }
 
