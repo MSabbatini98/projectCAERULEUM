@@ -2,17 +2,15 @@
   min-height: 100vh;
 }
 
-.page-header {
-  margin-bottom: 24px;
-}
-
-.page-title {
-  font-size: 24px;
+.pageTitle {
+  font-size: 32px;
+  text-align: center;
   font-weight: 700;
+  color: var(--blue_5);
 }
 
-.page-subtitle {
-  font-size: 14px;
+.pageSubtitle {
+  font-size: 18px;
   color: #4b5563;
 }
 

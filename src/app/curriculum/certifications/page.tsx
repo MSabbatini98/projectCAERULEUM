@@ -28,15 +28,9 @@ const certificateData: Certificate[] = [
     pdfHref: '/public/download/data_analytics/Data_Analytics_complete.pdf',
     previewImg: '/media/skills/Google_Logo_2.webp',
     issuer: 'Johns Hopkins University',
+    releaseDate: '30/06/2026',
     duration: '~ 150h'
-  },
-  {
-    title: 'Liquid Storefronts for Theme Developers',
-    intro: 'Understand the principles and best practices to optimize a Shopify theme using Liquid, in order to deliver exceptional user experiences for Shopify merchants and their customers.',
-    previewImg: '/images/previews/shopify-ecommerce.png',
-    issuer: 'Shopify',
-    certLink: 'https://www.credly.com/badges/c6e15a5a-7dd3-4c3d-b335-8d4b00176143/public_url'
-  },
+  },  
   {
     title: 'CompetenceBadge: Programmazione (3-4-5-6)',
     intro: 'Pianificare e sviluppare una sequenza di istruzioni comprensibili per un sistema informatico per risolvere un dato problema o per eseguire un compito specifico.',
@@ -44,7 +38,14 @@ const certificateData: Certificate[] = [
     issuer: 'A.E.C.A. - Bologna',
     releaseDate: '21/10/2025',
   },
-
+  {
+    title: 'Liquid Storefronts for Theme Developers',
+    intro: 'Understand the principles and best practices to optimize a Shopify theme using Liquid, in order to deliver exceptional user experiences for Shopify merchants and their customers.',
+    previewImg: '/images/previews/shopify-ecommerce.png',
+    issuer: 'Shopify',
+    certLink: 'https://www.credly.com/badges/c6e15a5a-7dd3-4c3d-b335-8d4b00176143/public_url',
+    releaseDate: '30/09/2024',
+  }
 ]
 export default function CertificationPage() {
   const renderCert = (c: Certificate) => (
@@ -65,8 +66,8 @@ export default function CertificationPage() {
         </div>
       <div className={styles.certInfo}>
         <ul className={styles.certInfoList}>
-          <li className={styles.certInfoItem}>Emesso da {c.issuer}</li>
-          {c.releaseDate && (<li className={styles.certInfoItem}>Data di rilascio: {c.releaseDate}</li>)} 
+          <li className={styles.certInfoItem}>Emesso da :{c.issuer}</li>
+          {c.releaseDate && (<li className={styles.certInfoItem}>Data : {c.releaseDate}</li>)} 
           {c.duration && ( <li className={styles.certInfoItem}>{c.duration} ore </li>  )}
         </ul>
       </div>
@@ -98,15 +99,15 @@ export default function CertificationPage() {
 
   return (
     <main className={`${styles.certificationPage} mainContent`}>
-      <header className="page-header">
-        <h1 className="page-title">Certifications</h1>
-        <p className="page-subtitle">
-          Uploaded certificates (PDF) with image previews.
+      <header className={styles.pageHeader}>
+        <h1 className={styles.pageTitle}>Certifications</h1>
+        <p className={styles.pageSubtitle}>
+          Here is a list of my certifications, showcasing my commitment to continuous learning and professional development. Each certification represents a milestone in my journey to enhance my skills and knowledge in various domains.
         </p>
       </header>
 
-      <section className="certGrid">
-        <div className="certColumn">
+      <section className={styles.certGrid}>
+        <div className={styles.certColumn}>
           {certificateData.map(renderCert)}
         </div>
       </section>
