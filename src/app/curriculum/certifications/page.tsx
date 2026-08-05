@@ -4,48 +4,47 @@ import styles from './certification.module.css'
 type Certificate = {
   title: string
   intro: string
-  pdfHref: string
+  pdfHref?: string
   previewImg: string
   issuer: string
-  duration: number | string 
+  duration?: number | string 
   releaseDate?: string
+  certLink?: string
 }
 
 const certificateData: Certificate[] = [
   {
     title: 'Microsoft Excel Professional Certificate',
     intro: 'Master Excel and Copilot to analyze, automate, and visualize data through advanced techniques, including VBA, dashboards, and data transformation workflows.',
-    pdfHref: '/public/download/Excel_and_copilot_complete.pdf',
-    previewImg: '/images/previews/excel-copilot.png',
+    pdfHref: '/public/download/excel/Excel_and_copilot_complete.pdf',
+    previewImg: '/media/skills/yannzys-excel-logo.png',
     issuer: 'Microsoft',
     releaseDate: '04/07/2026',
-    duration: '~80',
+    duration: '~ 80h',
   },
   {
     title: 'Google Data Analytics',
     intro: 'Develop core data analysis skills—cleaning, analyzing, and visualizing data—using tools like spreadsheets, SQL, R, and Tableau to deliver actionable insights.',
-    pdfHref: '/certs/data-analysis-r.pdf',
-    previewImg: '/images/previews/data-analysis-r.png',
+    pdfHref: '/public/download/data_analytics/Data_Analytics_complete.pdf',
+    previewImg: '/media/skills/Google_Logo_2.webp',
     issuer: 'Johns Hopkins University',
-    duration: 200
+    duration: '~ 150h'
   },
   {
-    title: 'Shopify E-commerce Development',
-    intro: 'Building e-commerce sites with Shopify.',
-    pdfHref: '/certs/shopify-ecommerce.pdf',
+    title: 'Liquid Storefronts for Theme Developers',
+    intro: 'Understand the principles and best practices to optimize a Shopify theme using Liquid, in order to deliver exceptional user experiences for Shopify merchants and their customers.',
     previewImg: '/images/previews/shopify-ecommerce.png',
     issuer: 'Shopify',
-    duration: 150
+    certLink: 'https://www.credly.com/badges/c6e15a5a-7dd3-4c3d-b335-8d4b00176143/public_url'
   },
   {
-    title: 'Accessibility Essentials',
-    intro: 'Making web interfaces accessible to everyone.',
-    pdfHref: '/certs/accessibility-essentials.pdf',
+    title: 'CompetenceBadge: Programmazione (3-4-5-6)',
+    intro: 'Pianificare e sviluppare una sequenza di istruzioni comprensibili per un sistema informatico per risolvere un dato problema o per eseguire un compito specifico.',
     previewImg: '/images/previews/a11y.png',
-    issuer: 'W3C',
-    releaseDate: '01/01/2024',
-    duration: 200
+    issuer: 'A.E.C.A. - Bologna',
+    releaseDate: '21/10/2025',
   },
+
 ]
 export default function CertificationPage() {
   const renderCert = (c: Certificate) => (
@@ -56,31 +55,42 @@ export default function CertificationPage() {
           alt={`${c.title} preview`}
           fill
           sizes="(max-width: 768px) 100vw, 144px"
-          style={{ objectFit: 'cover' }}
         />
       </div>
 
-      <div className={styles.cardContent}>
+      <div className={styles.certContent}>
         <div>
-          <h3 className={styles.cardTitle}>{c.title}</h3>
-          <p className={styles.cardIntro}>{c.intro}</p>
+          <h3 className={styles.certTitle}>{c.title}</h3>
+          <p className={styles.certIntro}>{c.intro}</p>
         </div>
       <div className={styles.certInfo}>
         <ul className={styles.certInfoList}>
           <li className={styles.certInfoItem}>Emesso da {c.issuer}</li>
-          <li className={styles.certInfoItem}>Data di rilascio: {c.releaseDate || 'Data non disponibile'}</li>
-          <li className={styles.certInfoItem}>{c.duration} ore</li>
+          {c.releaseDate && (<li className={styles.certInfoItem}>Data di rilascio: {c.releaseDate}</li>)} 
+          {c.duration && ( <li className={styles.certInfoItem}>{c.duration} ore </li>  )}
         </ul>
       </div>
-        <div >
+        <div className={styles.certBtns}>
+        {c.pdfHref && (
           <a
             href={c.pdfHref}
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.cardButton}
+            className={styles.certBtn}
           >
             Download 
           </a>
+          )}
+          {c.certLink && (
+            <a
+              href={c.certLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.certBtn}
+            >
+              View online
+            </a>
+          )}
         </div>
       </div>
     </article>
@@ -95,8 +105,8 @@ export default function CertificationPage() {
         </p>
       </header>
 
-      <section className="grid">
-        <div className="column">
+      <section className="certGrid">
+        <div className="certColumn">
           {certificateData.map(renderCert)}
         </div>
       </section>

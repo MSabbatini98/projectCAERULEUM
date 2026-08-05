@@ -17,25 +17,6 @@
 }
 
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-/* Card */
 .certCard {
   display: flex;
   flex-direction: column;
@@ -50,11 +31,11 @@
 @media (min-width: 768px) {
   .certCard {
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
+    margin: 32px;
   }
 }
 
-/* Image */
 .certImg {
   position: relative;
   width: 100%;
@@ -64,6 +45,11 @@
   background-color: #f3f4f6;
   flex-shrink: 0;
 }
+.certImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 @media (min-width: 768px) {
   .certImg {
@@ -71,34 +57,23 @@
   }
 }
 
-/* Content */
-.cardContent {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.cardTitle {
-  font-size: 18px;
+.certTitle {
+  font-size: 24px;
   font-weight: 600;
 }
 
-.cardIntro {
-  margin-top: 4px;
-  font-size: 14px;
+.certIntro {
+  margin: 6px 0 24px 0;
+  font-size: 16px;
   color: #4b5563;
 }
 
-.certInfo {
-  margin: 8px 0 12px;
-}
 
 .certInfoList {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 0;
+  padding: 6px 0;
   margin: 0;
   list-style: none;
 }
@@ -116,9 +91,16 @@ li.certInfoItem + .certInfoItem::before {
   color: #9ca3af;
 }
 
-/* Button */
-.cardButton {
-  display: inline-block;
+.certBtns {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  position: relative;
+}
+.certBtn {
+  position:absolute;
+  bottom: 0;
+  right: 0;
   padding: 8px 12px;
   background-color: #2563eb;
   color: #ffffff;
@@ -127,6 +109,6 @@ li.certInfoItem + .certInfoItem::before {
   text-decoration: none;
 }
 
-.cardButton:hover {
+.certBtn:hover {
   background-color: #1d4ed8;
 }
