@@ -2,46 +2,54 @@ import Image from 'next/image'
 import styles from './certification.module.css'
 
 type Certificate = {
-  id: string
   title: string
   intro: string
   pdfHref: string
   previewImg: string
+  issuer: string
+  duration: number | string 
+  releaseDate?: string
 }
 
 const certificateData: Certificate[] = [
   {
-    id: 'Excel + Copilot',
-    title: 'Certificate in Excel + Copilot',
-    intro: 'Introduction to Excel and Copilot.',
-    pdfHref: '/certs/excel-copilot.pdf',
+    title: 'Microsoft Excel Professional Certificate',
+    intro: 'Master Excel and Copilot to analyze, automate, and visualize data through advanced techniques, including VBA, dashboards, and data transformation workflows.',
+    pdfHref: '/public/download/Excel_and_copilot_complete.pdf',
     previewImg: '/images/previews/excel-copilot.png',
+    issuer: 'Microsoft',
+    releaseDate: '04/07/2026',
+    duration: '~80',
   },
   {
-    id: 'Data Analysis with R',
-    title: 'Data Analysis with R',
-    intro: 'Introduction to data analysis using R.',
+    title: 'Google Data Analytics',
+    intro: 'Develop core data analysis skills—cleaning, analyzing, and visualizing data—using tools like spreadsheets, SQL, R, and Tableau to deliver actionable insights.',
     pdfHref: '/certs/data-analysis-r.pdf',
     previewImg: '/images/previews/data-analysis-r.png',
+    issuer: 'Johns Hopkins University',
+    duration: 200
   },
   {
-    id: 'Shopify E-commerce Development',
     title: 'Shopify E-commerce Development',
     intro: 'Building e-commerce sites with Shopify.',
     pdfHref: '/certs/shopify-ecommerce.pdf',
     previewImg: '/images/previews/shopify-ecommerce.png',
+    issuer: 'Shopify',
+    duration: 150
   },
   {
-    id: 'b2',
     title: 'Accessibility Essentials',
     intro: 'Making web interfaces accessible to everyone.',
     pdfHref: '/certs/accessibility-essentials.pdf',
     previewImg: '/images/previews/a11y.png',
+    issuer: 'W3C',
+    releaseDate: '01/01/2024',
+    duration: 200
   },
 ]
 export default function CertificationPage() {
-  const renderCard = (c: Certificate) => (
-    <article key={c.id} className={styles.certCard}>
+  const renderCert = (c: Certificate) => (
+    <article key={c.title} className={styles.certCard}>
       <div className={styles.certImg}>
         <Image
           src={c.previewImg}
@@ -57,15 +65,21 @@ export default function CertificationPage() {
           <h3 className={styles.cardTitle}>{c.title}</h3>
           <p className={styles.cardIntro}>{c.intro}</p>
         </div>
-
-        <div className={styles.cardActions}>
+      <div className={styles.certInfo}>
+        <ul className={styles.certInfoList}>
+          <li className={styles.certInfoItem}>Emesso da {c.issuer}</li>
+          <li className={styles.certInfoItem}>Data di rilascio: {c.releaseDate || 'Data non disponibile'}</li>
+          <li className={styles.certInfoItem}>{c.duration} ore</li>
+        </ul>
+      </div>
+        <div >
           <a
             href={c.pdfHref}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.cardButton}
           >
-            Open certificate
+            Download 
           </a>
         </div>
       </div>
@@ -83,7 +97,7 @@ export default function CertificationPage() {
 
       <section className="grid">
         <div className="column">
-          {certificateData.map(renderCard)}
+          {certificateData.map(renderCert)}
         </div>
       </section>
     </main>
