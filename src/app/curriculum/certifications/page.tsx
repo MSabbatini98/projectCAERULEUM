@@ -34,14 +34,15 @@ const certificateData: Certificate[] = [
   {
     title: 'CompetenceBadge: Programmazione (3-4-5-6)',
     intro: 'Pianificare e sviluppare una sequenza di istruzioni comprensibili per un sistema informatico per risolvere un dato problema o per eseguire un compito specifico.',
-    previewImg: '/images/previews/a11y.png',
+    previewImg: '/media/skills/Badge_lv_6.png',
+    pdfHref: '/download/regione/PROGRAMMAZIONE - Avanzato 6.pdf',
     issuer: 'A.E.C.A. - Bologna',
     releaseDate: '21/10/2025',
   },
   {
     title: 'Liquid Storefronts for Theme Developers',
     intro: 'Understand the principles and best practices to optimize a Shopify theme using Liquid, in order to deliver exceptional user experiences for Shopify merchants and their customers.',
-    previewImg: '/images/previews/shopify-ecommerce.png',
+    previewImg: '/download/e-commerce/liquid-storefronts-for-theme-developers-verified-sk.png',
     issuer: 'Shopify',
     certLink: 'https://www.credly.com/badges/c6e15a5a-7dd3-4c3d-b335-8d4b00176143/public_url',
     releaseDate: '30/09/2024',
@@ -66,8 +67,8 @@ export default function CertificationPage() {
         </div>
       <div className={styles.certInfo}>
         <ul className={styles.certInfoList}>
-          <li className={styles.certInfoItem}>Emesso da :{c.issuer}</li>
-          {c.releaseDate && (<li className={styles.certInfoItem}>Data : {c.releaseDate}</li>)} 
+          <li className={styles.certInfoItem}>Emesso da: {c.issuer}</li>
+          {c.releaseDate && (<li className={styles.certInfoItem}>Data: {c.releaseDate}</li>)} 
           {c.duration && ( <li className={styles.certInfoItem}>{c.duration} ore </li>  )}
         </ul>
       </div>
