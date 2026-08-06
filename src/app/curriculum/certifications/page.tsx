@@ -100,7 +100,7 @@ export default function CertificationPage() {
   
 
   return (
-    <main className={`${styles.certificationPage} mainContent`}>
+    <main className={styles.certificationPage}>
       <header className={styles.pageHeader}>
         <h1 className={styles.pageTitle}>Certifications</h1>
         <p className={styles.pageSubtitle}>

@@ -3,7 +3,7 @@ import ExpandingPanel from "@/components/utils/expandCTA";
 
 export default function TestPage() {
   return (
-    <div className="mainContent test_page">
+    <div className="test_page">
       <h1>Test Page</h1>
       <p>This is a simple test page for the expanding CTA component.</p>
       <p>content Before</p>
