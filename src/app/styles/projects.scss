@@ -1,3 +1,107 @@
+.projects {
+  .projectIntro{
+    font-size: 24px;
+    margin: 24px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .projectIntroH {
+    font-size: 32px;
+    margin: 36px auto;
+    font-weight: bold;
+    text-align: center;
+    color: var(--dark);
+  }
+
+  .cardContainer .card{
+    padding: 24px;
+    position: relative;
+
+.cardContent {
+  min-height: 240px;
+}
+
+    .cardTitle {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .cardText {
+
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+
+      .cardCTAs {
+        position: absolute;
+        display: flex;
+        gap: 12px;
+        bottom: 24px;
+        left: 24px;
+        cursor: pointer;
+        border-radius: 5px;
+
+        > a {
+          background-color: var(--blue_4);
+
+          &:hover {
+            background-color: white;
+            color: var(--blue_4);
+            border-color: var(--blue_4);
+            transform: none;
+          }
+        }
+        
+        .themeBtn.github_link {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          position: relative;
+          
+        }
+
+        .themeBtn.github_link::before {
+          content: "";
+          display: inline-block;
+          background-color: var(--light );
+          width: 24px;
+          height: 24px;
+          margin-right: 6px;
+        
+          -webkit-mask: url("/media/skills/github.svg") no-repeat center;
+          mask: url("/media/skills/github.svg") no-repeat center;
+          -webkit-mask-size: contain;
+          mask-size: contain;
+
+        }
+        .themeBtn.github_link:hover::before {
+          background-color: var(--blue_4);
+        }
+      }
+    }
+    .card_skills{
+    position: absolute;
+    width: 250px;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    img{
+        width: 50px;
+        height: 50px;
+        border: solid 4px var(--blue_3);
+        border-radius: 10px;
+        padding: 5px;
+        background-color: var(--light);
+    }
+    }
+  }
+}
+
+
+
 .project {
   width: 100%;
 

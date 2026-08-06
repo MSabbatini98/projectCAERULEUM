@@ -45,7 +45,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
       <div className="about_slide">
           {images.map(({ url, alt, title }, index) => (
           <div 
-            className="about_slide-container"
+            className="about_slideContainer"
             key={index}
             style={{ translate: `${-100 * imageIndex}%` }}
           >

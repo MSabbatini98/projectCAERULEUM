@@ -85,7 +85,7 @@ const VERCONTACTS = [
 
 export default function Contacts() {
     return (
-    <div className="main_content contacts">
+    <div className="mainContent contacts">
         <div className="contacts_hor">
             <CoolTitle
             title="Mettiti in contatto"

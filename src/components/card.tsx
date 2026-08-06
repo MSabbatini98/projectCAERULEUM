@@ -18,6 +18,16 @@ type CardProps = {
         projectDate?: string;  //data del progetto
         projectMainImage?: string; //immagine principale del progetto
         isProjectProgramming?: boolean; //indica se il progetto è di programmazione o meno
+        githubLink?: string; //link al repository GitHub del progetto
+        imgURL?: string; //URL dell'immagine del progetto
+    }
+    type HalfCardProps = {
+        children: ReactNode;
+        title?: string; //testo del link alla pagina del progetto
+        longDescription: string; //descrizione più lunga del progetto
+        imgURL?: string; //URL dell'immagine del progetto
+        textCta: string; //testo del link per ulteriori informazioni (Es. Duolingo, GitHub, ecc. )
+        hrefCta: string; //link alla pagina del progetto
     }
 const BROKEN_IMAGE = '/media/broken-img.png';
 
@@ -52,18 +62,27 @@ const SKILL_IMAGES: Record<string, string> = {
     // 'Angular': '/media/skills/angular.svg',
 };
 
-export function Card({children, href, hrefCTA, projectLongDescription, projectMainImage, isProjectProgramming, projectSkills, projectLinkCTA} : CardProps) {
+export function Card({children, href, hrefCTA, projectLongDescription, projectMainImage, isProjectProgramming, projectSkills, projectLinkCTA, githubLink} : CardProps) {
 
     return (
-        <div className="card-container">
+        <div className="cardContainer">
             <div className="card">
-                <div className="card_title">
+                <div className="cardTitle">
                 {children}
                 </div>
-                <div className="card_content">
-                    <div className="card_text">
+                <div className="cardContent">
+                    <div className="cardText">
                         <p>{projectLongDescription}</p>
-                        <Link href={href}>{hrefCTA}</Link>
+                        <div className="cardCTAs">
+                            <Link className="themeBtn" href={href}>
+                                {hrefCTA}
+                            </Link>
+                            {githubLink && (
+                                <a className="themeBtn github_link" href={githubLink} target="_blank" rel="noopener noreferrer">
+                                    {projectLinkCTA || "GitHub"}
+                                </a>
+                            )}
+                        </div>
                     </div>
                     <div className="card_image">
                         <Image
@@ -89,32 +108,31 @@ export function Card({children, href, hrefCTA, projectLongDescription, projectMa
                         ))}
                     </div>
                 )}
+
             </div>
         </div>
     )
 }
 
-export function CardHalf({children, href, hrefCTA, projectLongDescription, projectLinkCTA, ...props} : CardProps) {
+export function CardHalf({children, title, longDescription, hrefCta, textCta, imgURL} : HalfCardProps) {
 
     return (
-        <div className="card-half-container">
-            <div className="card-half card">
-                <div className="card_title">
+        <div className="singleHalfContainer">
+            <div className="singleHalf card">
                 {children}
+                <Image
+                    className="active"
+                    src={imgURL || "/media/header/flags/flag-italy.avif"}
+                    alt="Italian flag icon"
+                    width={100}
+                    height={100}
+                />
+                <div className="cardText">
+                    <p>{longDescription}</p>
                 </div>
-                <div className="card_image">
-                    <Image
-                            className="active"
-                            src="/media/header/flags/flag-italy.avif"
-                            alt="Italian flag icon"
-                            width={100}
-                            height={100}
-                        />
-                </div>
-                <div className="card_text">
-                    <p>{projectLongDescription}</p>
-                </div>
-                <Link className="fake_cta" href={href}>{projectLinkCTA}</Link>
+                <Link className="themeBtn" href={hrefCta}>
+                    {textCta}
+                </Link>
                 </div>
             </div>
     )

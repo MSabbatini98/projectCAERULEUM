@@ -29,7 +29,7 @@ import "../styles/about.scss"
 export default function About() {
 
     return (
-  <section className="main_content about">
+  <section className="mainContent about">
     <div
       style={{
         maxWidth: "1200px",

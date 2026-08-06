@@ -5,7 +5,8 @@ import CoolTitle from "@/components/utils/coolTitle"
 import "./basic-calculator.css"
 
 import { useReducer } from "react"
-import { DigitButton, OperatorButton } from "../../../components/CalcButtons"
+import { DigitButton, OperatorButton } from "./CalcButtons"
+import Link from "next/link"
 
 export const ACTIONS = {
   ADD_DIGIT: 'add-digit',
@@ -41,12 +42,17 @@ const initialState: State = {
 export default function Calculator() {
   return (
     <main >
-      <div className="main_content">
+      <div className="mainContent">
 
         <CoolTitle
             title="Calcolatrice classica"
             colorClass="blue_3"/>
         <p>Seguendo un tutorial, ho sviluppato una semplice calcolatrice classica con HTML, CSS e JavaScript.</p>
+        <p style={{ marginTop: "0.75rem" }}>
+          <Link href="/projects/basicCalculator/source" style={{ color: "#2563eb", textDecoration: "underline" }}>
+            View source files
+          </Link>
+        </p>
         <BasicCalculator />
       </div>
     </main>

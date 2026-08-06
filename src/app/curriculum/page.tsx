@@ -3,25 +3,26 @@ import Image from "next/image";
 import Theater from "@/components/theater";
 import TheaterLang from "@/components/theaterLang";
 
-import { SKILLZ, LANG_SLIDER } from "./data";
+import { IKIGAI, LANG_SLIDER } from "./data";
 import {Card, CardHalf} from "@/components/card";
 import CoolTitle, { SuperCoolTitle } from "@/components/utils/coolTitle";
 import DownloadableImg from "@/components/DownloadableImg";
 import ExpandingPanel from "@/components/utils/expandCTA";
-
+import Link from "next/link";
 export default function Curriculum() {
   return (
-    <div className="main_content curriculum">
+    <div className="mainContent curriculum">
       <div className="cv_upper">
         <div className="cv_txt">
           <p className="intro">
-            {
-              "Dall'esperienza accumulata nell'e-Commerce in Spotview alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formatice che hanno contribuito a costruire una professionalità versatile e responsabile."
-            }
+          Dall'esperienza accumulata nell'e-Commerce  alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formative che hanno contribuito a costruire una professionalità versatile e responsabile.
           </p>
-          <button className="fake_cta">
-            Clicca sul curriculum per scaricarlo &rarr;{" "}
+          <button className="fakeCta">
+            Clicca sul <span>curriculum</span> per scaricarlo<span> &rarr;{" "}</span>
           </button>
+          <p className="intro">
+          O continua a leggere per scoprire di più su di me, le mie competenze e i miei progetti.
+          </p>
         </div>
         <div className="cv_img">
           <Image
@@ -42,21 +43,37 @@ export default function Curriculum() {
         </div>
       </div>
 
-      <div className="skillz">
-        {/* <p> {SKILLZ[0].title}</p> Single item from DATA - SKILLZ*/}
+      <div className="ikigai">
+        {/* <p> {IKIGAI[0].title}</p> Single item from DATA - IKIGAI*/}
 
-        {SKILLZ.map(({ title, content, content_link }, index) => (
+        {IKIGAI.map(({ title, content, content_link }, index) => (
           <div
-            className="PPF" //Past (soft skills ), Present (programming skills), Future (mission)-> Conoscenze passate (), presenti e future
+            className="ikigaiCard" 
             key={index}
           >
-            <CoolTitle title={title} colorClass="blue_5" />
-            <div>
-              <p className="PPFcontent">{content}</p>
+            <div className="ikigaiTextWrapper">
+              <CoolTitle title={title} colorClass="blue_5" />
+              <p className="ikigaiText">{content}</p>
+              {content_link && (
+                <a className="realCta" href={content_link}>
+                  Esplora di più
+                </a>
+              )}
             </div>
-            <a className="fake_cta" href={content_link}>
-              Esplora di più
-            </a>
+
+            {index === 1 && (
+              <div className="ikigaiSide">
+                <Link className=" primaryBtn " href="/certifications">
+                  Certifications
+                </Link>
+                <Link className=" primaryBtn" href="/certifications">
+                  Projects
+                </Link>
+                <Link className=" primaryBtn" href="/certifications">
+                  Skills
+                </Link>
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -110,24 +127,23 @@ export default function Curriculum() {
           scuola di italiano per extracomunitari e il progetto di ascolto per le
           persone sole/anziane/emarginate.
         </p>
-        <div className="volunteer-cards">
+        <div className="volunteerCards">
           <CardHalf
-            href="/projects/prova1"
-            hrefCTA="Albero di Cirene"
-            projectLongDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con l'Albero di Cirene collaboro tramite l'insegnamento della lingua italiana a persone extracomunitarie."
-            projectLinkCTA="Scopri di più"
+            hrefCta="Albero di Cirene"
+            textCta="Scopri di più"
+            longDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con l'Albero di Cirene collaboro tramite l'insegnamento della lingua italiana a persone extracomunitarie."
+            imgURL="/media/cv/logo_AlberoCirene.png"
           >
             <CoolTitle title="Albero di Cirene" colorClass="blue_5" />
           </CardHalf>
           
           <CardHalf
-            href="/projects/prova1"
-            hrefCTA="Scopri la sezione PlasticFree dedicata"
-            projectLongDescription="Sono ormai referente per il Comune di Bologna da Maggio 2024. Con Plastic free effettuiamo diversi progetti sul territorio: dalla sensibilizzazione nelle scuole alla partecipazione attiva durante le attività di raccolta rifiuti. Personalmente mi sono occupato di organizzare, divulgare, raccogliere e molto altro. Il tutto con l'obiettivo di sensibilizzare e coinvolgere sempre più persone nella lotta contro l'inquinamento da plastica."
-            projectLinkCTA="Scopri di più"
-
+            longDescription="Sono ormai referente per il Comune di Bologna da Maggio 2024. Con Plastic free effettuiamo diversi progetti sul territorio: dalla sensibilizzazione nelle scuole alla partecipazione attiva durante le attività di raccolta rifiuti. Personalmente mi sono occupato di organizzare, divulgare, raccogliere e molto altro. Il tutto con l'obiettivo di sensibilizzare e coinvolgere sempre più persone nella lotta contro l'inquinamento da plastica."
+            hrefCta="/projects/prova1"
+            textCta="Scopri di più"
+            imgURL="/media/cv/logo_PlasticFree.jpeg"
           >
-          <CoolTitle title="PlasticFree " colorClass="blue_3" />
+          <CoolTitle title="PlasticFree " colorClass="blue_5" />
           </CardHalf>
         </div>
       </div>
