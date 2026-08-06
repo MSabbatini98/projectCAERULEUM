@@ -11,7 +11,7 @@ import ExpandingPanel from "@/components/utils/expandCTA";
 import Link from "next/link";
 export default function Curriculum() {
   return (
-    <div className="mainContent curriculum">
+    <div className="curriculum">
       <div className="cv_upper">
         <div className="cv_txt">
           <p className="intro">

@@ -21,6 +21,7 @@ import "../components/styles/navbar.scss";
 import Navbar from '@/components/navbar'
 import Header from '@/components/Header'
 import Footer from '../components/footer'
+import Breadcrumbs from '@/components/Breadcrumbss'
 
 
 
@@ -44,7 +45,10 @@ export default function RootLayout({
       <body >
         <Header />
         <Navbar />
-          {children}  
+        <div className="mainContent">
+          <Breadcrumbs /> 
+          {children}
+        </div>
         <Footer />
       </body>
 
@@ -52,3 +56,5 @@ export default function RootLayout({
     
   );
 }
+
+

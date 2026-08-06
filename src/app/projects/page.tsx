@@ -12,7 +12,7 @@ export  function generateMetadata() {
 
 export default function Project() {
   return (
-    <div className="mainContent projects">
+    <div className="projects">
       <p className="projectIntro">I’m the kind of person who <b>gets interested in almost everything </b>— and I mean it. <br/>
       Over time, that’s turned into a collection of personal projects across different areas of my life.<br/> They all share a common thread: simple to tryout, sustainable, and accessible to anyone who wants to challenge themselves.  </p>
 
