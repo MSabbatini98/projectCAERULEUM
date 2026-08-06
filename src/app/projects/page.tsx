@@ -1,10 +1,10 @@
 import { Card } from "@/components/card";
 import CoolTitle from "@/components/utils/coolTitle";
 
-export async function generateMetadata() {
+export  function generateMetadata() {
   return {
     title: "Progetti | CAERULEUM",
-    descriptiom: "tutti i progetti del mio sito portfolio",
+    description: "tutti i progetti del mio sito portfolio",
   };
 }
 

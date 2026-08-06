@@ -1,9 +1,9 @@
 import {Card} from "@/components/card"
 
-export async function generateMetadata() {
+export function generateMetadata() {
     return {
       title: 'Pericoli dei social | CAERULEUM',
-      descriptiom : 'tutti i progetti del mio sito portfolio'
+      description : 'tutti i progetti del mio sito portfolio'
     }
   }
 

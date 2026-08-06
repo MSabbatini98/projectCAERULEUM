@@ -1,48 +1,55 @@
-'use client'
+'use client';
+
 import { Loader } from "@googlemaps/js-api-loader";
-import React, {useEffect} from "react";
+import { useEffect, useRef } from "react";
 
+export default function GoogleMaps() {
+  const mapRef = useRef<HTMLDivElement>(null);
+  const initialized = useRef(false);
 
-export default function GoogleMaps () {
-    const mapRef = React.useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (initialized.current) return;
+    initialized.current = true;
 
-    useEffect (() => {
+    const initMap = async () => {
+      const apiKey = process.env.NEXT_PUBLIC_MAPS_API_KEY;
 
-        const initMap = async () => {
+      if (!apiKey) {
+        console.error("Missing Google Maps API key");
+        return;
+      }
 
-            const loader = new Loader({
-                apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY as string,
-                version: "weekly"
-            });
+      if (!mapRef.current) return;
 
-            const { Map } = await loader.importLibrary('maps');
-            
-            const position = {
-                lat: 44.4949,
-                lng: 11.3426
-            }
+      const loader = new Loader({
+        apiKey,
+        version: "weekly",
+      });
 
-            //map options
-            const mapOptions: google.maps.MapOptions = {
-                center: position,
-                zoom : 14,
-                mapId: 'FIND_ME_MAPS'
-            }
+      const { Map } = await loader.importLibrary("maps");
 
-            //setup the map
-            const map = new Map(mapRef.current as HTMLDivElement, mapOptions);
+      const position = {
+        lat: 44.4949,
+        lng: 11.3426,
+      };
 
+      const mapOptions = {
+        center: position,
+        zoom: 14,
+        mapId: "FIND_ME_MAPS",
+      } as const;
 
-        }
+      new Map(mapRef.current, mapOptions);
+    };
 
-        initMap();
-    }, []);
+    initMap();
+  }, []);
 
-    return (
-
-        <div className="map"  
-            ref={mapRef} 
-            style={{height: '350px', width:'100%'}}>
-            </div>
-    )
+  return (
+    <div
+      ref={mapRef}
+      className="map"
+      style={{ height: "350px", width: "100%" }}
+    />
+  );
 }
