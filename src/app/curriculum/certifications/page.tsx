@@ -97,6 +97,7 @@ export default function CertificationPage() {
       </div>
     </article>
   )
+  
 
   return (
     <main className={`${styles.certificationPage} mainContent`}>
