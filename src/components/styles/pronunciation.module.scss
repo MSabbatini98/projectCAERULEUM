@@ -1,0 +1,22 @@
+.pronunciation {
+  all: unset;
+  cursor: pointer;
+
+  border: solid 2px var(--light);
+  border-radius: 8px;
+  padding: 10px;
+
+  position: absolute;
+  top: 6px;
+  right: 17%;
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

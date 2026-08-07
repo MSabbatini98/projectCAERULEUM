@@ -1,5 +1,6 @@
 import Image from "next/image"
 import "../app/styles/hero.scss"
+import Pronunciation from "../components/Pronunciation";
 import { Goblin_One } from "next/font/google";
 
 const font_header = Goblin_One({ 
@@ -14,14 +15,9 @@ export default function Home() {
       <div className={`hero_content ` + font_header.className}>
         <h1>Project <br /> Caeruleum</h1>
         <h3>By Matteo Sabbatini</h3>
-        <div className="icon">
-          <Image
-            src="/media/pronunciation.avif"
-            width={50}
-            height={50}
-            alt="icona della pronuncia, clicca per ascoltare"
-            />
-        </div>        
+        <Pronunciation
+          audioUrl="/audio/pronuncia-enhanced.mp3"
+          />
       </div>
     <div className="bg_image">
         <Image
