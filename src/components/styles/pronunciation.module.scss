@@ -1,0 +1,114 @@
+// Enables smooth interpolation of --progress in the keyframes below.
+@property --progress {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
+
+//Main icon button
+.pronunciation {
+  all: unset;
+  cursor: pointer;
+
+  position: absolute;
+  top: 6px;
+  right: 17%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: solid 2px var(--light);
+  border-radius: 8px;
+
+  padding: 10px;
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: var(--blue_3);
+    border-width: 3px;
+    background-color: var(--light);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// Squircle animation clockwise
+.timer {
+  position: absolute;
+  inset: -2px;
+  border-radius: 8px;
+  border: solid 4px var(--blue_3);
+  opacity: 0;
+  pointer-events: none;
+
+  --progress: 0%;
+
+  // the rest masked away — a squircle outline "clock wipe".
+  -webkit-mask: conic-gradient(
+    from 0deg,
+    var(--dark) var(--progress),
+    transparent var(--progress)
+  );
+  mask: conic-gradient(
+    from 0deg,
+    var(--dark) var(--progress),
+    transparent var(--progress)
+  );
+}
+
+.isDepleting {
+  opacity: 1;
+  animation: deplete var(--duration, 2500ms) linear forwards;
+}
+
+@keyframes deplete {
+  from {
+    --progress: 100%;
+  }
+  to {
+    --progress: 0%;
+  }
+}
+
+
+
+
+// Tooltip
+.pronunciation {
+  font-family: "Inter", sans-serif;
+  &::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+
+    white-space: nowrap;
+    background-color: var(--light);
+    border: solid 1px var(--blue_3);
+    color: var(--blue_3);
+    font-size: 12px;
+    line-height: 1.4;
+    padding: 6px 10px;
+    border-radius: 6px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    transition-delay: 0s; // hide instantly on mouse-out
+    z-index: 10;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    transition-delay: 1s; // wait 1s before showing
+  }
+}
