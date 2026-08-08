@@ -1,18 +1,18 @@
 import Image from "next/image";
 
-import Theater from "@/components/theater";
 import TheaterLang from "@/components/theaterLang";
 
 import { IKIGAI, LANG_SLIDER } from "./data";
-import {Card, CardHalf} from "@/components/card";
+import { Card, CardHalf } from "@/components/card";
 import CoolTitle, { SuperCoolTitle } from "@/components/utils/coolTitle";
 import DownloadableImg from "@/components/DownloadableImg";
 import ExpandingPanel from "@/components/utils/expandCTA";
+
 import Link from "next/link";
 export default function Curriculum() {
   return (
     <div className="curriculum">
-      <div className="cv_upper">
+      <section className="cv_upper">
         <div className="cv_txt">
           <p className="intro">
           Dall'esperienza accumulata nell'e-Commerce  alla passione innata per l'ambiente, scopri le più importanti esperienze lavorative e formative che hanno contribuito a costruire una professionalità versatile e responsabile.
@@ -41,12 +41,12 @@ export default function Curriculum() {
           />
 
         </div>
-      </div>
+      </section>
 
-      <div className="ikigai">
+      <section className="ikigai">
         {/* <p> {IKIGAI[0].title}</p> Single item from DATA - IKIGAI*/}
 
-        {IKIGAI.map(({ title, content, content_link }, index) => (
+        {IKIGAI.map(({ title, content, contentLink }, index) => (
           <div
             className="ikigaiCard" 
             key={index}
@@ -54,11 +54,11 @@ export default function Curriculum() {
             <div className="ikigaiTextWrapper">
               <CoolTitle title={title} colorClass="blue_5" />
               <p className="ikigaiText">{content}</p>
-              {content_link && (
+              {/* {content_link && (
                 <a className="realCta" href={content_link}>
                   Esplora di più
-                </a>
-              )}
+                </a>  TODO fix positioning
+              )}*/}
             </div>
 
             {index === 1 && (
@@ -76,8 +76,9 @@ export default function Curriculum() {
             )}
           </div>
         ))}
-      </div>
-      <div className="mission">
+      </section>
+
+      <section className="mission">
         <SuperCoolTitle title={"Missione personale"} colorClass="blue_5" />
         <p>
           La mia missione personale è quella di contribuire attivamente alla
@@ -89,9 +90,9 @@ export default function Curriculum() {
           mondo ha bisogno, lavorando per un futuro in cui l'armonia tra uomo e
           natura sia una realtà concreta.
         </p>
-      </div>
+      </section>
 
-      <div className="lang_theater">
+      <section className="lang_theater">
         <CoolTitle title={"Lingue conosciute"} colorClass="blue_5" />
         <p>
           Clicca sui vari banner per avere più informazioni sulle lingue che
@@ -101,9 +102,9 @@ export default function Curriculum() {
         <div className="cv_theater theater_lang">
           <TheaterLang langs={LANG_SLIDER} />
         </div>
-      </div>
+      </section>
 
-      <div className="volontariato">
+      <section className="volontariato">
         <CoolTitle title={"Volontariato"} colorClass="blue_5" />
         <p>
           Oltre alla mia esperienza lavorativa, nel corso degli anni ho dedicato
@@ -146,10 +147,12 @@ export default function Curriculum() {
           <CoolTitle title="PlasticFree " colorClass="blue_5" />
           </CardHalf>
         </div>
-      </div>
-        <ExpandingPanel color="red" CTAtext="Open">
-          <p>This is a secret section. It will be avaiable after the GO LIVE of the fun mode.</p>
-        </ExpandingPanel>
+      </section>
+
+      <ExpandingPanel color="red" CTAtext="Open">
+        <p>This is a secret section. It will be avaiable after the GO LIVE of the fun mode.</p>
+      </ExpandingPanel>
+
     </div>
   );
 }
