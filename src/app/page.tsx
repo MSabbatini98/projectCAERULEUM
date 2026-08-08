@@ -17,7 +17,8 @@ export default function Home() {
         <h3>By Matteo Sabbatini</h3>
         <Pronunciation
           audioUrl="/audio/pronuncia-enhanced.mp3"
-          />
+          alt="Website name pronunciation"
+        />
       </div>
     <div className="bg_image">
         <Image
