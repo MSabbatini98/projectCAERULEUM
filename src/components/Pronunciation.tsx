@@ -22,7 +22,7 @@ export default function Pronunciation({
 
   const playingLabel = "Playing...";
   const tooltip = "Click to hear the pronunciation";
-  
+
   const handlePlay = async () => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -40,12 +40,16 @@ export default function Pronunciation({
     }
   };
 
+  const handleAnimationEnd = () => {
+    setIsDepleting(false);
+    setIsPlaying(false);
+  };
+
   return (
     <button
       type="button"
       className={styles.pronunciation}
       onClick={handlePlay}
-      onMouseLeave={() => setIsPlaying(false)}
       aria-label={alt}
       data-tooltip={isPlaying ? playingLabel : tooltip}
       style={{ "--duration": `${durationMs}ms` } as React.CSSProperties}
@@ -53,7 +57,7 @@ export default function Pronunciation({
       <span
         key={animKey}
         className={`${styles.timer} ${isDepleting ? styles.isDepleting : ""}`}
-        onAnimationEnd={() => setIsDepleting(false)}
+        onAnimationEnd={handleAnimationEnd}
         aria-hidden="true"
       />
 
