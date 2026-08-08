@@ -9,6 +9,9 @@ export default function Breadcrumbs() {
   const pathname = usePathname();
   const segments = pathname.split("/").filter(Boolean);
 
+  if (segments.length === 0) {
+    return null;
+  }
   return (
     <nav aria-label="breadcrumb" className={styles.breadcrumbNav}>
       <ol className={styles.breadcrumbList}>
