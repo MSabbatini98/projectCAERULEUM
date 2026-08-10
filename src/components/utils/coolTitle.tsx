@@ -16,7 +16,7 @@ export default function CoolTitle({title, colorClass} : titleProps) {
 }
 export function  SuperCoolTitle({title, colorClass} : titleProps) {
     return (
-        <div className=" super_coolTitle">
+        <div className=" superCoolTitle">
             <h3 className={colorClass}><span className="left-sct" >{title}</span><span className="right-sct"></span></h3>
         </div>
     )

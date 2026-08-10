@@ -180,13 +180,12 @@
     z-index: 0;
     padding: 50px 0;
 
-  
     //fullscree backgorund
     &::before {
       content: '';
       position: absolute;
-      top: -30px;
-      bottom: -30px;
+      top: 0px;
+      bottom: 0px;
       left: -100vw;  
       right: -100px;
 
@@ -194,11 +193,16 @@
       z-index: -100;
     }
 
+    p {
+        font-size: 24px;
+        line-height: 2;
+        margin: 20px 0;
+        color: var(--light);
+    }
   }
 
 .volunteerCards {
     .coolTitle h3{
-        font-size: 35px;
         margin: 20px 0 10px 0;
 
         span {

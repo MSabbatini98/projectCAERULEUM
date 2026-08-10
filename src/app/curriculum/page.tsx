@@ -3,11 +3,10 @@ import Image from "next/image";
 import TheaterLang from "@/components/theaterLang";
 
 import { IKIGAI, LANG_SLIDER } from "./data";
-import { Card, CardHalf } from "@/components/card";
+import {Card, CardHalf} from "@/components/card";
 import CoolTitle, { SuperCoolTitle } from "@/components/utils/coolTitle";
 import DownloadableImg from "@/components/DownloadableImg";
 import ExpandingPanel from "@/components/utils/expandCTA";
-
 import Link from "next/link";
 export default function Curriculum() {
   return (
@@ -149,9 +148,9 @@ export default function Curriculum() {
         </div>
       </section>
 
-      <ExpandingPanel color="red" CTAtext="Open">
-        <p>This is a secret section. It will be avaiable after the GO LIVE of the fun mode.</p>
-      </ExpandingPanel>
+        <ExpandingPanel color="red" CTAtext="Open">
+          <p>This is a secret section. It will be avaiable after the GO LIVE of the fun mode.</p>
+        </ExpandingPanel>
 
     </div>
   );
