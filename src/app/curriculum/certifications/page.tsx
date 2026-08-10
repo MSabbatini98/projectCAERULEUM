@@ -14,7 +14,7 @@ type Certificate = {
 
 const certificateData: Certificate[] = [
   {
-    title: 'Microsoft Excel Professional Certificate',
+    title: 'Microsoft Excel + Copilot',
     intro: 'Master Excel and Copilot to analyze, automate, and visualize data through advanced techniques, including VBA, dashboards, and data transformation workflows.',
     pdfHref: '/public/download/excel/Excel_and_copilot_complete.pdf',
     previewImg: '/media/skills/yannzys-excel-logo.png',

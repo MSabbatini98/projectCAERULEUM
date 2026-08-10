@@ -11,7 +11,7 @@ import "./styles/navbar.scss"
 export default function Navbar() {
     const [toggleMenu, setToggleMenu] = useState(false)
     return (
-        <section className={`${toggleMenu ? "main_nav main_nav_open" : "main_nav main_nav_close"} ` }> 
+        <section className={`${toggleMenu ? "mainNav mainNav_open" : "mainNav mainNav_close"} ` }> 
             <nav className={`${toggleMenu ? "nav_open" : "nav_close"} ` }>
                 <ul>
                     <li className={`${toggleMenu ? "nav_open" : "nav_closed"} ` }  id='curriculum'>

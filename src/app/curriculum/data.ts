@@ -5,27 +5,30 @@ import banner_jp from "../../../public/media/sliderImgs/japan_banner.webp"
 import banner_de from "../../../public/media/sliderImgs/germany_banner.webp"
 import banner_en from "../../../public/media/sliderImgs/uk_banner.webp"
 
-
-export const IKIGAI = [
+export interface IkigaiItem {
+    title: string;
+    content: string;
+    contentLink?: string;
+  }
+  
+  export const IKIGAI: IkigaiItem[] = [
+    // it can have the following properties: title, content and content_link. 
+    // TODO Rn content_link is not used, but it can be used bc it's bronken
     { 
         title: "What I love", 
         content: "I crave novelty and creativity, and I find joy in learning new things and exploring new ideas. I am passionate about technology, sustainability, and making a positive impact on the world. I love working on projects that challenge me to think outside the box and push the boundaries of what is possible.", 
-        content_link: "#",
     },
     { 
         title: "What I'm good at", 
         content: "I have a strong background in e-commerce platforms such as Shopify, BigCommerce - for which i have a certificate, but also Magento2, and custom hybrid solutions with nextJs and wordpress. I'm currently the sole Web Master of multiple different websites, such as this one. I am skilled at analyzing data, identifying trends, and I'm currently working on developing data analytics skills thanks to my google Certificate. I'm also working to perfect my Ux/Ui design skills. I am also a creative problem solver and a strong communicator, able to collaborate effectively with cross-functional teams and stakeholders.", 
-        content_link: ""
     },
     { 
         title: "What I want to do", 
         content: "I'm still too young to have a clear vision of my future, but I know that I want to work on projects that have a positive impact on the world and that allow me to continue learning and growing. I'm particularly interested in sustainability and environmental issues, and I would love to work on projects that help to create a more sustainable future. I'm also interested in exploring new technologies and finding innovative simple solutions to somewhat complex problems.", 
-        content_link: "#"
     },
     { 
         title: "What the world needs", 
         content: "Right now, more than ever, the world needs peace and quite to heal. We need to find ways to work together to create bridges and not fences. Bridges that connects forests divided by highways, bridges between different cultures, different generations, different ideologies. We need to find ways to connect with each other and with nature to improve the quality of our lives and protect what is dear to us, as a species and as individuals. We need to find ways to create a more sustainable future for ourselves and for future generations.", 
-        content_link: "#"
     }
 ];
 export    const  LANG_SLIDER = [ 

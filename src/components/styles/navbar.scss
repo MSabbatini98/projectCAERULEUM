@@ -1,9 +1,10 @@
 /*?NAV*/
-section.main_nav{
+section.mainNav{
     position: fixed;
     top: 140px;
     left: 0px;
     margin-top: 60px;
+    z-index: 10;
 
     ul {
         padding: 20px;
@@ -54,7 +55,7 @@ section.main_nav{
         }
     }
 }
-.main_nav_open{
+.mainNav_open{
     z-index: 10;
     &::before{
         content: "";
@@ -124,7 +125,7 @@ section.main_nav{
         
     }
 }
-.main_nav_close{
+.mainNav_close{
     nav {
         button {
             padding: 2px 1px 0px 1px;
@@ -168,7 +169,7 @@ section.main_nav{
 .nav_closed h3.title{
     display: none;
 }
-.main_nav_open {
+.mainNav_open {
     nav ul {
         li.nav_open {
              margin: 0 15px;
@@ -190,10 +191,10 @@ section.main_nav{
         
     }
 }
-.main_nav_open nav ul li.nav_open:nth-child(3) {
+.mainNav_open nav ul li.nav_open:nth-child(3) {
     margin-top: 30px;
 }
-.main_nav_open nav ul li.nav_open:nth-child(4) {
+.mainNav_open nav ul li.nav_open:nth-child(4) {
     margin-bottom: 16px;
 }
 
