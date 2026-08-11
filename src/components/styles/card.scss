@@ -17,7 +17,7 @@
         flex: 1;
         margin-right: 20px;
     }
-    .card_image {
+    .cardImage {
         position: relative;
         width: 250px;
         height: 180px;
@@ -25,14 +25,14 @@
         border-radius: 10px;    
     }
 }
-.singleHalfContainer {
+.cardHalfContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
 }
 
-.singleHalf {
+.halfCard {
     border: solid 2px var(--blue_3);
     border-radius: 20px;
     width: 100%;
@@ -52,7 +52,7 @@
     .cardText {
         margin-right: 0;
     }
-    .card_image {
+    .cardImage {
         width: 250px;
         height: 180px;
         background-color: var(--blue_3);
@@ -66,4 +66,11 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 20px;
+
+    h3.halfCardTitle {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
 } 

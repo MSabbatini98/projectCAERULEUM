@@ -84,7 +84,7 @@ export function Card({children, href, hrefCTA, projectLongDescription, projectMa
                             )}
                         </div>
                     </div>
-                    <div className="card_image">
+                    <div className="cardImage">
                         <Image
                                 className="active"
                                 src={projectMainImage || BROKEN_IMAGE}
@@ -117,8 +117,9 @@ export function Card({children, href, hrefCTA, projectLongDescription, projectMa
 export function CardHalf({children, title, longDescription, hrefCta, textCta, imgURL} : HalfCardProps) {
 
     return (
-        <div className="singleHalfContainer">
-            <div className="singleHalf card">
+        <div className="cardHalfContainer">
+            <div className="halfCard card">
+                <h3 className="halfCardTitle">{title}</h3>
                 {children}
                 <Image
                     className="active"
