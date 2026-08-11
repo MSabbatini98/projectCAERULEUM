@@ -91,9 +91,9 @@ export default function Curriculum() {
         </p>
       </section>
 
-      <section className="lang_theater">
+      <section className="cvLanguages">
         <CoolTitle title={"Lingue conosciute"} colorClass="blue_5" />
-        <p>
+        <p className="intro">
           Clicca sui vari banner per avere più informazioni sulle lingue che
           parlo e che sto imparando. Utilizza le frecce per spostarti e clicca
           di nuovo se vuoi chiudere.
@@ -105,27 +105,13 @@ export default function Curriculum() {
 
       <section className="volontariato">
         <CoolTitle title={"Volontariato"} colorClass="blue_5" />
-        <p>
+        <p className="intro">
           Oltre alla mia esperienza lavorativa, nel corso degli anni ho dedicato
           parte del mio tempo al volontariato, contribuendo a progetti e
           iniziative che mirano a migliorare la comunità e l'ambiente. Queste
           esperienze mi hanno permesso di sviluppare competenze trasversali e di
           ampliare la mia prospettiva sul mondo del lavoro e sulla società in
           generale.
-        </p>
-
-        <h2>Salvaguardia dell'ambiente : PlasticFree</h2>
-        <p>
-          Con Plastic free effettuiamo diversi progetti sul territorio. Dalla
-          sensibilizzazione nelle scuole alla partecipazione attiva durante le
-          attività di raccolta rifiuti.
-        </p>
-        <h2>Integrazione con la comunità : Albero di Cirene</h2>
-        <p>
-          Con Albero di Cirene collaboriamo per promuovere l'integrazione
-          sociale e culturale nella comunità. I progetti a cui partecipo la
-          scuola di italiano per extracomunitari e il progetto di ascolto per le
-          persone sole/anziane/emarginate.
         </p>
         <div className="volunteerCards">
           <CardHalf
