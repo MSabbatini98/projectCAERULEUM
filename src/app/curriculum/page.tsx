@@ -91,13 +91,17 @@ export default function Curriculum() {
         </p>
       </section>
 
-      <section className="lang_theater">
+      <section className="cvLanguages">
         <CoolTitle title={"Lingue conosciute"} colorClass="blue_5" />
-        <p>
+        <p className="intro">
           Clicca sui vari banner per avere più informazioni sulle lingue che
-          parlo e che sto imparando. Utilizza le frecce per spostarti e clicca
-          di nuovo se vuoi chiudere.
+          parlo e che sto imparando. <br />
+          Utilizza le frecce per spostarti, infine clicca
+          di nuovo se vuoi chiudere lo specchio informativo.
         </p>
+        <p className="intro"> Oppure consulta la mia pagina dedicata al mio progresso su Duolingo! <Link className="themeBtn duoBtn" href="/duolingo">
+        Duolingo</Link></p>
+        
         <div className="cv_theater theater_lang">
           <TheaterLang langs={LANG_SLIDER} />
         </div>
@@ -105,7 +109,7 @@ export default function Curriculum() {
 
       <section className="volontariato">
         <CoolTitle title={"Volontariato"} colorClass="blue_5" />
-        <p>
+        <p className="intro">
           Oltre alla mia esperienza lavorativa, nel corso degli anni ho dedicato
           parte del mio tempo al volontariato, contribuendo a progetti e
           iniziative che mirano a migliorare la comunità e l'ambiente. Queste
@@ -135,7 +139,7 @@ export default function Curriculum() {
       </section>
 
         <ExpandingPanel color="red" CTAtext="Open">
-          <p>This is a secret section. It will be avaiable after the GO LIVE of the fun mode.</p>
+          <p>This is section is still Work in Progress. It will be avaiable after the GO LIVE of the fun mode.</p>
         </ExpandingPanel>
 
     </div>

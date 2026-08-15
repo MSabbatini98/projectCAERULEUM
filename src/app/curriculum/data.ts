@@ -1,8 +1,8 @@
 import banner_it from "../../../public/media/sliderImgs/italy_banner.webp"
 import banner_fr from "../../../public/media/sliderImgs/france_banner.webp"
-import banner_sp from "../../../public/media/sliderImgs/spain_banner.webp"
+import banner_sp from "../../../public/media/sliderImgs/spain_banner2.png"
 import banner_jp from "../../../public/media/sliderImgs/japan_banner.webp"
-import banner_de from "../../../public/media/sliderImgs/germany_banner.webp"
+import banner_ps from "../../../public/media/sliderImgs/palestine_banner.webp"
 import banner_en from "../../../public/media/sliderImgs/uk_banner.webp"
 
 export interface IkigaiItem {
@@ -69,21 +69,21 @@ export    const  LANG_SLIDER = [
         example: "Esa pluma estas sobre la mesa, con un gato y una manzana roja."
     },
     {
-        urlIcon: banner_de, 
-        altIcon: "Bandiera Tedesca",
-        urlMainImg : banner_de,
-        altMainImg: "Bandiera Tedesca",
-        title: "Tedesco",
-        content: "Ho una conoscenza estremamente limitata del tedesco, con una comprensione limitata ai saluti e ringraziamenti, imparato grazie a Duolingo e qualche viaggio (il mio 'tschüss' è perfetto, dicono). ",
-        example: "Der Stift und die Katze und der rote Apfel sind auf dem Tisch."
-    },
-    {
         urlIcon: banner_jp,
         altIcon: "Bandiera Giapponese",
         urlMainImg : banner_jp,
         altMainImg: "Bandiera Giapponese",
         title: "Giapponese",
-        content: "Anni ed anni di anime hanno dato qualche  - minimo - frutto: conosco abbastanza bene 1 dei 3 alfabeti, l'hiragana, e sono in grado di leggere i kanji più semplici. Riesco inoltre a capire le frasi più comunemente usate negli anime (quindi ad esempio ‹sono tornat a casa›, ma anche ‹ucciderò tutti i demoni› e ovviamente ‹salverò il mondo/l'umanità/la tua anima› ) ",
+        content: "Conosco abbastanza bene 1 dei 3 alfabeti, l'hiragana, e sono in grado di leggere i kanji più semplici. Riesco inoltre a capire le frasi più comunemente usate negli anime (quindi ad esempio ‹sono tornat a casa›, ma anche ‹ucciderò tutti i demoni› e ovviamente ‹salverò il mondo/l'umanità/la tua anima› ).",
         example: "ペンはつくえの上にあります。ねことあかいりんごといっしょです。 (Pen wa tsukue no ue ni arimasu. Neko to akai ringo to issho desu.)"
+    },
+    {
+        urlIcon: banner_ps, 
+        altIcon: "Bandiera Palestina (lingua araba)",
+        urlMainImg : banner_ps,
+        altMainImg: "Bandiera Palestina (lingua araba)",
+        title: "Arabo MSA",
+        content: "Ho do poco cominciato a studiare l'arabo MSA ( forma ufficiale usata nei libri, nei giornali, alla televisione e nei discorsi formali) e l'alfabeto arabo. I progressi possono essere consultati sulla pagina di Duolingo.",
+        example: "بوب (Bob)"
     }
 ];

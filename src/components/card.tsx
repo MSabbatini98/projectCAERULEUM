@@ -78,9 +78,9 @@ export function Card({children, href, hrefCTA, projectLongDescription, projectMa
                                 {hrefCTA}
                             </Link>
                             {githubLink && (
-                                <a className="themeBtn github_link" href={githubLink} target="_blank" rel="noopener noreferrer">
+                                <Link className="themeBtn github_link" href={githubLink} target="_blank" rel="noopener noreferrer">
                                     {projectLinkCTA || "GitHub"}
-                                </a>
+                                </Link>
                             )}
                         </div>
                     </div>
