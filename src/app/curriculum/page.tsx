@@ -113,20 +113,6 @@ export default function Curriculum() {
           ampliare la mia prospettiva sul mondo del lavoro e sulla società in
           generale.
         </p>
-
-        <h2>Salvaguardia dell'ambiente : PlasticFree</h2>
-        <p>
-          Con Plastic free effettuiamo diversi progetti sul territorio. Dalla
-          sensibilizzazione nelle scuole alla partecipazione attiva durante le
-          attività di raccolta rifiuti.
-        </p>
-        <h2>Integrazione con la comunità : Albero di Cirene</h2>
-        <p>
-          Con Albero di Cirene collaboriamo per promuovere l'integrazione
-          sociale e culturale nella comunità. I progetti a cui partecipo la
-          scuola di italiano per extracomunitari e il progetto di ascolto per le
-          persone sole/anziane/emarginate.
-        </p>
         <div className="volunteerCards">
           <CardHalf
             hrefCta="Albero di Cirene"
@@ -134,7 +120,7 @@ export default function Curriculum() {
             longDescription="Associazione di volontariato che persegue la promozione e la valorizzazione della persona, in qualunque condizione essa si trovi, attraverso attività di ascolto, orientamento, formazione e accompagnamento. Con l'Albero di Cirene collaboro tramite l'insegnamento della lingua italiana a persone extracomunitarie."
             imgURL="/media/cv/logo_AlberoCirene.png"
           >
-            <CoolTitle title="Albero di Cirene" colorClass="blue_5" />
+            <p>lorem ipsum dolor sit amet</p>
           </CardHalf>
           
           <CardHalf
@@ -143,7 +129,7 @@ export default function Curriculum() {
             textCta="Scopri di più"
             imgURL="/media/cv/logo_PlasticFree.jpeg"
           >
-          <CoolTitle title="PlasticFree " colorClass="blue_5" />
+            <p>lorem ipsum dolor sit amet</p>
           </CardHalf>
         </div>
       </section>

@@ -187,7 +187,7 @@
       top: 0px;
       bottom: 0px;
       left: -100vw;  
-      right: -100px;
+      right: -40px;
 
       background-color: var(--blue_5);
       z-index: -100;
@@ -213,7 +213,7 @@
             right: 10%;
         }
     }
-    .singleHalf{
+    .halfCard{
         img {
             border-radius: 20px;
             object-fit: cover;
