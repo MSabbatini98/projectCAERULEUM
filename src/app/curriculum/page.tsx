@@ -95,9 +95,13 @@ export default function Curriculum() {
         <CoolTitle title={"Lingue conosciute"} colorClass="blue_5" />
         <p className="intro">
           Clicca sui vari banner per avere più informazioni sulle lingue che
-          parlo e che sto imparando. Utilizza le frecce per spostarti e clicca
-          di nuovo se vuoi chiudere.
+          parlo e che sto imparando. <br />
+          Utilizza le frecce per spostarti, infine clicca
+          di nuovo se vuoi chiudere lo specchio informativo.
         </p>
+        <p className="intro"> Oppure consulta la mia pagina dedicata al mio progresso su Duolingo! <Link className="themeBtn duoBtn" href="/duolingo">
+        Duolingo</Link></p>
+        
         <div className="cv_theater theater_lang">
           <TheaterLang langs={LANG_SLIDER} />
         </div>
@@ -135,7 +139,7 @@ export default function Curriculum() {
       </section>
 
         <ExpandingPanel color="red" CTAtext="Open">
-          <p>This is a secret section. It will be avaiable after the GO LIVE of the fun mode.</p>
+          <p>This is section is still Work in Progress. It will be avaiable after the GO LIVE of the fun mode.</p>
         </ExpandingPanel>
 
     </div>

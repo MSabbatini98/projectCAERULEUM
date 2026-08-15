@@ -74,7 +74,7 @@ export    const  LANG_SLIDER = [
         urlMainImg : banner_jp,
         altMainImg: "Bandiera Giapponese",
         title: "Giapponese",
-        content: "Conosco abbastanza bene 1 dei 3 alfabeti, l'hiragana, e sono in grado di leggere i kanji più semplici. Riesco inoltre a capire le frasi più comunemente usate negli anime (quindi ad esempio ‹sono tornat a casa›, ma anche ‹ucciderò tutti i demoni› e ovviamente ‹salverò il mondo/l'umanità/la tua anima› ). Attualmente lo studio del giapponese è stato sospeso per dare spazio all'arabo - che ha un solo alfabeto.",
+        content: "Conosco abbastanza bene 1 dei 3 alfabeti, l'hiragana, e sono in grado di leggere i kanji più semplici. Riesco inoltre a capire le frasi più comunemente usate negli anime (quindi ad esempio ‹sono tornat a casa›, ma anche ‹ucciderò tutti i demoni› e ovviamente ‹salverò il mondo/l'umanità/la tua anima› ).",
         example: "ペンはつくえの上にあります。ねことあかいりんごといっしょです。 (Pen wa tsukue no ue ni arimasu. Neko to akai ringo to issho desu.)"
     },
     {

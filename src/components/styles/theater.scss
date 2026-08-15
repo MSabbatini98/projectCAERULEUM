@@ -1,252 +1,198 @@
 section.cv_theater {
-    position: relative;
-    padding: 40px;
-    
-    .cv_slide {
+  position: relative;
+  padding: 40px;
+
+  .cv_slide {
+    display: flex;
+    width: 85%;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+
+    .skill_selection {
       display: flex;
-      width: 85%;
-      margin: 0;
-      overflow: hidden;
-      text-align: center;
-      // border: solid 1px red;
-
-      .skill_selection {
-        display: flex;
-        gap: 20px;
-        margin: 20px 5px;
-      }
+      gap: 20px;
+      margin: 20px 5px;
     }
-  
-    @keyframes squish {
-        50% {
-          scale: 1.2;
-        }
-      }
-
-  .arrow_nav{
-      position: absolute;
-      top: 90px;
-      right: 50px;
-      color: var(--blue_5);
-      // border: yellow 3px solid;
-      button svg:hover {
-        fill: var(--light);
-        scale: 1.2;
-      }
-      button svg :active {
-        animation: squish 200ms ease-in-out;
-      }
   }
-  
-    .skill_thumb {
-      all: unset;
-      display: block;
-      cursor: pointer;
-      width: 130px;
-      height: 160px;
-      transition: translate 0.5s ease-in-out; 
-    //   transition: scale 100ms ease-in-out;
-        
-      .card.active {
-        outline: 4px solid var(--blue_5);
-        border: 4px solid var(--blue_5);
-      
-      }
-      
-      &:hover,
-      &:focus-visible {
-        scale: 1.2;
-      }
-      > * {
-        stroke: white;
-        fill: black;
-        height: 100%;
-        width: 100%;
-      }
+
+  .skill_thumb {
+    all: unset;
+    display: block;
+    width: 130px;
+    height: 160px;
+    cursor: pointer;
+    transition: translate 0.5s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      scale: 1.2;
     }
-  
-    .skill_thumb:focus-visible,
-    .img-slider-btn:focus-visible {
-      outline: auto;
+
+    .card.active {
+      outline: 4px solid var(--blue_5);
+      border: 4px solid var(--blue_5);
     }
-  
-    @media not (prefers-reduced-motion) {
-      .img-slider-img {
-        transition: translate 300ms ease-in-out;
-      }
-      .img-slider-btn > *{
-        transition: all 0.5s ease-in-out;
-      }
-      .img-slider-btn:hover > *,
-      .img-slider-btn:focus-visible > * {
-        transform: scale(1.5);
-      }
-      .img-slider-btn:active > * {
-        animation: squish 200ms ease-in-out;
-      }
+
+    > * {
+      width: 100%;
+      height: 100%;
+      stroke: white;
+      fill: black;
     }
+  }
+
+  // Navigation ----------
+  .arrow_nav,
+  .nav_left,
+  .nav_right {
+    position: absolute;
+    top: 90px;
+    color: var(--blue_5);
+
+    button svg:hover {
+      fill: var(--light);
+      scale: 1.2;
+    }
+
+    button svg:active {
+      animation: squish 200ms ease-in-out;
+    }
+  }
+
+  .arrow_nav {
+    right: 50px;
+  }
+
+  // Accessibility ----------
+  .skill_thumb:focus-visible,
+  .img-slider-btn:focus-visible {
+    outline: auto;
+  }
+
+  // Reduced motion ----------
+  @media not (prefers-reduced-motion) {
+    .img-slider-img {
+      transition: translate 300ms ease-in-out;
+    }
+
+    .img-slider-btn > * {
+      transition: all 0.5s ease-in-out;
+    }
+
+    .img-slider-btn:hover > *,
+    .img-slider-btn:focus-visible > * {
+      transform: scale(1.5);
+    }
+
+    .img-slider-btn:active > * {
+      animation: squish 200ms ease-in-out;
+    }
+  }
 }
-.cv_stage {
-    padding: 20px;
-    .cv_stage_title {
-      font-size: 45px;
-      text-align: center;
+
+
+// LANGUAGE THEATER
+// ========================================
+section.cv_theater.theater_lang {
+
+  .lang_slide {
+    justify-content: center;
+    width: 100%;
+
+    .card {
+      margin: 0;
     }
-    &_content {
+
+    ._selection {
       display: flex;
       justify-content: space-between;
-      position: relative;
-
-
-      
-
-      img {
-        width: 400px;
-        border-radius: 20px;
-        border: solid 2px var(--blue_5);
-        position: relative;
-        
-
-
-      }
+      gap: 0;
+      margin: 20px 5px;
     }
-}
+  }
 
+  // Navigation ----------
+  .nav_left,
+  .nav_right {
+    top: 100px;
 
-
-//************ THEATER LANG STYLE
-section.cv_theater.theater_lang {
-    position: relative;
-    padding: 40px;
-
-    .lang_slide {
-      justify-content: center;
-      width: 100%;
-      .card {
-        margin: 0;
-      }
-      ._selection {
-        display: flex;
-        justify-content: space-between;
-        gap: 0px;
-        margin: 20px 5px;
-      }
+    button svg:hover {
+      scale: 1.25;
     }
-  
-  .nav_left, .nav_right{
-      position: absolute;
-      top: 100px;
-      color: var(--blue_5);
-      
-      button svg:hover {
-        fill: var(--light);
-        scale: 1.25;
-      }
-      button svg :active {
-        animation: squish 200ms ease-in-out;
-      }
   }
 
-  .nav_left{
-      left: 50px;
+  .nav_left {
+    left: 50px;
   }
-  .nav_right{
-      right: 50px;
-  }
-    .skill_thumb {
-      all: unset;
-      display: block;
-      cursor: pointer;
-      width: 130px;
-      height: 160px;
-      transition: translate 0.5s ease-in-out; 
 
-      
+  .nav_right {
+    right: 50px;
+  }
+
+  .skill_thumb {
     .thumb_lang {
       font-size: 18px;
     }
-      .card {
-        padding: 10px;
-      }
-      .card.active {
-        outline: 4px solid var(--blue_5);
-        border: 4px solid var(--blue_5);
-      
-      }
-      
-      &:hover,
-      &:focus-visible {
-        scale: 1.2;
-      }
-      > * {
-        stroke: white;
-        fill: black;
-        height: 100%;
-        width: 100%;
-      }
+
+    .card {
+      padding: 10px;
     }
-  
-    .skill_thumb:focus-visible,
-    .img-slider-btn:focus-visible {
-      outline: auto;
-    }
-  
-    @media not (prefers-reduced-motion) {
-      .img-slider-img {
-        transition: translate 300ms ease-in-out;
-      }
-      .img-slider-btn > *{
-        transition: all 0.5s ease-in-out;
-      }
-      .img-slider-btn:hover > *,
-      .img-slider-btn:focus-visible > * {
-        transform: scale(1.5);
-      }
-      .img-slider-btn:active > * {
-        animation: squish 200ms ease-in-out;
-      }
-    }
+  }
 }
+
+
 .cv_stage {
-    padding: 20px;
-    .cv_stage_title {
-      font-size: 45px;
-      text-align: center;
-    }
-    &_content {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
+  padding: 20px;
+
+  h3 {
+    font-size: 42px;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+
+    img {
       position: relative;
-    
-      img {
-        width: 400px;
-        border-radius: 20px;
-        border: solid 2px var(--blue_5);
-        position: relative;
-
-      }
+      width: 300px;
+      border-radius: 20px;
+      margin-top: 0px;
     }
+  }
 
-    &.stage_lang {
-      display: flex;
-      flex-direction: column; 
-      align-items: center; 
-      gap: 20px; 
+  // Stage ----------
+  &.stage_lang {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 
-      .cv_stage_img img {
-        width: 350px;
-      }
+    .cv_stage_img img {
+      width: 350px;
     }
-    .cv_stage_content_intro {
-      
-      width: 75%;
+  }
 
-      p {
-        font-size: 22px;
-        display: block;
-        margin-bottom: 20px;
-      }
+  .cv_stage_content_intro {
+    width: 75%;
+
+    p {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 22px;
     }
-    
+  }
+  .cv_stage_example {
+    color: var(--light);
+  }
+}
+
+
+//ANIMATIONS
+@keyframes squish {
+  50% {
+    scale: 1.2;
+  }
 }

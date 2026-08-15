@@ -90,6 +90,7 @@ export default function TheaterLang({ langs }: LangSliderProps) {
           <ArrowBigRight size={64}aria-hidden />
         </button>
       </div>
+
     </div>
       {langIndex >= 0 && 
       <div className="cv_stage card stage_lang" >
@@ -97,9 +98,9 @@ export default function TheaterLang({ langs }: LangSliderProps) {
         <div className="cv_stage_content">
           <div className="cv_stage_content_intro">
           <p>{langs[langIndex].content} </p>
-          <h4>Esempio :</h4>
-          <p>{langs[langIndex].example}</p> 
-          </div>
+          <h4 className="cv_stage_example">Esempio :</h4>
+          <p className="cv_stage_example">{langs[langIndex].example}</p> 
+        </div>
 
         {langs[langIndex].urlMainImg && 
         <div className="cv_stage_img">
