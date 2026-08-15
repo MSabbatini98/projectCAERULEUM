@@ -1,4 +1,8 @@
-
+.curriculum .intro {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 30px 30px 0 30px;
+}
 
 .fakeCta {
     padding: 5px 20px;
@@ -111,7 +115,7 @@
 
 }
 
-.cv_upper .cv_hover:hover {
+.cvUpper .cv_hover:hover {
     opacity: 1;
     transform: scale(1.25);
 }
@@ -211,10 +215,10 @@
 }
 
 
-.intro {
-    font-size: 20px;
-    line-height: 1.6;
-    margin: 20px 30px;
+
+
+.cvLanguages {
+    margin-top: 50px;
 }
 
 .volunteerCards {
@@ -238,8 +242,4 @@
             margin: 20px 0;
         }
     }
-}
-
-html {
-    overflow-x: hidden;
 }

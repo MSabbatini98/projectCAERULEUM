@@ -18,7 +18,7 @@ type LangSliderProps = {
   }[]
 }
 
-export default function Theater({ langs }: LangSliderProps) {
+export default function TheaterLang({ langs }: LangSliderProps) {
   const [langIndex, setLangIndex] = useState(-1);
 
   
@@ -93,7 +93,7 @@ export default function Theater({ langs }: LangSliderProps) {
     </div>
       {langIndex >= 0 && 
       <div className="cv_stage card stage_lang" >
-        <h3 className="cv_stage_title">{langs[langIndex].title}</h3>
+        <h3>{langs[langIndex].title}</h3>
         <div className="cv_stage_content">
           <div className="cv_stage_content_intro">
           <p>{langs[langIndex].content} </p>

@@ -65,6 +65,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: rgb(42,82,190);
   background: linear-gradient(var(--light) 20%, var(--blue_3) 70%) fixed;
