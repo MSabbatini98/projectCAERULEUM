@@ -2,9 +2,9 @@
     border: solid 4px var(--blue_3);
     border-radius: 20px;
     position: relative;
-    padding: 20px;
+    padding: 24px;
     margin: 15px auto;
-    max-width: 1000px;
+    max-width: 1200px;
 
 
 
@@ -15,14 +15,6 @@
 
     .cardText {
         flex: 1;
-        margin-right: 20px;
-
-        .projectLongDescription {
-            font-size: 20px;
-
-            margin: 20px 30px;
-            padding: 10px;
-        };
     }
 
     .cardImage {

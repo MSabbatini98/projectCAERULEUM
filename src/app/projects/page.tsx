@@ -32,7 +32,7 @@ export default function Project() {
         githubLink="https://github.com/MSabbatini98/REACT-eruditio/tree/main/hook-use-reducer"
       >
         <CoolTitle title="Calcolatrice semplice" colorClass="blue_4" />
-    <p className="projectLongDescription">Semplice esercizio in react per prendere dimestichezza e allenarmi con useReducer. L'esercizio è stato svolto seguendo un tutorial ma con alcune personalizzazioni stilistiche e funzionali.</p>
+        <p className="projectLongDescription">Semplice esercizio in react per prendere dimestichezza e allenarmi con <b>useReducer</b>. L'esercizio è stato svolto seguendo un tutorial ma con alcune personalizzazioni stilistiche e funzionali.</p>
       </Card>
 
       {/* PlasticFree */}

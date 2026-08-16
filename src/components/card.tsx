@@ -88,22 +88,23 @@ export function Card({children, href, hrefCTA, projectMainImage, isProjectProgra
                                 fill
                                 style={{ objectFit: 'contain' }}
                             />
+                        {isProjectProgramming && projectSkills && projectSkills.length > 0 && (
+                        <div className="cardSkills">
+                            {projectSkills.slice(0, 4).map((skill, index) => (
+                                <Image
+                                    key={`${skill}-${index}`}
+                                    className="active"
+                                    src={SKILL_IMAGES[skill] || BROKEN_IMAGE}
+                                    alt={`${skill} icon`}
+                                    width={50}
+                                    height={50}
+                                />
+                            ))}
+                        </div>
+                    )}
                     </div>
                 </div>
-                {isProjectProgramming && projectSkills && projectSkills.length > 0 && (
-                    <div className="card_skills">
-                        {projectSkills.slice(0, 4).map((skill, index) => (
-                            <Image
-                                key={`${skill}-${index}`}
-                                className="active"
-                                src={SKILL_IMAGES[skill] || BROKEN_IMAGE}
-                                alt={`${skill} icon`}
-                                width={50}
-                                height={50}
-                            />
-                        ))}
-                    </div>
-                )}
+                
 
             </div>
         </div>
