@@ -17,10 +17,11 @@ export default function Project() {
       Over time, that’s turned into a collection of personal projects across different areas of my life.<br/> They all share a common thread: simple to tryout, sustainable, and accessible to anyone who wants to challenge themselves.  </p>
 
       <h3 className="projectIntroH">Here is a non-exhaustive list of them:</h3>
+
+      {/*!  Calculator Basic */}
       <Card
-        href="/projects/basicCalculator"
+        href="/projects/basic-calculator"
         hrefCTA="Vai alla Calcolatrice"
-        projectLongDescription="Semplice esercizio in react per prendere dimestichezza e allenarmi con useReducer. L'esercizio è stato svolto seguendo un tutorial ma con alcune personalizzazioni stilistiche e funzionali."
         projectLinkCTA=""
         projectDifficulty="Facile"
         projectSkills={["HTML", "CSS", "JS", "REACT"]}
@@ -31,37 +32,37 @@ export default function Project() {
         githubLink="https://github.com/MSabbatini98/REACT-eruditio/tree/main/hook-use-reducer"
       >
         <CoolTitle title="Calcolatrice semplice" colorClass="blue_4" />
-
+    <p className="projectLongDescription">Semplice esercizio in react per prendere dimestichezza e allenarmi con useReducer. L'esercizio è stato svolto seguendo un tutorial ma con alcune personalizzazioni stilistiche e funzionali.</p>
       </Card>
 
-
+      {/* PlasticFree */}
       <Card
-        href="/projects/plasticfree"
-        hrefCTA="Scopri di più"
-        projectLongDescription="PlasticFree è un progetto che mira a sensibilizzare sull'importanza di ridurre l'uso della plastica nella nostra vita quotidiana. 
-        Sono referente ormai da diversi anni e insieme a PlasticFree promuoviamo azioni locali per ridurre il consumo, la raccolta e il riciclo della plastica."
         projectDifficulty="Impossibile da definire"
         projectStatus="In corso"
         isProjectProgramming={false}
         projectMainImage="/media/cv/logo_PlasticFree.jpeg" 
+        href="/projects/plastic-free"
+        hrefCTA="Scopri di più"
         >
         <CoolTitle title="PlasticFree" colorClass="blue_4" />
+        <p className="projectLongDescription">PlasticFree è un progetto che mira a sensibilizzare sull'importanza di ridurre l'uso della plastica nella nostra vita quotidiana. 
+        Sono referente ormai da diversi anni e insieme a PlasticFree promuoviamo azioni locali per ridurre il consumo, la raccolta e il riciclo della plastica.</p>
       </Card>
 
+      {/* kintzugi */}
       <Card
+        projectLinkCTA="Scopri di più sul Kintsugi"
         href="/projects/kintsugi"
         hrefCTA="Kintsugi"
-        projectLongDescription="Il kintzugi è l'arte giapponese di riparare oggetti rotti con l'oro, trasformando le crepe in elementi di bellezza. Il progetto Kintsugi è nato dal desiderio di riparare e valorizzare oggetti danneggiati, dando loro una nuova vita. Attraverso tecniche di restauro e design, Kintsugi mira a creare pezzi unici che raccontano storie di resilienza e trasformazione."
-        projectLinkCTA="Scopri di più sul Kintsugi"
       >
         
-        <CoolTitle title="secondo Titolo " colorClass="blue_2" />
+        <CoolTitle title="Kintzugi" colorClass="blue_2" />
+        <p className="projectLongDescription">Il kintzugi è l'arte giapponese di riparare oggetti rotti con l'oro, trasformando le crepe in elementi di bellezza. Il progetto Kintsugi è nato dal desiderio di riparare e valorizzare oggetti danneggiati, dando loro una nuova vita. Attraverso tecniche di restauro e design, Kintsugi mira a creare pezzi unici che raccontano storie di resilienza e trasformazione.</p>
       </Card>
 
       <Card
         href="/projects/prova2"
         hrefCTA="Prova 2"
-        projectLongDescription="Lorem Ipsum"
         projectLinkCTA=""
       >
         <CoolTitle title="secondo Titolo " colorClass="blue_2" />
@@ -71,17 +72,16 @@ export default function Project() {
       <Card
         href="/projects/prova2"
         hrefCTA="Prova 2"
-        projectLongDescription="A casa ho tante piante, ho deciso di creare un database per tenere traccia di tutte le mie piante, con foto, nome, data di acquisto e altre informazioni utili. Il progetto è in collaborazione GITHUB, per collegare dei rilevatori di umidità e un arduino, in modo da poter monitorare le mie piante anche quando sono fuori casa"
         projectLinkCTA=""
       >
         <CoolTitle title="secondo Titolo " colorClass="blue_2" />
+        <p className="projectLongDescription">A casa ho tante piante, ho deciso di creare un database per tenere traccia di tutte le mie piante, con foto, nome, data di acquisto e altre informazioni utili. Il progetto è in collaborazione GITHUB, per collegare dei rilevatori di umidità e un arduino, in modo da poter monitorare le mie piante anche quando sono fuori casa</p>
         {/* TODO passare grado di difficoltà in modo dinamico */}
         {/* TODO passare tecnologia utilizzata in modo dinamico */}
         {/* TODO passare link pagina in modo dinamico */}
         {/* TODO passare grado di difficoltà in modo dinamico */}
 
         <p>
-          {" "}
           Una calcolatrice classica realizzata con HTML, CSS e JavaScript.{" "}
         </p>
       </Card>

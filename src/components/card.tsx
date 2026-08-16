@@ -10,7 +10,6 @@ type CardProps = {
         children: ReactNode;
         href: string; //link alla pagina del progetto
         hrefCTA: string; //testo del link alla pagina del progetto
-        projectLongDescription: string; //descrizione più lunga del progetto
         projectLinkCTA?: string; //testo del link per ulteriori informazioni (Es. Duolingo, GitHub, ecc. )
         projectDifficulty?: string; //Facile, Medio, Difficile, Folle
         projectSkills?: string[]; //es: CSS, HTML, JS...
@@ -62,17 +61,14 @@ const SKILL_IMAGES: Record<string, string> = {
     // 'Angular': '/media/skills/angular.svg',
 };
 
-export function Card({children, href, hrefCTA, projectLongDescription, projectMainImage, isProjectProgramming, projectSkills, projectLinkCTA, githubLink} : CardProps) {
+export function Card({children, href, hrefCTA, projectMainImage, isProjectProgramming, projectSkills, projectLinkCTA, githubLink} : CardProps) {
 
     return (
         <div className="cardContainer">
             <div className="card">
-                <div className="cardTitle">
-                {children}
-                </div>
                 <div className="cardContent">
                     <div className="cardText">
-                        <p>{projectLongDescription}</p>
+                        {children}
                         <div className="cardCTAs">
                             <Link className="themeBtn" href={href}>
                                 {hrefCTA}

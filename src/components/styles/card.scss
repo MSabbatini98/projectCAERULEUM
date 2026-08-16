@@ -16,7 +16,15 @@
     .cardText {
         flex: 1;
         margin-right: 20px;
+
+        .projectLongDescription {
+            font-size: 20px;
+
+            margin: 20px 30px;
+            padding: 10px;
+        };
     }
+
     .cardImage {
         position: relative;
         width: 250px;
