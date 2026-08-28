@@ -1,8 +1,6 @@
-// import Calculator from "./basic-calculator";
-
-export default function BasicCalculatorPage() {
+export default function KintsugiPage() {
   return (
-    <main className="mainContent">
+    <main className="mainContent" >
     </main>
   );
 }

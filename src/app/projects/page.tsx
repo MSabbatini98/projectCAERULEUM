@@ -22,7 +22,6 @@ export default function Project() {
       <Card
         href="/projects/basic-calculator"
         hrefCTA="Vai alla Calcolatrice"
-        projectLinkCTA=""
         projectDifficulty="Facile"
         projectSkills={["HTML", "CSS", "JS", "REACT"]}
         projectStatus="Completato"
@@ -42,37 +41,55 @@ export default function Project() {
         isProjectProgramming={false}
         projectMainImage="/media/cv/logo_PlasticFree.jpeg" 
         href="/projects/plastic-free"
-        hrefCTA="Scopri di più"
+        hrefCTA="Scopri tutti i dettagli"
         >
         <CoolTitle title="PlasticFree" colorClass="blue_4" />
         <p className="projectLongDescription">PlasticFree è un progetto che mira a sensibilizzare sull'importanza di ridurre l'uso della plastica nella nostra vita quotidiana. 
-        Sono referente ormai da diversi anni e insieme a PlasticFree promuoviamo azioni locali per ridurre il consumo, la raccolta e il riciclo della plastica.</p>
+        Sono referente ormai da diversi anni e insieme a PlasticFree promuoviamo azioni locali per ridurre il consumo, la raccolta e il riciclo della plastica. <br></br>
+        Tra i vari progetti ho collaborato in raccolte, sensibilizazioni e accordi con i comuni.
+        </p>
       </Card>
 
       {/* kintzugi */}
       <Card
-        projectLinkCTA="Scopri di più sul Kintsugi"
         href="/projects/kintsugi"
-        hrefCTA="Kintsugi"
+        hrefCTA="Scopri le mie creazioni"
+        isProjectProgramming={false}
+        projectMainImage="/media/projects/kintsugi/kintsugi_tile.jpeg" 
       >
         
         <CoolTitle title="Kintzugi" colorClass="blue_2" />
         <p className="projectLongDescription">Il kintzugi è l'arte giapponese di riparare oggetti rotti con l'oro, trasformando le crepe in elementi di bellezza. Il progetto Kintsugi è nato dal desiderio di riparare e valorizzare oggetti danneggiati, dando loro una nuova vita. Attraverso tecniche di restauro e design, Kintsugi mira a creare pezzi unici che raccontano storie di resilienza e trasformazione.</p>
       </Card>
 
-      <Card
-        href="/projects/prova2"
-        hrefCTA="Prova 2"
-        projectLinkCTA=""
+      {/* scacchiera GOLIVE dopo aver consegnato il regalo */}
+      {/* <Card
+        href="/projects/scacchiera-argilla"
+        hrefCTA="Scopri il processo creativo"
       >
-        <CoolTitle title="secondo Titolo " colorClass="blue_2" />
+        <CoolTitle title="Scacchiera in argilla" colorClass="blue_2" />
+      </Card> */}
+      
+      {/*!  Calculator Scientific */}
+      <Card
+        href="/projects/scientific-calculator"
+        hrefCTA="Vai alla Calcolatrice Scientifica"
+        projectDifficulty="Facile"
+        projectSkills={["HTML", "CSS", "JS", "REACT"]}
+        projectStatus="Completato"
+        projectDate="2026-08"
+        isProjectProgramming={true}
+        projectMainImage="/media/projects/basic_calculator.png"
+        githubLink="https://github.com/MSabbatini98/REACT-eruditio/tree/main/hook-use-reducer"
+      >
+        <CoolTitle title="Calcolatrice scientifica" colorClass="blue_4" />
+        <p className="projectLongDescription">L'evoluzione della <a>calcolatrice semplice</a>: dopo essermi esercitato, riprovo l'esercizio senza risorse esterne. Per non fare la stessa cosa, questa volta proverò a riprodurre la calcolatrice scientifica </p>
       </Card>
 
 
       <Card
         href="/projects/prova2"
-        hrefCTA="Prova 2"
-        projectLinkCTA=""
+        hrefCTA="Fai un tour"
       >
         <CoolTitle title="secondo Titolo " colorClass="blue_2" />
         <p className="projectLongDescription">A casa ho tante piante, ho deciso di creare un database per tenere traccia di tutte le mie piante, con foto, nome, data di acquisto e altre informazioni utili. Il progetto è in collaborazione GITHUB, per collegare dei rilevatori di umidità e un arduino, in modo da poter monitorare le mie piante anche quando sono fuori casa</p>

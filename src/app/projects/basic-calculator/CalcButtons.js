@@ -10,7 +10,7 @@ export function DigitButton({ dispatch, digit }) {
 
 export function OperatorButton({ dispatch, operation }) {
     return (
-        <button className="calc_operator" onClick={() => dispatch({type: ACTIONS.CHOOSE_OPERATION, payload: {operation}})}>
+        <button className="calcOperator" onClick={() => dispatch({type: ACTIONS.CHOOSE_OPERATION, payload: {operation}})}>
             {operation}
         </button>
     )

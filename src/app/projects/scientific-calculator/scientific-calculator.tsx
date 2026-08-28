@@ -2,10 +2,10 @@
 
 // /projects/programming/basic-calculator 
 import CoolTitle from "@/components/utils/coolTitle"
-import "./basic-calculator.scss"
+import "./scientific-calculator.scss"
 
 import { useReducer } from "react"
-import { DigitButton, OperatorButton } from "./CalcButtons"
+import { DigitButton, OperatorButton, ScienceButton } from "./CalcButtons"
 import Link from "next/link"
 
 export const ACTIONS = {
@@ -39,21 +39,22 @@ const initialState: State = {
   overwrite: false,
 }
 
-export default function Calculator() {
+export default function CalculatorScience() {
   return (
     <main >
       <div>
 
         <CoolTitle
-            title="Calcolatrice classica"
+            title="Calcolatrice scientifica"
             colorClass="blue_3"/>
-        <p>Seguendo un tutorial, ho sviluppato una semplice calcolatrice classica con HTML, CSS e JavaScript.</p>
-        <p >
-          <Link href="/projects/basicCalculator/source">
-            Vedi i file sorgente
+        <p>Dopo aver seguito il tutorial (<a href="/projects/basic-calculator">calcolatrice classica</a>) ho sviluppato una calcolatrice scientifica con HTML, CSS e JavaScript.</p>
+        <p style={{ marginTop: "0.75rem" }}>
+          <Link href="/projects/scientificCalculator/source">
+          Vedi i file sorgente
           </Link>
         </p>
-        <BasicCalculator />
+
+        <ScientificCalculator />
       </div>
     </main>
   )
@@ -185,7 +186,7 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-function BasicCalculator() {
+function ScientificCalculator() {
   const [{ currOpe, prevOpe, operation }, dispatch] = useReducer(
     reducer,
     initialState
@@ -201,23 +202,55 @@ function BasicCalculator() {
           <div className="curr-oper">{formatOperand(currOpe)}</div>
 
         </div>
-      <button className="span-two calcOperator" onClick={() => dispatch({type: ACTIONS.CLEAR})}>AC</button>
+
+        {/* first row */}
+      <button className="span-two calcOperator">Deg | Rad</button>
+      <ScienceButton dispatch={dispatch} value="Fractions" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="pi" mode="mixed" />
+      <ScienceButton dispatch={dispatch} value="√" mode="mixed" />
+      <ScienceButton dispatch={dispatch} value="x²" mode="mixed" />
+      <button className="calcOperator" onClick={() => dispatch({type: ACTIONS.CLEAR})}>AC</button>
       <button className="calcOperator" onClick={() => dispatch({type: ACTIONS.DELETE_DIGIT})}>DEL</button>
-      <OperatorButton dispatch={dispatch} operation="+"/>
-      <DigitButton dispatch={dispatch} digit="1"/>
-      <DigitButton dispatch={dispatch} digit="2"/>
-      <DigitButton dispatch={dispatch} digit="3"/>
-      <OperatorButton dispatch={dispatch} operation="-"/>
-      <DigitButton dispatch={dispatch} digit="4"/>
-      <DigitButton dispatch={dispatch} digit="5"/>
-      <DigitButton dispatch={dispatch} digit="6"/>
-      <OperatorButton dispatch={dispatch} operation="*"/>
-      <DigitButton dispatch={dispatch} digit="7"/>
-      <DigitButton dispatch={dispatch} digit="8"/>
-      <DigitButton dispatch={dispatch} digit="9"/>
-      <OperatorButton dispatch={dispatch} operation="÷"/>
-      <DigitButton dispatch={dispatch} digit="."/>
-      <DigitButton dispatch={dispatch} digit="0"/>
+
+        {/* second row */}
+      <ScienceButton dispatch={dispatch} value="sin" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="x^" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="√" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="1" mode="number" />
+      <ScienceButton dispatch={dispatch} value="2" mode="number" />
+      <ScienceButton dispatch={dispatch} value="3" mode="number" />
+      <ScienceButton dispatch={dispatch} value="(" mode="operator" />
+      <ScienceButton dispatch={dispatch} value=")" mode="operator" />
+
+      {/* third row */}
+      <ScienceButton dispatch={dispatch} value="cos" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="fraction" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="log" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="4" mode="number" />
+      <ScienceButton dispatch={dispatch} value="5" mode="number" />
+      <ScienceButton dispatch={dispatch} value="6" mode="number" />
+      <ScienceButton dispatch={dispatch} value="+" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="-" mode="operator" />
+
+
+
+      {/* fourth row */}
+      <ScienceButton dispatch={dispatch} value="tan" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="x!" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="ln" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="7" mode="number" />
+      <ScienceButton dispatch={dispatch} value="8" mode="number" />
+      <ScienceButton dispatch={dispatch} value="9" mode="number" />
+      <ScienceButton dispatch={dispatch} value="*" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="÷" mode="operator" />
+
+      {/* Fifth row */}
+      <ScienceButton dispatch={dispatch} value="Ans" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="EXP" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="e" mode="operator" />
+      <ScienceButton dispatch={dispatch} value="," mode="mixed" />
+      <ScienceButton dispatch={dispatch} value="0" mode="number" />
+      <ScienceButton dispatch={dispatch} value="+/-" mode="mixed" />
       <button className="span-two calcOperator" onClick={() => dispatch({type: ACTIONS.EVALUATE})}>=</button>
 
 
